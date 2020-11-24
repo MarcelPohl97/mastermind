@@ -11,6 +11,7 @@
     "autoprefixer": "^9.8.6",
     "fontsource-roboto": "^3.0.3",
     "framer-motion": "^2.9.4",
+    "materialize-css": "^1.0.0-rc.2",
     "postcss": "^8.1.9",
     "postcss-cli": "^8.3.0",
     "react": "^17.0.1",

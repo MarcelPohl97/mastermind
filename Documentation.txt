@@ -1,0 +1,13 @@
+23.11.2020:
+-> Created Excalidraw Mockup
+-> Created Technologie List
+-> Created Landing Component
+-> Landing Component
+
+24.11.2020:
+-> Created Menu Component
+-> Created Board Component
+-> Created Boards Component
+-> Created Navigation Component
+-> Created Shape Component
+

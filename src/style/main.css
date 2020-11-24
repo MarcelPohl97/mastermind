@@ -19534,6 +19534,46 @@ video {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+.active\:shadow-sm:active {
+  --tw-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.active\:shadow:active {
+  --tw-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.active\:shadow-md:active {
+  --tw-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.active\:shadow-lg:active {
+  --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.active\:shadow-xl:active {
+  --tw-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.active\:shadow-2xl:active {
+  --tw-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.active\:shadow-inner:active {
+  --tw-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.active\:shadow-none:active {
+  --tw-shadow: 0 0 #0000;
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
 * {
   --tw-ring-inset: var(--tw-empty,/*!*/ /*!*/);
   --tw-ring-offset-width: 0px;
@@ -26047,6 +26087,32 @@ video {
   transform: none;
 }
 
+.active\:transform:active {
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.active\:transform-gpu:active {
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  transform: translate3d(var(--tw-translate-x), var(--tw-translate-y), 0) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.active\:transform-none:active {
+  transform: none;
+}
+
 .origin-center {
   transform-origin: center;
 }
@@ -28693,6 +28759,678 @@ video {
   --tw-translate-y: -100%;
 }
 
+.active\:translate-x-0:active {
+  --tw-translate-x: 0px;
+}
+
+.active\:translate-x-1:active {
+  --tw-translate-x: 0.25rem;
+}
+
+.active\:translate-x-2:active {
+  --tw-translate-x: 0.5rem;
+}
+
+.active\:translate-x-3:active {
+  --tw-translate-x: 0.75rem;
+}
+
+.active\:translate-x-4:active {
+  --tw-translate-x: 1rem;
+}
+
+.active\:translate-x-5:active {
+  --tw-translate-x: 1.25rem;
+}
+
+.active\:translate-x-6:active {
+  --tw-translate-x: 1.5rem;
+}
+
+.active\:translate-x-7:active {
+  --tw-translate-x: 1.75rem;
+}
+
+.active\:translate-x-8:active {
+  --tw-translate-x: 2rem;
+}
+
+.active\:translate-x-9:active {
+  --tw-translate-x: 2.25rem;
+}
+
+.active\:translate-x-10:active {
+  --tw-translate-x: 2.5rem;
+}
+
+.active\:translate-x-11:active {
+  --tw-translate-x: 2.75rem;
+}
+
+.active\:translate-x-12:active {
+  --tw-translate-x: 3rem;
+}
+
+.active\:translate-x-14:active {
+  --tw-translate-x: 3.5rem;
+}
+
+.active\:translate-x-16:active {
+  --tw-translate-x: 4rem;
+}
+
+.active\:translate-x-20:active {
+  --tw-translate-x: 5rem;
+}
+
+.active\:translate-x-24:active {
+  --tw-translate-x: 6rem;
+}
+
+.active\:translate-x-28:active {
+  --tw-translate-x: 7rem;
+}
+
+.active\:translate-x-32:active {
+  --tw-translate-x: 8rem;
+}
+
+.active\:translate-x-36:active {
+  --tw-translate-x: 9rem;
+}
+
+.active\:translate-x-40:active {
+  --tw-translate-x: 10rem;
+}
+
+.active\:translate-x-44:active {
+  --tw-translate-x: 11rem;
+}
+
+.active\:translate-x-48:active {
+  --tw-translate-x: 12rem;
+}
+
+.active\:translate-x-52:active {
+  --tw-translate-x: 13rem;
+}
+
+.active\:translate-x-56:active {
+  --tw-translate-x: 14rem;
+}
+
+.active\:translate-x-60:active {
+  --tw-translate-x: 15rem;
+}
+
+.active\:translate-x-64:active {
+  --tw-translate-x: 16rem;
+}
+
+.active\:translate-x-72:active {
+  --tw-translate-x: 18rem;
+}
+
+.active\:translate-x-80:active {
+  --tw-translate-x: 20rem;
+}
+
+.active\:translate-x-96:active {
+  --tw-translate-x: 24rem;
+}
+
+.active\:translate-x-px:active {
+  --tw-translate-x: 1px;
+}
+
+.active\:translate-x-0\.5:active {
+  --tw-translate-x: 0.125rem;
+}
+
+.active\:translate-x-1\.5:active {
+  --tw-translate-x: 0.375rem;
+}
+
+.active\:translate-x-2\.5:active {
+  --tw-translate-x: 0.625rem;
+}
+
+.active\:translate-x-3\.5:active {
+  --tw-translate-x: 0.875rem;
+}
+
+.active\:-translate-x-0:active {
+  --tw-translate-x: 0px;
+}
+
+.active\:-translate-x-1:active {
+  --tw-translate-x: -0.25rem;
+}
+
+.active\:-translate-x-2:active {
+  --tw-translate-x: -0.5rem;
+}
+
+.active\:-translate-x-3:active {
+  --tw-translate-x: -0.75rem;
+}
+
+.active\:-translate-x-4:active {
+  --tw-translate-x: -1rem;
+}
+
+.active\:-translate-x-5:active {
+  --tw-translate-x: -1.25rem;
+}
+
+.active\:-translate-x-6:active {
+  --tw-translate-x: -1.5rem;
+}
+
+.active\:-translate-x-7:active {
+  --tw-translate-x: -1.75rem;
+}
+
+.active\:-translate-x-8:active {
+  --tw-translate-x: -2rem;
+}
+
+.active\:-translate-x-9:active {
+  --tw-translate-x: -2.25rem;
+}
+
+.active\:-translate-x-10:active {
+  --tw-translate-x: -2.5rem;
+}
+
+.active\:-translate-x-11:active {
+  --tw-translate-x: -2.75rem;
+}
+
+.active\:-translate-x-12:active {
+  --tw-translate-x: -3rem;
+}
+
+.active\:-translate-x-14:active {
+  --tw-translate-x: -3.5rem;
+}
+
+.active\:-translate-x-16:active {
+  --tw-translate-x: -4rem;
+}
+
+.active\:-translate-x-20:active {
+  --tw-translate-x: -5rem;
+}
+
+.active\:-translate-x-24:active {
+  --tw-translate-x: -6rem;
+}
+
+.active\:-translate-x-28:active {
+  --tw-translate-x: -7rem;
+}
+
+.active\:-translate-x-32:active {
+  --tw-translate-x: -8rem;
+}
+
+.active\:-translate-x-36:active {
+  --tw-translate-x: -9rem;
+}
+
+.active\:-translate-x-40:active {
+  --tw-translate-x: -10rem;
+}
+
+.active\:-translate-x-44:active {
+  --tw-translate-x: -11rem;
+}
+
+.active\:-translate-x-48:active {
+  --tw-translate-x: -12rem;
+}
+
+.active\:-translate-x-52:active {
+  --tw-translate-x: -13rem;
+}
+
+.active\:-translate-x-56:active {
+  --tw-translate-x: -14rem;
+}
+
+.active\:-translate-x-60:active {
+  --tw-translate-x: -15rem;
+}
+
+.active\:-translate-x-64:active {
+  --tw-translate-x: -16rem;
+}
+
+.active\:-translate-x-72:active {
+  --tw-translate-x: -18rem;
+}
+
+.active\:-translate-x-80:active {
+  --tw-translate-x: -20rem;
+}
+
+.active\:-translate-x-96:active {
+  --tw-translate-x: -24rem;
+}
+
+.active\:-translate-x-px:active {
+  --tw-translate-x: -1px;
+}
+
+.active\:-translate-x-0\.5:active {
+  --tw-translate-x: -0.125rem;
+}
+
+.active\:-translate-x-1\.5:active {
+  --tw-translate-x: -0.375rem;
+}
+
+.active\:-translate-x-2\.5:active {
+  --tw-translate-x: -0.625rem;
+}
+
+.active\:-translate-x-3\.5:active {
+  --tw-translate-x: -0.875rem;
+}
+
+.active\:translate-x-1\/2:active {
+  --tw-translate-x: 50%;
+}
+
+.active\:translate-x-1\/3:active {
+  --tw-translate-x: 33.333333%;
+}
+
+.active\:translate-x-2\/3:active {
+  --tw-translate-x: 66.666667%;
+}
+
+.active\:translate-x-1\/4:active {
+  --tw-translate-x: 25%;
+}
+
+.active\:translate-x-2\/4:active {
+  --tw-translate-x: 50%;
+}
+
+.active\:translate-x-3\/4:active {
+  --tw-translate-x: 75%;
+}
+
+.active\:translate-x-full:active {
+  --tw-translate-x: 100%;
+}
+
+.active\:-translate-x-1\/2:active {
+  --tw-translate-x: -50%;
+}
+
+.active\:-translate-x-1\/3:active {
+  --tw-translate-x: -33.333333%;
+}
+
+.active\:-translate-x-2\/3:active {
+  --tw-translate-x: -66.666667%;
+}
+
+.active\:-translate-x-1\/4:active {
+  --tw-translate-x: -25%;
+}
+
+.active\:-translate-x-2\/4:active {
+  --tw-translate-x: -50%;
+}
+
+.active\:-translate-x-3\/4:active {
+  --tw-translate-x: -75%;
+}
+
+.active\:-translate-x-full:active {
+  --tw-translate-x: -100%;
+}
+
+.active\:translate-y-0:active {
+  --tw-translate-y: 0px;
+}
+
+.active\:translate-y-1:active {
+  --tw-translate-y: 0.25rem;
+}
+
+.active\:translate-y-2:active {
+  --tw-translate-y: 0.5rem;
+}
+
+.active\:translate-y-3:active {
+  --tw-translate-y: 0.75rem;
+}
+
+.active\:translate-y-4:active {
+  --tw-translate-y: 1rem;
+}
+
+.active\:translate-y-5:active {
+  --tw-translate-y: 1.25rem;
+}
+
+.active\:translate-y-6:active {
+  --tw-translate-y: 1.5rem;
+}
+
+.active\:translate-y-7:active {
+  --tw-translate-y: 1.75rem;
+}
+
+.active\:translate-y-8:active {
+  --tw-translate-y: 2rem;
+}
+
+.active\:translate-y-9:active {
+  --tw-translate-y: 2.25rem;
+}
+
+.active\:translate-y-10:active {
+  --tw-translate-y: 2.5rem;
+}
+
+.active\:translate-y-11:active {
+  --tw-translate-y: 2.75rem;
+}
+
+.active\:translate-y-12:active {
+  --tw-translate-y: 3rem;
+}
+
+.active\:translate-y-14:active {
+  --tw-translate-y: 3.5rem;
+}
+
+.active\:translate-y-16:active {
+  --tw-translate-y: 4rem;
+}
+
+.active\:translate-y-20:active {
+  --tw-translate-y: 5rem;
+}
+
+.active\:translate-y-24:active {
+  --tw-translate-y: 6rem;
+}
+
+.active\:translate-y-28:active {
+  --tw-translate-y: 7rem;
+}
+
+.active\:translate-y-32:active {
+  --tw-translate-y: 8rem;
+}
+
+.active\:translate-y-36:active {
+  --tw-translate-y: 9rem;
+}
+
+.active\:translate-y-40:active {
+  --tw-translate-y: 10rem;
+}
+
+.active\:translate-y-44:active {
+  --tw-translate-y: 11rem;
+}
+
+.active\:translate-y-48:active {
+  --tw-translate-y: 12rem;
+}
+
+.active\:translate-y-52:active {
+  --tw-translate-y: 13rem;
+}
+
+.active\:translate-y-56:active {
+  --tw-translate-y: 14rem;
+}
+
+.active\:translate-y-60:active {
+  --tw-translate-y: 15rem;
+}
+
+.active\:translate-y-64:active {
+  --tw-translate-y: 16rem;
+}
+
+.active\:translate-y-72:active {
+  --tw-translate-y: 18rem;
+}
+
+.active\:translate-y-80:active {
+  --tw-translate-y: 20rem;
+}
+
+.active\:translate-y-96:active {
+  --tw-translate-y: 24rem;
+}
+
+.active\:translate-y-px:active {
+  --tw-translate-y: 1px;
+}
+
+.active\:translate-y-0\.5:active {
+  --tw-translate-y: 0.125rem;
+}
+
+.active\:translate-y-1\.5:active {
+  --tw-translate-y: 0.375rem;
+}
+
+.active\:translate-y-2\.5:active {
+  --tw-translate-y: 0.625rem;
+}
+
+.active\:translate-y-3\.5:active {
+  --tw-translate-y: 0.875rem;
+}
+
+.active\:-translate-y-0:active {
+  --tw-translate-y: 0px;
+}
+
+.active\:-translate-y-1:active {
+  --tw-translate-y: -0.25rem;
+}
+
+.active\:-translate-y-2:active {
+  --tw-translate-y: -0.5rem;
+}
+
+.active\:-translate-y-3:active {
+  --tw-translate-y: -0.75rem;
+}
+
+.active\:-translate-y-4:active {
+  --tw-translate-y: -1rem;
+}
+
+.active\:-translate-y-5:active {
+  --tw-translate-y: -1.25rem;
+}
+
+.active\:-translate-y-6:active {
+  --tw-translate-y: -1.5rem;
+}
+
+.active\:-translate-y-7:active {
+  --tw-translate-y: -1.75rem;
+}
+
+.active\:-translate-y-8:active {
+  --tw-translate-y: -2rem;
+}
+
+.active\:-translate-y-9:active {
+  --tw-translate-y: -2.25rem;
+}
+
+.active\:-translate-y-10:active {
+  --tw-translate-y: -2.5rem;
+}
+
+.active\:-translate-y-11:active {
+  --tw-translate-y: -2.75rem;
+}
+
+.active\:-translate-y-12:active {
+  --tw-translate-y: -3rem;
+}
+
+.active\:-translate-y-14:active {
+  --tw-translate-y: -3.5rem;
+}
+
+.active\:-translate-y-16:active {
+  --tw-translate-y: -4rem;
+}
+
+.active\:-translate-y-20:active {
+  --tw-translate-y: -5rem;
+}
+
+.active\:-translate-y-24:active {
+  --tw-translate-y: -6rem;
+}
+
+.active\:-translate-y-28:active {
+  --tw-translate-y: -7rem;
+}
+
+.active\:-translate-y-32:active {
+  --tw-translate-y: -8rem;
+}
+
+.active\:-translate-y-36:active {
+  --tw-translate-y: -9rem;
+}
+
+.active\:-translate-y-40:active {
+  --tw-translate-y: -10rem;
+}
+
+.active\:-translate-y-44:active {
+  --tw-translate-y: -11rem;
+}
+
+.active\:-translate-y-48:active {
+  --tw-translate-y: -12rem;
+}
+
+.active\:-translate-y-52:active {
+  --tw-translate-y: -13rem;
+}
+
+.active\:-translate-y-56:active {
+  --tw-translate-y: -14rem;
+}
+
+.active\:-translate-y-60:active {
+  --tw-translate-y: -15rem;
+}
+
+.active\:-translate-y-64:active {
+  --tw-translate-y: -16rem;
+}
+
+.active\:-translate-y-72:active {
+  --tw-translate-y: -18rem;
+}
+
+.active\:-translate-y-80:active {
+  --tw-translate-y: -20rem;
+}
+
+.active\:-translate-y-96:active {
+  --tw-translate-y: -24rem;
+}
+
+.active\:-translate-y-px:active {
+  --tw-translate-y: -1px;
+}
+
+.active\:-translate-y-0\.5:active {
+  --tw-translate-y: -0.125rem;
+}
+
+.active\:-translate-y-1\.5:active {
+  --tw-translate-y: -0.375rem;
+}
+
+.active\:-translate-y-2\.5:active {
+  --tw-translate-y: -0.625rem;
+}
+
+.active\:-translate-y-3\.5:active {
+  --tw-translate-y: -0.875rem;
+}
+
+.active\:translate-y-1\/2:active {
+  --tw-translate-y: 50%;
+}
+
+.active\:translate-y-1\/3:active {
+  --tw-translate-y: 33.333333%;
+}
+
+.active\:translate-y-2\/3:active {
+  --tw-translate-y: 66.666667%;
+}
+
+.active\:translate-y-1\/4:active {
+  --tw-translate-y: 25%;
+}
+
+.active\:translate-y-2\/4:active {
+  --tw-translate-y: 50%;
+}
+
+.active\:translate-y-3\/4:active {
+  --tw-translate-y: 75%;
+}
+
+.active\:translate-y-full:active {
+  --tw-translate-y: 100%;
+}
+
+.active\:-translate-y-1\/2:active {
+  --tw-translate-y: -50%;
+}
+
+.active\:-translate-y-1\/3:active {
+  --tw-translate-y: -33.333333%;
+}
+
+.active\:-translate-y-2\/3:active {
+  --tw-translate-y: -66.666667%;
+}
+
+.active\:-translate-y-1\/4:active {
+  --tw-translate-y: -25%;
+}
+
+.active\:-translate-y-2\/4:active {
+  --tw-translate-y: -50%;
+}
+
+.active\:-translate-y-3\/4:active {
+  --tw-translate-y: -75%;
+}
+
+.active\:-translate-y-full:active {
+  --tw-translate-y: -100%;
+}
+
 .skew-x-0 {
   --tw-skew-x: 0deg;
 }
@@ -29126,6 +29864,230 @@ video {
 
 .animate-bounce {
   animation: bounce 1s infinite;
+}
+
+.hover\:animate-none:hover {
+  animation: none;
+}
+
+.hover\:animate-spin:hover {
+  animation: spin 1s linear infinite;
+}
+
+.hover\:animate-ping:hover {
+  animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+.hover\:animate-pulse:hover {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.hover\:animate-bounce:hover {
+  animation: bounce 1s infinite;
+}
+
+.group:hover .group-hover\:animate-none {
+  animation: none;
+}
+
+.group:hover .group-hover\:animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+.group:hover .group-hover\:animate-ping {
+  animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+.group:hover .group-hover\:animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.group:hover .group-hover\:animate-bounce {
+  animation: bounce 1s infinite;
+}
+
+.active\:animate-none:active {
+  animation: none;
+}
+
+.active\:animate-spin:active {
+  animation: spin 1s linear infinite;
+}
+
+.active\:animate-ping:active {
+  animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+.active\:animate-pulse:active {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.active\:animate-bounce:active {
+  animation: bounce 1s infinite;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .motion-safe\:animate-none {
+    animation: none;
+  }
+
+  .motion-safe\:animate-spin {
+    animation: spin 1s linear infinite;
+  }
+
+  .motion-safe\:animate-ping {
+    animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+  }
+
+  .motion-safe\:animate-pulse {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .motion-safe\:animate-bounce {
+    animation: bounce 1s infinite;
+  }
+
+  .motion-safe\:hover\:animate-none:hover {
+    animation: none;
+  }
+
+  .motion-safe\:hover\:animate-spin:hover {
+    animation: spin 1s linear infinite;
+  }
+
+  .motion-safe\:hover\:animate-ping:hover {
+    animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+  }
+
+  .motion-safe\:hover\:animate-pulse:hover {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .motion-safe\:hover\:animate-bounce:hover {
+    animation: bounce 1s infinite;
+  }
+
+  .group:hover .motion-safe\:group-hover\:animate-none {
+    animation: none;
+  }
+
+  .group:hover .motion-safe\:group-hover\:animate-spin {
+    animation: spin 1s linear infinite;
+  }
+
+  .group:hover .motion-safe\:group-hover\:animate-ping {
+    animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+  }
+
+  .group:hover .motion-safe\:group-hover\:animate-pulse {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .group:hover .motion-safe\:group-hover\:animate-bounce {
+    animation: bounce 1s infinite;
+  }
+
+  .motion-safe\:active\:animate-none:active {
+    animation: none;
+  }
+
+  .motion-safe\:active\:animate-spin:active {
+    animation: spin 1s linear infinite;
+  }
+
+  .motion-safe\:active\:animate-ping:active {
+    animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+  }
+
+  .motion-safe\:active\:animate-pulse:active {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .motion-safe\:active\:animate-bounce:active {
+    animation: bounce 1s infinite;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .motion-reduce\:animate-none {
+    animation: none;
+  }
+
+  .motion-reduce\:animate-spin {
+    animation: spin 1s linear infinite;
+  }
+
+  .motion-reduce\:animate-ping {
+    animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+  }
+
+  .motion-reduce\:animate-pulse {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .motion-reduce\:animate-bounce {
+    animation: bounce 1s infinite;
+  }
+
+  .motion-reduce\:hover\:animate-none:hover {
+    animation: none;
+  }
+
+  .motion-reduce\:hover\:animate-spin:hover {
+    animation: spin 1s linear infinite;
+  }
+
+  .motion-reduce\:hover\:animate-ping:hover {
+    animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+  }
+
+  .motion-reduce\:hover\:animate-pulse:hover {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .motion-reduce\:hover\:animate-bounce:hover {
+    animation: bounce 1s infinite;
+  }
+
+  .group:hover .motion-reduce\:group-hover\:animate-none {
+    animation: none;
+  }
+
+  .group:hover .motion-reduce\:group-hover\:animate-spin {
+    animation: spin 1s linear infinite;
+  }
+
+  .group:hover .motion-reduce\:group-hover\:animate-ping {
+    animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+  }
+
+  .group:hover .motion-reduce\:group-hover\:animate-pulse {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .group:hover .motion-reduce\:group-hover\:animate-bounce {
+    animation: bounce 1s infinite;
+  }
+
+  .motion-reduce\:active\:animate-none:active {
+    animation: none;
+  }
+
+  .motion-reduce\:active\:animate-spin:active {
+    animation: spin 1s linear infinite;
+  }
+
+  .motion-reduce\:active\:animate-ping:active {
+    animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+  }
+
+  .motion-reduce\:active\:animate-pulse:active {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .motion-reduce\:active\:animate-bounce:active {
+    animation: bounce 1s infinite;
+  }
 }
 
 @media (min-width: 640px) {
@@ -48123,6 +49085,46 @@ video {
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   }
 
+  .sm\:active\:shadow-sm:active {
+    --tw-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+
+  .sm\:active\:shadow:active {
+    --tw-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+
+  .sm\:active\:shadow-md:active {
+    --tw-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+
+  .sm\:active\:shadow-lg:active {
+    --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+
+  .sm\:active\:shadow-xl:active {
+    --tw-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+
+  .sm\:active\:shadow-2xl:active {
+    --tw-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+
+  .sm\:active\:shadow-inner:active {
+    --tw-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+
+  .sm\:active\:shadow-none:active {
+    --tw-shadow: 0 0 #0000;
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+
   .sm\:ring-0 {
     --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
     --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(0px + var(--tw-ring-offset-width)) var(--tw-ring-color);
@@ -54627,6 +55629,32 @@ video {
     transform: none;
   }
 
+  .sm\:active\:transform:active {
+    --tw-translate-x: 0;
+    --tw-translate-y: 0;
+    --tw-rotate: 0;
+    --tw-skew-x: 0;
+    --tw-skew-y: 0;
+    --tw-scale-x: 1;
+    --tw-scale-y: 1;
+    transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .sm\:active\:transform-gpu:active {
+    --tw-translate-x: 0;
+    --tw-translate-y: 0;
+    --tw-rotate: 0;
+    --tw-skew-x: 0;
+    --tw-skew-y: 0;
+    --tw-scale-x: 1;
+    --tw-scale-y: 1;
+    transform: translate3d(var(--tw-translate-x), var(--tw-translate-y), 0) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .sm\:active\:transform-none:active {
+    transform: none;
+  }
+
   .sm\:origin-center {
     transform-origin: center;
   }
@@ -57273,6 +58301,678 @@ video {
     --tw-translate-y: -100%;
   }
 
+  .sm\:active\:translate-x-0:active {
+    --tw-translate-x: 0px;
+  }
+
+  .sm\:active\:translate-x-1:active {
+    --tw-translate-x: 0.25rem;
+  }
+
+  .sm\:active\:translate-x-2:active {
+    --tw-translate-x: 0.5rem;
+  }
+
+  .sm\:active\:translate-x-3:active {
+    --tw-translate-x: 0.75rem;
+  }
+
+  .sm\:active\:translate-x-4:active {
+    --tw-translate-x: 1rem;
+  }
+
+  .sm\:active\:translate-x-5:active {
+    --tw-translate-x: 1.25rem;
+  }
+
+  .sm\:active\:translate-x-6:active {
+    --tw-translate-x: 1.5rem;
+  }
+
+  .sm\:active\:translate-x-7:active {
+    --tw-translate-x: 1.75rem;
+  }
+
+  .sm\:active\:translate-x-8:active {
+    --tw-translate-x: 2rem;
+  }
+
+  .sm\:active\:translate-x-9:active {
+    --tw-translate-x: 2.25rem;
+  }
+
+  .sm\:active\:translate-x-10:active {
+    --tw-translate-x: 2.5rem;
+  }
+
+  .sm\:active\:translate-x-11:active {
+    --tw-translate-x: 2.75rem;
+  }
+
+  .sm\:active\:translate-x-12:active {
+    --tw-translate-x: 3rem;
+  }
+
+  .sm\:active\:translate-x-14:active {
+    --tw-translate-x: 3.5rem;
+  }
+
+  .sm\:active\:translate-x-16:active {
+    --tw-translate-x: 4rem;
+  }
+
+  .sm\:active\:translate-x-20:active {
+    --tw-translate-x: 5rem;
+  }
+
+  .sm\:active\:translate-x-24:active {
+    --tw-translate-x: 6rem;
+  }
+
+  .sm\:active\:translate-x-28:active {
+    --tw-translate-x: 7rem;
+  }
+
+  .sm\:active\:translate-x-32:active {
+    --tw-translate-x: 8rem;
+  }
+
+  .sm\:active\:translate-x-36:active {
+    --tw-translate-x: 9rem;
+  }
+
+  .sm\:active\:translate-x-40:active {
+    --tw-translate-x: 10rem;
+  }
+
+  .sm\:active\:translate-x-44:active {
+    --tw-translate-x: 11rem;
+  }
+
+  .sm\:active\:translate-x-48:active {
+    --tw-translate-x: 12rem;
+  }
+
+  .sm\:active\:translate-x-52:active {
+    --tw-translate-x: 13rem;
+  }
+
+  .sm\:active\:translate-x-56:active {
+    --tw-translate-x: 14rem;
+  }
+
+  .sm\:active\:translate-x-60:active {
+    --tw-translate-x: 15rem;
+  }
+
+  .sm\:active\:translate-x-64:active {
+    --tw-translate-x: 16rem;
+  }
+
+  .sm\:active\:translate-x-72:active {
+    --tw-translate-x: 18rem;
+  }
+
+  .sm\:active\:translate-x-80:active {
+    --tw-translate-x: 20rem;
+  }
+
+  .sm\:active\:translate-x-96:active {
+    --tw-translate-x: 24rem;
+  }
+
+  .sm\:active\:translate-x-px:active {
+    --tw-translate-x: 1px;
+  }
+
+  .sm\:active\:translate-x-0\.5:active {
+    --tw-translate-x: 0.125rem;
+  }
+
+  .sm\:active\:translate-x-1\.5:active {
+    --tw-translate-x: 0.375rem;
+  }
+
+  .sm\:active\:translate-x-2\.5:active {
+    --tw-translate-x: 0.625rem;
+  }
+
+  .sm\:active\:translate-x-3\.5:active {
+    --tw-translate-x: 0.875rem;
+  }
+
+  .sm\:active\:-translate-x-0:active {
+    --tw-translate-x: 0px;
+  }
+
+  .sm\:active\:-translate-x-1:active {
+    --tw-translate-x: -0.25rem;
+  }
+
+  .sm\:active\:-translate-x-2:active {
+    --tw-translate-x: -0.5rem;
+  }
+
+  .sm\:active\:-translate-x-3:active {
+    --tw-translate-x: -0.75rem;
+  }
+
+  .sm\:active\:-translate-x-4:active {
+    --tw-translate-x: -1rem;
+  }
+
+  .sm\:active\:-translate-x-5:active {
+    --tw-translate-x: -1.25rem;
+  }
+
+  .sm\:active\:-translate-x-6:active {
+    --tw-translate-x: -1.5rem;
+  }
+
+  .sm\:active\:-translate-x-7:active {
+    --tw-translate-x: -1.75rem;
+  }
+
+  .sm\:active\:-translate-x-8:active {
+    --tw-translate-x: -2rem;
+  }
+
+  .sm\:active\:-translate-x-9:active {
+    --tw-translate-x: -2.25rem;
+  }
+
+  .sm\:active\:-translate-x-10:active {
+    --tw-translate-x: -2.5rem;
+  }
+
+  .sm\:active\:-translate-x-11:active {
+    --tw-translate-x: -2.75rem;
+  }
+
+  .sm\:active\:-translate-x-12:active {
+    --tw-translate-x: -3rem;
+  }
+
+  .sm\:active\:-translate-x-14:active {
+    --tw-translate-x: -3.5rem;
+  }
+
+  .sm\:active\:-translate-x-16:active {
+    --tw-translate-x: -4rem;
+  }
+
+  .sm\:active\:-translate-x-20:active {
+    --tw-translate-x: -5rem;
+  }
+
+  .sm\:active\:-translate-x-24:active {
+    --tw-translate-x: -6rem;
+  }
+
+  .sm\:active\:-translate-x-28:active {
+    --tw-translate-x: -7rem;
+  }
+
+  .sm\:active\:-translate-x-32:active {
+    --tw-translate-x: -8rem;
+  }
+
+  .sm\:active\:-translate-x-36:active {
+    --tw-translate-x: -9rem;
+  }
+
+  .sm\:active\:-translate-x-40:active {
+    --tw-translate-x: -10rem;
+  }
+
+  .sm\:active\:-translate-x-44:active {
+    --tw-translate-x: -11rem;
+  }
+
+  .sm\:active\:-translate-x-48:active {
+    --tw-translate-x: -12rem;
+  }
+
+  .sm\:active\:-translate-x-52:active {
+    --tw-translate-x: -13rem;
+  }
+
+  .sm\:active\:-translate-x-56:active {
+    --tw-translate-x: -14rem;
+  }
+
+  .sm\:active\:-translate-x-60:active {
+    --tw-translate-x: -15rem;
+  }
+
+  .sm\:active\:-translate-x-64:active {
+    --tw-translate-x: -16rem;
+  }
+
+  .sm\:active\:-translate-x-72:active {
+    --tw-translate-x: -18rem;
+  }
+
+  .sm\:active\:-translate-x-80:active {
+    --tw-translate-x: -20rem;
+  }
+
+  .sm\:active\:-translate-x-96:active {
+    --tw-translate-x: -24rem;
+  }
+
+  .sm\:active\:-translate-x-px:active {
+    --tw-translate-x: -1px;
+  }
+
+  .sm\:active\:-translate-x-0\.5:active {
+    --tw-translate-x: -0.125rem;
+  }
+
+  .sm\:active\:-translate-x-1\.5:active {
+    --tw-translate-x: -0.375rem;
+  }
+
+  .sm\:active\:-translate-x-2\.5:active {
+    --tw-translate-x: -0.625rem;
+  }
+
+  .sm\:active\:-translate-x-3\.5:active {
+    --tw-translate-x: -0.875rem;
+  }
+
+  .sm\:active\:translate-x-1\/2:active {
+    --tw-translate-x: 50%;
+  }
+
+  .sm\:active\:translate-x-1\/3:active {
+    --tw-translate-x: 33.333333%;
+  }
+
+  .sm\:active\:translate-x-2\/3:active {
+    --tw-translate-x: 66.666667%;
+  }
+
+  .sm\:active\:translate-x-1\/4:active {
+    --tw-translate-x: 25%;
+  }
+
+  .sm\:active\:translate-x-2\/4:active {
+    --tw-translate-x: 50%;
+  }
+
+  .sm\:active\:translate-x-3\/4:active {
+    --tw-translate-x: 75%;
+  }
+
+  .sm\:active\:translate-x-full:active {
+    --tw-translate-x: 100%;
+  }
+
+  .sm\:active\:-translate-x-1\/2:active {
+    --tw-translate-x: -50%;
+  }
+
+  .sm\:active\:-translate-x-1\/3:active {
+    --tw-translate-x: -33.333333%;
+  }
+
+  .sm\:active\:-translate-x-2\/3:active {
+    --tw-translate-x: -66.666667%;
+  }
+
+  .sm\:active\:-translate-x-1\/4:active {
+    --tw-translate-x: -25%;
+  }
+
+  .sm\:active\:-translate-x-2\/4:active {
+    --tw-translate-x: -50%;
+  }
+
+  .sm\:active\:-translate-x-3\/4:active {
+    --tw-translate-x: -75%;
+  }
+
+  .sm\:active\:-translate-x-full:active {
+    --tw-translate-x: -100%;
+  }
+
+  .sm\:active\:translate-y-0:active {
+    --tw-translate-y: 0px;
+  }
+
+  .sm\:active\:translate-y-1:active {
+    --tw-translate-y: 0.25rem;
+  }
+
+  .sm\:active\:translate-y-2:active {
+    --tw-translate-y: 0.5rem;
+  }
+
+  .sm\:active\:translate-y-3:active {
+    --tw-translate-y: 0.75rem;
+  }
+
+  .sm\:active\:translate-y-4:active {
+    --tw-translate-y: 1rem;
+  }
+
+  .sm\:active\:translate-y-5:active {
+    --tw-translate-y: 1.25rem;
+  }
+
+  .sm\:active\:translate-y-6:active {
+    --tw-translate-y: 1.5rem;
+  }
+
+  .sm\:active\:translate-y-7:active {
+    --tw-translate-y: 1.75rem;
+  }
+
+  .sm\:active\:translate-y-8:active {
+    --tw-translate-y: 2rem;
+  }
+
+  .sm\:active\:translate-y-9:active {
+    --tw-translate-y: 2.25rem;
+  }
+
+  .sm\:active\:translate-y-10:active {
+    --tw-translate-y: 2.5rem;
+  }
+
+  .sm\:active\:translate-y-11:active {
+    --tw-translate-y: 2.75rem;
+  }
+
+  .sm\:active\:translate-y-12:active {
+    --tw-translate-y: 3rem;
+  }
+
+  .sm\:active\:translate-y-14:active {
+    --tw-translate-y: 3.5rem;
+  }
+
+  .sm\:active\:translate-y-16:active {
+    --tw-translate-y: 4rem;
+  }
+
+  .sm\:active\:translate-y-20:active {
+    --tw-translate-y: 5rem;
+  }
+
+  .sm\:active\:translate-y-24:active {
+    --tw-translate-y: 6rem;
+  }
+
+  .sm\:active\:translate-y-28:active {
+    --tw-translate-y: 7rem;
+  }
+
+  .sm\:active\:translate-y-32:active {
+    --tw-translate-y: 8rem;
+  }
+
+  .sm\:active\:translate-y-36:active {
+    --tw-translate-y: 9rem;
+  }
+
+  .sm\:active\:translate-y-40:active {
+    --tw-translate-y: 10rem;
+  }
+
+  .sm\:active\:translate-y-44:active {
+    --tw-translate-y: 11rem;
+  }
+
+  .sm\:active\:translate-y-48:active {
+    --tw-translate-y: 12rem;
+  }
+
+  .sm\:active\:translate-y-52:active {
+    --tw-translate-y: 13rem;
+  }
+
+  .sm\:active\:translate-y-56:active {
+    --tw-translate-y: 14rem;
+  }
+
+  .sm\:active\:translate-y-60:active {
+    --tw-translate-y: 15rem;
+  }
+
+  .sm\:active\:translate-y-64:active {
+    --tw-translate-y: 16rem;
+  }
+
+  .sm\:active\:translate-y-72:active {
+    --tw-translate-y: 18rem;
+  }
+
+  .sm\:active\:translate-y-80:active {
+    --tw-translate-y: 20rem;
+  }
+
+  .sm\:active\:translate-y-96:active {
+    --tw-translate-y: 24rem;
+  }
+
+  .sm\:active\:translate-y-px:active {
+    --tw-translate-y: 1px;
+  }
+
+  .sm\:active\:translate-y-0\.5:active {
+    --tw-translate-y: 0.125rem;
+  }
+
+  .sm\:active\:translate-y-1\.5:active {
+    --tw-translate-y: 0.375rem;
+  }
+
+  .sm\:active\:translate-y-2\.5:active {
+    --tw-translate-y: 0.625rem;
+  }
+
+  .sm\:active\:translate-y-3\.5:active {
+    --tw-translate-y: 0.875rem;
+  }
+
+  .sm\:active\:-translate-y-0:active {
+    --tw-translate-y: 0px;
+  }
+
+  .sm\:active\:-translate-y-1:active {
+    --tw-translate-y: -0.25rem;
+  }
+
+  .sm\:active\:-translate-y-2:active {
+    --tw-translate-y: -0.5rem;
+  }
+
+  .sm\:active\:-translate-y-3:active {
+    --tw-translate-y: -0.75rem;
+  }
+
+  .sm\:active\:-translate-y-4:active {
+    --tw-translate-y: -1rem;
+  }
+
+  .sm\:active\:-translate-y-5:active {
+    --tw-translate-y: -1.25rem;
+  }
+
+  .sm\:active\:-translate-y-6:active {
+    --tw-translate-y: -1.5rem;
+  }
+
+  .sm\:active\:-translate-y-7:active {
+    --tw-translate-y: -1.75rem;
+  }
+
+  .sm\:active\:-translate-y-8:active {
+    --tw-translate-y: -2rem;
+  }
+
+  .sm\:active\:-translate-y-9:active {
+    --tw-translate-y: -2.25rem;
+  }
+
+  .sm\:active\:-translate-y-10:active {
+    --tw-translate-y: -2.5rem;
+  }
+
+  .sm\:active\:-translate-y-11:active {
+    --tw-translate-y: -2.75rem;
+  }
+
+  .sm\:active\:-translate-y-12:active {
+    --tw-translate-y: -3rem;
+  }
+
+  .sm\:active\:-translate-y-14:active {
+    --tw-translate-y: -3.5rem;
+  }
+
+  .sm\:active\:-translate-y-16:active {
+    --tw-translate-y: -4rem;
+  }
+
+  .sm\:active\:-translate-y-20:active {
+    --tw-translate-y: -5rem;
+  }
+
+  .sm\:active\:-translate-y-24:active {
+    --tw-translate-y: -6rem;
+  }
+
+  .sm\:active\:-translate-y-28:active {
+    --tw-translate-y: -7rem;
+  }
+
+  .sm\:active\:-translate-y-32:active {
+    --tw-translate-y: -8rem;
+  }
+
+  .sm\:active\:-translate-y-36:active {
+    --tw-translate-y: -9rem;
+  }
+
+  .sm\:active\:-translate-y-40:active {
+    --tw-translate-y: -10rem;
+  }
+
+  .sm\:active\:-translate-y-44:active {
+    --tw-translate-y: -11rem;
+  }
+
+  .sm\:active\:-translate-y-48:active {
+    --tw-translate-y: -12rem;
+  }
+
+  .sm\:active\:-translate-y-52:active {
+    --tw-translate-y: -13rem;
+  }
+
+  .sm\:active\:-translate-y-56:active {
+    --tw-translate-y: -14rem;
+  }
+
+  .sm\:active\:-translate-y-60:active {
+    --tw-translate-y: -15rem;
+  }
+
+  .sm\:active\:-translate-y-64:active {
+    --tw-translate-y: -16rem;
+  }
+
+  .sm\:active\:-translate-y-72:active {
+    --tw-translate-y: -18rem;
+  }
+
+  .sm\:active\:-translate-y-80:active {
+    --tw-translate-y: -20rem;
+  }
+
+  .sm\:active\:-translate-y-96:active {
+    --tw-translate-y: -24rem;
+  }
+
+  .sm\:active\:-translate-y-px:active {
+    --tw-translate-y: -1px;
+  }
+
+  .sm\:active\:-translate-y-0\.5:active {
+    --tw-translate-y: -0.125rem;
+  }
+
+  .sm\:active\:-translate-y-1\.5:active {
+    --tw-translate-y: -0.375rem;
+  }
+
+  .sm\:active\:-translate-y-2\.5:active {
+    --tw-translate-y: -0.625rem;
+  }
+
+  .sm\:active\:-translate-y-3\.5:active {
+    --tw-translate-y: -0.875rem;
+  }
+
+  .sm\:active\:translate-y-1\/2:active {
+    --tw-translate-y: 50%;
+  }
+
+  .sm\:active\:translate-y-1\/3:active {
+    --tw-translate-y: 33.333333%;
+  }
+
+  .sm\:active\:translate-y-2\/3:active {
+    --tw-translate-y: 66.666667%;
+  }
+
+  .sm\:active\:translate-y-1\/4:active {
+    --tw-translate-y: 25%;
+  }
+
+  .sm\:active\:translate-y-2\/4:active {
+    --tw-translate-y: 50%;
+  }
+
+  .sm\:active\:translate-y-3\/4:active {
+    --tw-translate-y: 75%;
+  }
+
+  .sm\:active\:translate-y-full:active {
+    --tw-translate-y: 100%;
+  }
+
+  .sm\:active\:-translate-y-1\/2:active {
+    --tw-translate-y: -50%;
+  }
+
+  .sm\:active\:-translate-y-1\/3:active {
+    --tw-translate-y: -33.333333%;
+  }
+
+  .sm\:active\:-translate-y-2\/3:active {
+    --tw-translate-y: -66.666667%;
+  }
+
+  .sm\:active\:-translate-y-1\/4:active {
+    --tw-translate-y: -25%;
+  }
+
+  .sm\:active\:-translate-y-2\/4:active {
+    --tw-translate-y: -50%;
+  }
+
+  .sm\:active\:-translate-y-3\/4:active {
+    --tw-translate-y: -75%;
+  }
+
+  .sm\:active\:-translate-y-full:active {
+    --tw-translate-y: -100%;
+  }
+
   .sm\:skew-x-0 {
     --tw-skew-x: 0deg;
   }
@@ -57675,6 +59375,230 @@ video {
 
   .sm\:animate-bounce {
     animation: bounce 1s infinite;
+  }
+
+  .sm\:hover\:animate-none:hover {
+    animation: none;
+  }
+
+  .sm\:hover\:animate-spin:hover {
+    animation: spin 1s linear infinite;
+  }
+
+  .sm\:hover\:animate-ping:hover {
+    animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+  }
+
+  .sm\:hover\:animate-pulse:hover {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .sm\:hover\:animate-bounce:hover {
+    animation: bounce 1s infinite;
+  }
+
+  .group:hover .sm\:group-hover\:animate-none {
+    animation: none;
+  }
+
+  .group:hover .sm\:group-hover\:animate-spin {
+    animation: spin 1s linear infinite;
+  }
+
+  .group:hover .sm\:group-hover\:animate-ping {
+    animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+  }
+
+  .group:hover .sm\:group-hover\:animate-pulse {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .group:hover .sm\:group-hover\:animate-bounce {
+    animation: bounce 1s infinite;
+  }
+
+  .sm\:active\:animate-none:active {
+    animation: none;
+  }
+
+  .sm\:active\:animate-spin:active {
+    animation: spin 1s linear infinite;
+  }
+
+  .sm\:active\:animate-ping:active {
+    animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+  }
+
+  .sm\:active\:animate-pulse:active {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .sm\:active\:animate-bounce:active {
+    animation: bounce 1s infinite;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .sm\:motion-safe\:animate-none {
+      animation: none;
+    }
+
+    .sm\:motion-safe\:animate-spin {
+      animation: spin 1s linear infinite;
+    }
+
+    .sm\:motion-safe\:animate-ping {
+      animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+    }
+
+    .sm\:motion-safe\:animate-pulse {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+
+    .sm\:motion-safe\:animate-bounce {
+      animation: bounce 1s infinite;
+    }
+
+    .sm\:motion-safe\:hover\:animate-none:hover {
+      animation: none;
+    }
+
+    .sm\:motion-safe\:hover\:animate-spin:hover {
+      animation: spin 1s linear infinite;
+    }
+
+    .sm\:motion-safe\:hover\:animate-ping:hover {
+      animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+    }
+
+    .sm\:motion-safe\:hover\:animate-pulse:hover {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+
+    .sm\:motion-safe\:hover\:animate-bounce:hover {
+      animation: bounce 1s infinite;
+    }
+
+    .group:hover .sm\:motion-safe\:group-hover\:animate-none {
+      animation: none;
+    }
+
+    .group:hover .sm\:motion-safe\:group-hover\:animate-spin {
+      animation: spin 1s linear infinite;
+    }
+
+    .group:hover .sm\:motion-safe\:group-hover\:animate-ping {
+      animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+    }
+
+    .group:hover .sm\:motion-safe\:group-hover\:animate-pulse {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+
+    .group:hover .sm\:motion-safe\:group-hover\:animate-bounce {
+      animation: bounce 1s infinite;
+    }
+
+    .sm\:motion-safe\:active\:animate-none:active {
+      animation: none;
+    }
+
+    .sm\:motion-safe\:active\:animate-spin:active {
+      animation: spin 1s linear infinite;
+    }
+
+    .sm\:motion-safe\:active\:animate-ping:active {
+      animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+    }
+
+    .sm\:motion-safe\:active\:animate-pulse:active {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+
+    .sm\:motion-safe\:active\:animate-bounce:active {
+      animation: bounce 1s infinite;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .sm\:motion-reduce\:animate-none {
+      animation: none;
+    }
+
+    .sm\:motion-reduce\:animate-spin {
+      animation: spin 1s linear infinite;
+    }
+
+    .sm\:motion-reduce\:animate-ping {
+      animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+    }
+
+    .sm\:motion-reduce\:animate-pulse {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+
+    .sm\:motion-reduce\:animate-bounce {
+      animation: bounce 1s infinite;
+    }
+
+    .sm\:motion-reduce\:hover\:animate-none:hover {
+      animation: none;
+    }
+
+    .sm\:motion-reduce\:hover\:animate-spin:hover {
+      animation: spin 1s linear infinite;
+    }
+
+    .sm\:motion-reduce\:hover\:animate-ping:hover {
+      animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+    }
+
+    .sm\:motion-reduce\:hover\:animate-pulse:hover {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+
+    .sm\:motion-reduce\:hover\:animate-bounce:hover {
+      animation: bounce 1s infinite;
+    }
+
+    .group:hover .sm\:motion-reduce\:group-hover\:animate-none {
+      animation: none;
+    }
+
+    .group:hover .sm\:motion-reduce\:group-hover\:animate-spin {
+      animation: spin 1s linear infinite;
+    }
+
+    .group:hover .sm\:motion-reduce\:group-hover\:animate-ping {
+      animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+    }
+
+    .group:hover .sm\:motion-reduce\:group-hover\:animate-pulse {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+
+    .group:hover .sm\:motion-reduce\:group-hover\:animate-bounce {
+      animation: bounce 1s infinite;
+    }
+
+    .sm\:motion-reduce\:active\:animate-none:active {
+      animation: none;
+    }
+
+    .sm\:motion-reduce\:active\:animate-spin:active {
+      animation: spin 1s linear infinite;
+    }
+
+    .sm\:motion-reduce\:active\:animate-ping:active {
+      animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+    }
+
+    .sm\:motion-reduce\:active\:animate-pulse:active {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+
+    .sm\:motion-reduce\:active\:animate-bounce:active {
+      animation: bounce 1s infinite;
+    }
   }
 }
 
@@ -76673,6 +78597,46 @@ video {
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   }
 
+  .md\:active\:shadow-sm:active {
+    --tw-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+
+  .md\:active\:shadow:active {
+    --tw-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+
+  .md\:active\:shadow-md:active {
+    --tw-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+
+  .md\:active\:shadow-lg:active {
+    --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+
+  .md\:active\:shadow-xl:active {
+    --tw-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+
+  .md\:active\:shadow-2xl:active {
+    --tw-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+
+  .md\:active\:shadow-inner:active {
+    --tw-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+
+  .md\:active\:shadow-none:active {
+    --tw-shadow: 0 0 #0000;
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+
   .md\:ring-0 {
     --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
     --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(0px + var(--tw-ring-offset-width)) var(--tw-ring-color);
@@ -83177,6 +85141,32 @@ video {
     transform: none;
   }
 
+  .md\:active\:transform:active {
+    --tw-translate-x: 0;
+    --tw-translate-y: 0;
+    --tw-rotate: 0;
+    --tw-skew-x: 0;
+    --tw-skew-y: 0;
+    --tw-scale-x: 1;
+    --tw-scale-y: 1;
+    transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .md\:active\:transform-gpu:active {
+    --tw-translate-x: 0;
+    --tw-translate-y: 0;
+    --tw-rotate: 0;
+    --tw-skew-x: 0;
+    --tw-skew-y: 0;
+    --tw-scale-x: 1;
+    --tw-scale-y: 1;
+    transform: translate3d(var(--tw-translate-x), var(--tw-translate-y), 0) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .md\:active\:transform-none:active {
+    transform: none;
+  }
+
   .md\:origin-center {
     transform-origin: center;
   }
@@ -85823,6 +87813,678 @@ video {
     --tw-translate-y: -100%;
   }
 
+  .md\:active\:translate-x-0:active {
+    --tw-translate-x: 0px;
+  }
+
+  .md\:active\:translate-x-1:active {
+    --tw-translate-x: 0.25rem;
+  }
+
+  .md\:active\:translate-x-2:active {
+    --tw-translate-x: 0.5rem;
+  }
+
+  .md\:active\:translate-x-3:active {
+    --tw-translate-x: 0.75rem;
+  }
+
+  .md\:active\:translate-x-4:active {
+    --tw-translate-x: 1rem;
+  }
+
+  .md\:active\:translate-x-5:active {
+    --tw-translate-x: 1.25rem;
+  }
+
+  .md\:active\:translate-x-6:active {
+    --tw-translate-x: 1.5rem;
+  }
+
+  .md\:active\:translate-x-7:active {
+    --tw-translate-x: 1.75rem;
+  }
+
+  .md\:active\:translate-x-8:active {
+    --tw-translate-x: 2rem;
+  }
+
+  .md\:active\:translate-x-9:active {
+    --tw-translate-x: 2.25rem;
+  }
+
+  .md\:active\:translate-x-10:active {
+    --tw-translate-x: 2.5rem;
+  }
+
+  .md\:active\:translate-x-11:active {
+    --tw-translate-x: 2.75rem;
+  }
+
+  .md\:active\:translate-x-12:active {
+    --tw-translate-x: 3rem;
+  }
+
+  .md\:active\:translate-x-14:active {
+    --tw-translate-x: 3.5rem;
+  }
+
+  .md\:active\:translate-x-16:active {
+    --tw-translate-x: 4rem;
+  }
+
+  .md\:active\:translate-x-20:active {
+    --tw-translate-x: 5rem;
+  }
+
+  .md\:active\:translate-x-24:active {
+    --tw-translate-x: 6rem;
+  }
+
+  .md\:active\:translate-x-28:active {
+    --tw-translate-x: 7rem;
+  }
+
+  .md\:active\:translate-x-32:active {
+    --tw-translate-x: 8rem;
+  }
+
+  .md\:active\:translate-x-36:active {
+    --tw-translate-x: 9rem;
+  }
+
+  .md\:active\:translate-x-40:active {
+    --tw-translate-x: 10rem;
+  }
+
+  .md\:active\:translate-x-44:active {
+    --tw-translate-x: 11rem;
+  }
+
+  .md\:active\:translate-x-48:active {
+    --tw-translate-x: 12rem;
+  }
+
+  .md\:active\:translate-x-52:active {
+    --tw-translate-x: 13rem;
+  }
+
+  .md\:active\:translate-x-56:active {
+    --tw-translate-x: 14rem;
+  }
+
+  .md\:active\:translate-x-60:active {
+    --tw-translate-x: 15rem;
+  }
+
+  .md\:active\:translate-x-64:active {
+    --tw-translate-x: 16rem;
+  }
+
+  .md\:active\:translate-x-72:active {
+    --tw-translate-x: 18rem;
+  }
+
+  .md\:active\:translate-x-80:active {
+    --tw-translate-x: 20rem;
+  }
+
+  .md\:active\:translate-x-96:active {
+    --tw-translate-x: 24rem;
+  }
+
+  .md\:active\:translate-x-px:active {
+    --tw-translate-x: 1px;
+  }
+
+  .md\:active\:translate-x-0\.5:active {
+    --tw-translate-x: 0.125rem;
+  }
+
+  .md\:active\:translate-x-1\.5:active {
+    --tw-translate-x: 0.375rem;
+  }
+
+  .md\:active\:translate-x-2\.5:active {
+    --tw-translate-x: 0.625rem;
+  }
+
+  .md\:active\:translate-x-3\.5:active {
+    --tw-translate-x: 0.875rem;
+  }
+
+  .md\:active\:-translate-x-0:active {
+    --tw-translate-x: 0px;
+  }
+
+  .md\:active\:-translate-x-1:active {
+    --tw-translate-x: -0.25rem;
+  }
+
+  .md\:active\:-translate-x-2:active {
+    --tw-translate-x: -0.5rem;
+  }
+
+  .md\:active\:-translate-x-3:active {
+    --tw-translate-x: -0.75rem;
+  }
+
+  .md\:active\:-translate-x-4:active {
+    --tw-translate-x: -1rem;
+  }
+
+  .md\:active\:-translate-x-5:active {
+    --tw-translate-x: -1.25rem;
+  }
+
+  .md\:active\:-translate-x-6:active {
+    --tw-translate-x: -1.5rem;
+  }
+
+  .md\:active\:-translate-x-7:active {
+    --tw-translate-x: -1.75rem;
+  }
+
+  .md\:active\:-translate-x-8:active {
+    --tw-translate-x: -2rem;
+  }
+
+  .md\:active\:-translate-x-9:active {
+    --tw-translate-x: -2.25rem;
+  }
+
+  .md\:active\:-translate-x-10:active {
+    --tw-translate-x: -2.5rem;
+  }
+
+  .md\:active\:-translate-x-11:active {
+    --tw-translate-x: -2.75rem;
+  }
+
+  .md\:active\:-translate-x-12:active {
+    --tw-translate-x: -3rem;
+  }
+
+  .md\:active\:-translate-x-14:active {
+    --tw-translate-x: -3.5rem;
+  }
+
+  .md\:active\:-translate-x-16:active {
+    --tw-translate-x: -4rem;
+  }
+
+  .md\:active\:-translate-x-20:active {
+    --tw-translate-x: -5rem;
+  }
+
+  .md\:active\:-translate-x-24:active {
+    --tw-translate-x: -6rem;
+  }
+
+  .md\:active\:-translate-x-28:active {
+    --tw-translate-x: -7rem;
+  }
+
+  .md\:active\:-translate-x-32:active {
+    --tw-translate-x: -8rem;
+  }
+
+  .md\:active\:-translate-x-36:active {
+    --tw-translate-x: -9rem;
+  }
+
+  .md\:active\:-translate-x-40:active {
+    --tw-translate-x: -10rem;
+  }
+
+  .md\:active\:-translate-x-44:active {
+    --tw-translate-x: -11rem;
+  }
+
+  .md\:active\:-translate-x-48:active {
+    --tw-translate-x: -12rem;
+  }
+
+  .md\:active\:-translate-x-52:active {
+    --tw-translate-x: -13rem;
+  }
+
+  .md\:active\:-translate-x-56:active {
+    --tw-translate-x: -14rem;
+  }
+
+  .md\:active\:-translate-x-60:active {
+    --tw-translate-x: -15rem;
+  }
+
+  .md\:active\:-translate-x-64:active {
+    --tw-translate-x: -16rem;
+  }
+
+  .md\:active\:-translate-x-72:active {
+    --tw-translate-x: -18rem;
+  }
+
+  .md\:active\:-translate-x-80:active {
+    --tw-translate-x: -20rem;
+  }
+
+  .md\:active\:-translate-x-96:active {
+    --tw-translate-x: -24rem;
+  }
+
+  .md\:active\:-translate-x-px:active {
+    --tw-translate-x: -1px;
+  }
+
+  .md\:active\:-translate-x-0\.5:active {
+    --tw-translate-x: -0.125rem;
+  }
+
+  .md\:active\:-translate-x-1\.5:active {
+    --tw-translate-x: -0.375rem;
+  }
+
+  .md\:active\:-translate-x-2\.5:active {
+    --tw-translate-x: -0.625rem;
+  }
+
+  .md\:active\:-translate-x-3\.5:active {
+    --tw-translate-x: -0.875rem;
+  }
+
+  .md\:active\:translate-x-1\/2:active {
+    --tw-translate-x: 50%;
+  }
+
+  .md\:active\:translate-x-1\/3:active {
+    --tw-translate-x: 33.333333%;
+  }
+
+  .md\:active\:translate-x-2\/3:active {
+    --tw-translate-x: 66.666667%;
+  }
+
+  .md\:active\:translate-x-1\/4:active {
+    --tw-translate-x: 25%;
+  }
+
+  .md\:active\:translate-x-2\/4:active {
+    --tw-translate-x: 50%;
+  }
+
+  .md\:active\:translate-x-3\/4:active {
+    --tw-translate-x: 75%;
+  }
+
+  .md\:active\:translate-x-full:active {
+    --tw-translate-x: 100%;
+  }
+
+  .md\:active\:-translate-x-1\/2:active {
+    --tw-translate-x: -50%;
+  }
+
+  .md\:active\:-translate-x-1\/3:active {
+    --tw-translate-x: -33.333333%;
+  }
+
+  .md\:active\:-translate-x-2\/3:active {
+    --tw-translate-x: -66.666667%;
+  }
+
+  .md\:active\:-translate-x-1\/4:active {
+    --tw-translate-x: -25%;
+  }
+
+  .md\:active\:-translate-x-2\/4:active {
+    --tw-translate-x: -50%;
+  }
+
+  .md\:active\:-translate-x-3\/4:active {
+    --tw-translate-x: -75%;
+  }
+
+  .md\:active\:-translate-x-full:active {
+    --tw-translate-x: -100%;
+  }
+
+  .md\:active\:translate-y-0:active {
+    --tw-translate-y: 0px;
+  }
+
+  .md\:active\:translate-y-1:active {
+    --tw-translate-y: 0.25rem;
+  }
+
+  .md\:active\:translate-y-2:active {
+    --tw-translate-y: 0.5rem;
+  }
+
+  .md\:active\:translate-y-3:active {
+    --tw-translate-y: 0.75rem;
+  }
+
+  .md\:active\:translate-y-4:active {
+    --tw-translate-y: 1rem;
+  }
+
+  .md\:active\:translate-y-5:active {
+    --tw-translate-y: 1.25rem;
+  }
+
+  .md\:active\:translate-y-6:active {
+    --tw-translate-y: 1.5rem;
+  }
+
+  .md\:active\:translate-y-7:active {
+    --tw-translate-y: 1.75rem;
+  }
+
+  .md\:active\:translate-y-8:active {
+    --tw-translate-y: 2rem;
+  }
+
+  .md\:active\:translate-y-9:active {
+    --tw-translate-y: 2.25rem;
+  }
+
+  .md\:active\:translate-y-10:active {
+    --tw-translate-y: 2.5rem;
+  }
+
+  .md\:active\:translate-y-11:active {
+    --tw-translate-y: 2.75rem;
+  }
+
+  .md\:active\:translate-y-12:active {
+    --tw-translate-y: 3rem;
+  }
+
+  .md\:active\:translate-y-14:active {
+    --tw-translate-y: 3.5rem;
+  }
+
+  .md\:active\:translate-y-16:active {
+    --tw-translate-y: 4rem;
+  }
+
+  .md\:active\:translate-y-20:active {
+    --tw-translate-y: 5rem;
+  }
+
+  .md\:active\:translate-y-24:active {
+    --tw-translate-y: 6rem;
+  }
+
+  .md\:active\:translate-y-28:active {
+    --tw-translate-y: 7rem;
+  }
+
+  .md\:active\:translate-y-32:active {
+    --tw-translate-y: 8rem;
+  }
+
+  .md\:active\:translate-y-36:active {
+    --tw-translate-y: 9rem;
+  }
+
+  .md\:active\:translate-y-40:active {
+    --tw-translate-y: 10rem;
+  }
+
+  .md\:active\:translate-y-44:active {
+    --tw-translate-y: 11rem;
+  }
+
+  .md\:active\:translate-y-48:active {
+    --tw-translate-y: 12rem;
+  }
+
+  .md\:active\:translate-y-52:active {
+    --tw-translate-y: 13rem;
+  }
+
+  .md\:active\:translate-y-56:active {
+    --tw-translate-y: 14rem;
+  }
+
+  .md\:active\:translate-y-60:active {
+    --tw-translate-y: 15rem;
+  }
+
+  .md\:active\:translate-y-64:active {
+    --tw-translate-y: 16rem;
+  }
+
+  .md\:active\:translate-y-72:active {
+    --tw-translate-y: 18rem;
+  }
+
+  .md\:active\:translate-y-80:active {
+    --tw-translate-y: 20rem;
+  }
+
+  .md\:active\:translate-y-96:active {
+    --tw-translate-y: 24rem;
+  }
+
+  .md\:active\:translate-y-px:active {
+    --tw-translate-y: 1px;
+  }
+
+  .md\:active\:translate-y-0\.5:active {
+    --tw-translate-y: 0.125rem;
+  }
+
+  .md\:active\:translate-y-1\.5:active {
+    --tw-translate-y: 0.375rem;
+  }
+
+  .md\:active\:translate-y-2\.5:active {
+    --tw-translate-y: 0.625rem;
+  }
+
+  .md\:active\:translate-y-3\.5:active {
+    --tw-translate-y: 0.875rem;
+  }
+
+  .md\:active\:-translate-y-0:active {
+    --tw-translate-y: 0px;
+  }
+
+  .md\:active\:-translate-y-1:active {
+    --tw-translate-y: -0.25rem;
+  }
+
+  .md\:active\:-translate-y-2:active {
+    --tw-translate-y: -0.5rem;
+  }
+
+  .md\:active\:-translate-y-3:active {
+    --tw-translate-y: -0.75rem;
+  }
+
+  .md\:active\:-translate-y-4:active {
+    --tw-translate-y: -1rem;
+  }
+
+  .md\:active\:-translate-y-5:active {
+    --tw-translate-y: -1.25rem;
+  }
+
+  .md\:active\:-translate-y-6:active {
+    --tw-translate-y: -1.5rem;
+  }
+
+  .md\:active\:-translate-y-7:active {
+    --tw-translate-y: -1.75rem;
+  }
+
+  .md\:active\:-translate-y-8:active {
+    --tw-translate-y: -2rem;
+  }
+
+  .md\:active\:-translate-y-9:active {
+    --tw-translate-y: -2.25rem;
+  }
+
+  .md\:active\:-translate-y-10:active {
+    --tw-translate-y: -2.5rem;
+  }
+
+  .md\:active\:-translate-y-11:active {
+    --tw-translate-y: -2.75rem;
+  }
+
+  .md\:active\:-translate-y-12:active {
+    --tw-translate-y: -3rem;
+  }
+
+  .md\:active\:-translate-y-14:active {
+    --tw-translate-y: -3.5rem;
+  }
+
+  .md\:active\:-translate-y-16:active {
+    --tw-translate-y: -4rem;
+  }
+
+  .md\:active\:-translate-y-20:active {
+    --tw-translate-y: -5rem;
+  }
+
+  .md\:active\:-translate-y-24:active {
+    --tw-translate-y: -6rem;
+  }
+
+  .md\:active\:-translate-y-28:active {
+    --tw-translate-y: -7rem;
+  }
+
+  .md\:active\:-translate-y-32:active {
+    --tw-translate-y: -8rem;
+  }
+
+  .md\:active\:-translate-y-36:active {
+    --tw-translate-y: -9rem;
+  }
+
+  .md\:active\:-translate-y-40:active {
+    --tw-translate-y: -10rem;
+  }
+
+  .md\:active\:-translate-y-44:active {
+    --tw-translate-y: -11rem;
+  }
+
+  .md\:active\:-translate-y-48:active {
+    --tw-translate-y: -12rem;
+  }
+
+  .md\:active\:-translate-y-52:active {
+    --tw-translate-y: -13rem;
+  }
+
+  .md\:active\:-translate-y-56:active {
+    --tw-translate-y: -14rem;
+  }
+
+  .md\:active\:-translate-y-60:active {
+    --tw-translate-y: -15rem;
+  }
+
+  .md\:active\:-translate-y-64:active {
+    --tw-translate-y: -16rem;
+  }
+
+  .md\:active\:-translate-y-72:active {
+    --tw-translate-y: -18rem;
+  }
+
+  .md\:active\:-translate-y-80:active {
+    --tw-translate-y: -20rem;
+  }
+
+  .md\:active\:-translate-y-96:active {
+    --tw-translate-y: -24rem;
+  }
+
+  .md\:active\:-translate-y-px:active {
+    --tw-translate-y: -1px;
+  }
+
+  .md\:active\:-translate-y-0\.5:active {
+    --tw-translate-y: -0.125rem;
+  }
+
+  .md\:active\:-translate-y-1\.5:active {
+    --tw-translate-y: -0.375rem;
+  }
+
+  .md\:active\:-translate-y-2\.5:active {
+    --tw-translate-y: -0.625rem;
+  }
+
+  .md\:active\:-translate-y-3\.5:active {
+    --tw-translate-y: -0.875rem;
+  }
+
+  .md\:active\:translate-y-1\/2:active {
+    --tw-translate-y: 50%;
+  }
+
+  .md\:active\:translate-y-1\/3:active {
+    --tw-translate-y: 33.333333%;
+  }
+
+  .md\:active\:translate-y-2\/3:active {
+    --tw-translate-y: 66.666667%;
+  }
+
+  .md\:active\:translate-y-1\/4:active {
+    --tw-translate-y: 25%;
+  }
+
+  .md\:active\:translate-y-2\/4:active {
+    --tw-translate-y: 50%;
+  }
+
+  .md\:active\:translate-y-3\/4:active {
+    --tw-translate-y: 75%;
+  }
+
+  .md\:active\:translate-y-full:active {
+    --tw-translate-y: 100%;
+  }
+
+  .md\:active\:-translate-y-1\/2:active {
+    --tw-translate-y: -50%;
+  }
+
+  .md\:active\:-translate-y-1\/3:active {
+    --tw-translate-y: -33.333333%;
+  }
+
+  .md\:active\:-translate-y-2\/3:active {
+    --tw-translate-y: -66.666667%;
+  }
+
+  .md\:active\:-translate-y-1\/4:active {
+    --tw-translate-y: -25%;
+  }
+
+  .md\:active\:-translate-y-2\/4:active {
+    --tw-translate-y: -50%;
+  }
+
+  .md\:active\:-translate-y-3\/4:active {
+    --tw-translate-y: -75%;
+  }
+
+  .md\:active\:-translate-y-full:active {
+    --tw-translate-y: -100%;
+  }
+
   .md\:skew-x-0 {
     --tw-skew-x: 0deg;
   }
@@ -86225,6 +88887,230 @@ video {
 
   .md\:animate-bounce {
     animation: bounce 1s infinite;
+  }
+
+  .md\:hover\:animate-none:hover {
+    animation: none;
+  }
+
+  .md\:hover\:animate-spin:hover {
+    animation: spin 1s linear infinite;
+  }
+
+  .md\:hover\:animate-ping:hover {
+    animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+  }
+
+  .md\:hover\:animate-pulse:hover {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .md\:hover\:animate-bounce:hover {
+    animation: bounce 1s infinite;
+  }
+
+  .group:hover .md\:group-hover\:animate-none {
+    animation: none;
+  }
+
+  .group:hover .md\:group-hover\:animate-spin {
+    animation: spin 1s linear infinite;
+  }
+
+  .group:hover .md\:group-hover\:animate-ping {
+    animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+  }
+
+  .group:hover .md\:group-hover\:animate-pulse {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .group:hover .md\:group-hover\:animate-bounce {
+    animation: bounce 1s infinite;
+  }
+
+  .md\:active\:animate-none:active {
+    animation: none;
+  }
+
+  .md\:active\:animate-spin:active {
+    animation: spin 1s linear infinite;
+  }
+
+  .md\:active\:animate-ping:active {
+    animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+  }
+
+  .md\:active\:animate-pulse:active {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .md\:active\:animate-bounce:active {
+    animation: bounce 1s infinite;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .md\:motion-safe\:animate-none {
+      animation: none;
+    }
+
+    .md\:motion-safe\:animate-spin {
+      animation: spin 1s linear infinite;
+    }
+
+    .md\:motion-safe\:animate-ping {
+      animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+    }
+
+    .md\:motion-safe\:animate-pulse {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+
+    .md\:motion-safe\:animate-bounce {
+      animation: bounce 1s infinite;
+    }
+
+    .md\:motion-safe\:hover\:animate-none:hover {
+      animation: none;
+    }
+
+    .md\:motion-safe\:hover\:animate-spin:hover {
+      animation: spin 1s linear infinite;
+    }
+
+    .md\:motion-safe\:hover\:animate-ping:hover {
+      animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+    }
+
+    .md\:motion-safe\:hover\:animate-pulse:hover {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+
+    .md\:motion-safe\:hover\:animate-bounce:hover {
+      animation: bounce 1s infinite;
+    }
+
+    .group:hover .md\:motion-safe\:group-hover\:animate-none {
+      animation: none;
+    }
+
+    .group:hover .md\:motion-safe\:group-hover\:animate-spin {
+      animation: spin 1s linear infinite;
+    }
+
+    .group:hover .md\:motion-safe\:group-hover\:animate-ping {
+      animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+    }
+
+    .group:hover .md\:motion-safe\:group-hover\:animate-pulse {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+
+    .group:hover .md\:motion-safe\:group-hover\:animate-bounce {
+      animation: bounce 1s infinite;
+    }
+
+    .md\:motion-safe\:active\:animate-none:active {
+      animation: none;
+    }
+
+    .md\:motion-safe\:active\:animate-spin:active {
+      animation: spin 1s linear infinite;
+    }
+
+    .md\:motion-safe\:active\:animate-ping:active {
+      animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+    }
+
+    .md\:motion-safe\:active\:animate-pulse:active {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+
+    .md\:motion-safe\:active\:animate-bounce:active {
+      animation: bounce 1s infinite;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .md\:motion-reduce\:animate-none {
+      animation: none;
+    }
+
+    .md\:motion-reduce\:animate-spin {
+      animation: spin 1s linear infinite;
+    }
+
+    .md\:motion-reduce\:animate-ping {
+      animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+    }
+
+    .md\:motion-reduce\:animate-pulse {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+
+    .md\:motion-reduce\:animate-bounce {
+      animation: bounce 1s infinite;
+    }
+
+    .md\:motion-reduce\:hover\:animate-none:hover {
+      animation: none;
+    }
+
+    .md\:motion-reduce\:hover\:animate-spin:hover {
+      animation: spin 1s linear infinite;
+    }
+
+    .md\:motion-reduce\:hover\:animate-ping:hover {
+      animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+    }
+
+    .md\:motion-reduce\:hover\:animate-pulse:hover {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+
+    .md\:motion-reduce\:hover\:animate-bounce:hover {
+      animation: bounce 1s infinite;
+    }
+
+    .group:hover .md\:motion-reduce\:group-hover\:animate-none {
+      animation: none;
+    }
+
+    .group:hover .md\:motion-reduce\:group-hover\:animate-spin {
+      animation: spin 1s linear infinite;
+    }
+
+    .group:hover .md\:motion-reduce\:group-hover\:animate-ping {
+      animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+    }
+
+    .group:hover .md\:motion-reduce\:group-hover\:animate-pulse {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+
+    .group:hover .md\:motion-reduce\:group-hover\:animate-bounce {
+      animation: bounce 1s infinite;
+    }
+
+    .md\:motion-reduce\:active\:animate-none:active {
+      animation: none;
+    }
+
+    .md\:motion-reduce\:active\:animate-spin:active {
+      animation: spin 1s linear infinite;
+    }
+
+    .md\:motion-reduce\:active\:animate-ping:active {
+      animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+    }
+
+    .md\:motion-reduce\:active\:animate-pulse:active {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+
+    .md\:motion-reduce\:active\:animate-bounce:active {
+      animation: bounce 1s infinite;
+    }
   }
 }
 
@@ -105223,6 +108109,46 @@ video {
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   }
 
+  .lg\:active\:shadow-sm:active {
+    --tw-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+
+  .lg\:active\:shadow:active {
+    --tw-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+
+  .lg\:active\:shadow-md:active {
+    --tw-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+
+  .lg\:active\:shadow-lg:active {
+    --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+
+  .lg\:active\:shadow-xl:active {
+    --tw-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+
+  .lg\:active\:shadow-2xl:active {
+    --tw-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+
+  .lg\:active\:shadow-inner:active {
+    --tw-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+
+  .lg\:active\:shadow-none:active {
+    --tw-shadow: 0 0 #0000;
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+
   .lg\:ring-0 {
     --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
     --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(0px + var(--tw-ring-offset-width)) var(--tw-ring-color);
@@ -111727,6 +114653,32 @@ video {
     transform: none;
   }
 
+  .lg\:active\:transform:active {
+    --tw-translate-x: 0;
+    --tw-translate-y: 0;
+    --tw-rotate: 0;
+    --tw-skew-x: 0;
+    --tw-skew-y: 0;
+    --tw-scale-x: 1;
+    --tw-scale-y: 1;
+    transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .lg\:active\:transform-gpu:active {
+    --tw-translate-x: 0;
+    --tw-translate-y: 0;
+    --tw-rotate: 0;
+    --tw-skew-x: 0;
+    --tw-skew-y: 0;
+    --tw-scale-x: 1;
+    --tw-scale-y: 1;
+    transform: translate3d(var(--tw-translate-x), var(--tw-translate-y), 0) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .lg\:active\:transform-none:active {
+    transform: none;
+  }
+
   .lg\:origin-center {
     transform-origin: center;
   }
@@ -114373,6 +117325,678 @@ video {
     --tw-translate-y: -100%;
   }
 
+  .lg\:active\:translate-x-0:active {
+    --tw-translate-x: 0px;
+  }
+
+  .lg\:active\:translate-x-1:active {
+    --tw-translate-x: 0.25rem;
+  }
+
+  .lg\:active\:translate-x-2:active {
+    --tw-translate-x: 0.5rem;
+  }
+
+  .lg\:active\:translate-x-3:active {
+    --tw-translate-x: 0.75rem;
+  }
+
+  .lg\:active\:translate-x-4:active {
+    --tw-translate-x: 1rem;
+  }
+
+  .lg\:active\:translate-x-5:active {
+    --tw-translate-x: 1.25rem;
+  }
+
+  .lg\:active\:translate-x-6:active {
+    --tw-translate-x: 1.5rem;
+  }
+
+  .lg\:active\:translate-x-7:active {
+    --tw-translate-x: 1.75rem;
+  }
+
+  .lg\:active\:translate-x-8:active {
+    --tw-translate-x: 2rem;
+  }
+
+  .lg\:active\:translate-x-9:active {
+    --tw-translate-x: 2.25rem;
+  }
+
+  .lg\:active\:translate-x-10:active {
+    --tw-translate-x: 2.5rem;
+  }
+
+  .lg\:active\:translate-x-11:active {
+    --tw-translate-x: 2.75rem;
+  }
+
+  .lg\:active\:translate-x-12:active {
+    --tw-translate-x: 3rem;
+  }
+
+  .lg\:active\:translate-x-14:active {
+    --tw-translate-x: 3.5rem;
+  }
+
+  .lg\:active\:translate-x-16:active {
+    --tw-translate-x: 4rem;
+  }
+
+  .lg\:active\:translate-x-20:active {
+    --tw-translate-x: 5rem;
+  }
+
+  .lg\:active\:translate-x-24:active {
+    --tw-translate-x: 6rem;
+  }
+
+  .lg\:active\:translate-x-28:active {
+    --tw-translate-x: 7rem;
+  }
+
+  .lg\:active\:translate-x-32:active {
+    --tw-translate-x: 8rem;
+  }
+
+  .lg\:active\:translate-x-36:active {
+    --tw-translate-x: 9rem;
+  }
+
+  .lg\:active\:translate-x-40:active {
+    --tw-translate-x: 10rem;
+  }
+
+  .lg\:active\:translate-x-44:active {
+    --tw-translate-x: 11rem;
+  }
+
+  .lg\:active\:translate-x-48:active {
+    --tw-translate-x: 12rem;
+  }
+
+  .lg\:active\:translate-x-52:active {
+    --tw-translate-x: 13rem;
+  }
+
+  .lg\:active\:translate-x-56:active {
+    --tw-translate-x: 14rem;
+  }
+
+  .lg\:active\:translate-x-60:active {
+    --tw-translate-x: 15rem;
+  }
+
+  .lg\:active\:translate-x-64:active {
+    --tw-translate-x: 16rem;
+  }
+
+  .lg\:active\:translate-x-72:active {
+    --tw-translate-x: 18rem;
+  }
+
+  .lg\:active\:translate-x-80:active {
+    --tw-translate-x: 20rem;
+  }
+
+  .lg\:active\:translate-x-96:active {
+    --tw-translate-x: 24rem;
+  }
+
+  .lg\:active\:translate-x-px:active {
+    --tw-translate-x: 1px;
+  }
+
+  .lg\:active\:translate-x-0\.5:active {
+    --tw-translate-x: 0.125rem;
+  }
+
+  .lg\:active\:translate-x-1\.5:active {
+    --tw-translate-x: 0.375rem;
+  }
+
+  .lg\:active\:translate-x-2\.5:active {
+    --tw-translate-x: 0.625rem;
+  }
+
+  .lg\:active\:translate-x-3\.5:active {
+    --tw-translate-x: 0.875rem;
+  }
+
+  .lg\:active\:-translate-x-0:active {
+    --tw-translate-x: 0px;
+  }
+
+  .lg\:active\:-translate-x-1:active {
+    --tw-translate-x: -0.25rem;
+  }
+
+  .lg\:active\:-translate-x-2:active {
+    --tw-translate-x: -0.5rem;
+  }
+
+  .lg\:active\:-translate-x-3:active {
+    --tw-translate-x: -0.75rem;
+  }
+
+  .lg\:active\:-translate-x-4:active {
+    --tw-translate-x: -1rem;
+  }
+
+  .lg\:active\:-translate-x-5:active {
+    --tw-translate-x: -1.25rem;
+  }
+
+  .lg\:active\:-translate-x-6:active {
+    --tw-translate-x: -1.5rem;
+  }
+
+  .lg\:active\:-translate-x-7:active {
+    --tw-translate-x: -1.75rem;
+  }
+
+  .lg\:active\:-translate-x-8:active {
+    --tw-translate-x: -2rem;
+  }
+
+  .lg\:active\:-translate-x-9:active {
+    --tw-translate-x: -2.25rem;
+  }
+
+  .lg\:active\:-translate-x-10:active {
+    --tw-translate-x: -2.5rem;
+  }
+
+  .lg\:active\:-translate-x-11:active {
+    --tw-translate-x: -2.75rem;
+  }
+
+  .lg\:active\:-translate-x-12:active {
+    --tw-translate-x: -3rem;
+  }
+
+  .lg\:active\:-translate-x-14:active {
+    --tw-translate-x: -3.5rem;
+  }
+
+  .lg\:active\:-translate-x-16:active {
+    --tw-translate-x: -4rem;
+  }
+
+  .lg\:active\:-translate-x-20:active {
+    --tw-translate-x: -5rem;
+  }
+
+  .lg\:active\:-translate-x-24:active {
+    --tw-translate-x: -6rem;
+  }
+
+  .lg\:active\:-translate-x-28:active {
+    --tw-translate-x: -7rem;
+  }
+
+  .lg\:active\:-translate-x-32:active {
+    --tw-translate-x: -8rem;
+  }
+
+  .lg\:active\:-translate-x-36:active {
+    --tw-translate-x: -9rem;
+  }
+
+  .lg\:active\:-translate-x-40:active {
+    --tw-translate-x: -10rem;
+  }
+
+  .lg\:active\:-translate-x-44:active {
+    --tw-translate-x: -11rem;
+  }
+
+  .lg\:active\:-translate-x-48:active {
+    --tw-translate-x: -12rem;
+  }
+
+  .lg\:active\:-translate-x-52:active {
+    --tw-translate-x: -13rem;
+  }
+
+  .lg\:active\:-translate-x-56:active {
+    --tw-translate-x: -14rem;
+  }
+
+  .lg\:active\:-translate-x-60:active {
+    --tw-translate-x: -15rem;
+  }
+
+  .lg\:active\:-translate-x-64:active {
+    --tw-translate-x: -16rem;
+  }
+
+  .lg\:active\:-translate-x-72:active {
+    --tw-translate-x: -18rem;
+  }
+
+  .lg\:active\:-translate-x-80:active {
+    --tw-translate-x: -20rem;
+  }
+
+  .lg\:active\:-translate-x-96:active {
+    --tw-translate-x: -24rem;
+  }
+
+  .lg\:active\:-translate-x-px:active {
+    --tw-translate-x: -1px;
+  }
+
+  .lg\:active\:-translate-x-0\.5:active {
+    --tw-translate-x: -0.125rem;
+  }
+
+  .lg\:active\:-translate-x-1\.5:active {
+    --tw-translate-x: -0.375rem;
+  }
+
+  .lg\:active\:-translate-x-2\.5:active {
+    --tw-translate-x: -0.625rem;
+  }
+
+  .lg\:active\:-translate-x-3\.5:active {
+    --tw-translate-x: -0.875rem;
+  }
+
+  .lg\:active\:translate-x-1\/2:active {
+    --tw-translate-x: 50%;
+  }
+
+  .lg\:active\:translate-x-1\/3:active {
+    --tw-translate-x: 33.333333%;
+  }
+
+  .lg\:active\:translate-x-2\/3:active {
+    --tw-translate-x: 66.666667%;
+  }
+
+  .lg\:active\:translate-x-1\/4:active {
+    --tw-translate-x: 25%;
+  }
+
+  .lg\:active\:translate-x-2\/4:active {
+    --tw-translate-x: 50%;
+  }
+
+  .lg\:active\:translate-x-3\/4:active {
+    --tw-translate-x: 75%;
+  }
+
+  .lg\:active\:translate-x-full:active {
+    --tw-translate-x: 100%;
+  }
+
+  .lg\:active\:-translate-x-1\/2:active {
+    --tw-translate-x: -50%;
+  }
+
+  .lg\:active\:-translate-x-1\/3:active {
+    --tw-translate-x: -33.333333%;
+  }
+
+  .lg\:active\:-translate-x-2\/3:active {
+    --tw-translate-x: -66.666667%;
+  }
+
+  .lg\:active\:-translate-x-1\/4:active {
+    --tw-translate-x: -25%;
+  }
+
+  .lg\:active\:-translate-x-2\/4:active {
+    --tw-translate-x: -50%;
+  }
+
+  .lg\:active\:-translate-x-3\/4:active {
+    --tw-translate-x: -75%;
+  }
+
+  .lg\:active\:-translate-x-full:active {
+    --tw-translate-x: -100%;
+  }
+
+  .lg\:active\:translate-y-0:active {
+    --tw-translate-y: 0px;
+  }
+
+  .lg\:active\:translate-y-1:active {
+    --tw-translate-y: 0.25rem;
+  }
+
+  .lg\:active\:translate-y-2:active {
+    --tw-translate-y: 0.5rem;
+  }
+
+  .lg\:active\:translate-y-3:active {
+    --tw-translate-y: 0.75rem;
+  }
+
+  .lg\:active\:translate-y-4:active {
+    --tw-translate-y: 1rem;
+  }
+
+  .lg\:active\:translate-y-5:active {
+    --tw-translate-y: 1.25rem;
+  }
+
+  .lg\:active\:translate-y-6:active {
+    --tw-translate-y: 1.5rem;
+  }
+
+  .lg\:active\:translate-y-7:active {
+    --tw-translate-y: 1.75rem;
+  }
+
+  .lg\:active\:translate-y-8:active {
+    --tw-translate-y: 2rem;
+  }
+
+  .lg\:active\:translate-y-9:active {
+    --tw-translate-y: 2.25rem;
+  }
+
+  .lg\:active\:translate-y-10:active {
+    --tw-translate-y: 2.5rem;
+  }
+
+  .lg\:active\:translate-y-11:active {
+    --tw-translate-y: 2.75rem;
+  }
+
+  .lg\:active\:translate-y-12:active {
+    --tw-translate-y: 3rem;
+  }
+
+  .lg\:active\:translate-y-14:active {
+    --tw-translate-y: 3.5rem;
+  }
+
+  .lg\:active\:translate-y-16:active {
+    --tw-translate-y: 4rem;
+  }
+
+  .lg\:active\:translate-y-20:active {
+    --tw-translate-y: 5rem;
+  }
+
+  .lg\:active\:translate-y-24:active {
+    --tw-translate-y: 6rem;
+  }
+
+  .lg\:active\:translate-y-28:active {
+    --tw-translate-y: 7rem;
+  }
+
+  .lg\:active\:translate-y-32:active {
+    --tw-translate-y: 8rem;
+  }
+
+  .lg\:active\:translate-y-36:active {
+    --tw-translate-y: 9rem;
+  }
+
+  .lg\:active\:translate-y-40:active {
+    --tw-translate-y: 10rem;
+  }
+
+  .lg\:active\:translate-y-44:active {
+    --tw-translate-y: 11rem;
+  }
+
+  .lg\:active\:translate-y-48:active {
+    --tw-translate-y: 12rem;
+  }
+
+  .lg\:active\:translate-y-52:active {
+    --tw-translate-y: 13rem;
+  }
+
+  .lg\:active\:translate-y-56:active {
+    --tw-translate-y: 14rem;
+  }
+
+  .lg\:active\:translate-y-60:active {
+    --tw-translate-y: 15rem;
+  }
+
+  .lg\:active\:translate-y-64:active {
+    --tw-translate-y: 16rem;
+  }
+
+  .lg\:active\:translate-y-72:active {
+    --tw-translate-y: 18rem;
+  }
+
+  .lg\:active\:translate-y-80:active {
+    --tw-translate-y: 20rem;
+  }
+
+  .lg\:active\:translate-y-96:active {
+    --tw-translate-y: 24rem;
+  }
+
+  .lg\:active\:translate-y-px:active {
+    --tw-translate-y: 1px;
+  }
+
+  .lg\:active\:translate-y-0\.5:active {
+    --tw-translate-y: 0.125rem;
+  }
+
+  .lg\:active\:translate-y-1\.5:active {
+    --tw-translate-y: 0.375rem;
+  }
+
+  .lg\:active\:translate-y-2\.5:active {
+    --tw-translate-y: 0.625rem;
+  }
+
+  .lg\:active\:translate-y-3\.5:active {
+    --tw-translate-y: 0.875rem;
+  }
+
+  .lg\:active\:-translate-y-0:active {
+    --tw-translate-y: 0px;
+  }
+
+  .lg\:active\:-translate-y-1:active {
+    --tw-translate-y: -0.25rem;
+  }
+
+  .lg\:active\:-translate-y-2:active {
+    --tw-translate-y: -0.5rem;
+  }
+
+  .lg\:active\:-translate-y-3:active {
+    --tw-translate-y: -0.75rem;
+  }
+
+  .lg\:active\:-translate-y-4:active {
+    --tw-translate-y: -1rem;
+  }
+
+  .lg\:active\:-translate-y-5:active {
+    --tw-translate-y: -1.25rem;
+  }
+
+  .lg\:active\:-translate-y-6:active {
+    --tw-translate-y: -1.5rem;
+  }
+
+  .lg\:active\:-translate-y-7:active {
+    --tw-translate-y: -1.75rem;
+  }
+
+  .lg\:active\:-translate-y-8:active {
+    --tw-translate-y: -2rem;
+  }
+
+  .lg\:active\:-translate-y-9:active {
+    --tw-translate-y: -2.25rem;
+  }
+
+  .lg\:active\:-translate-y-10:active {
+    --tw-translate-y: -2.5rem;
+  }
+
+  .lg\:active\:-translate-y-11:active {
+    --tw-translate-y: -2.75rem;
+  }
+
+  .lg\:active\:-translate-y-12:active {
+    --tw-translate-y: -3rem;
+  }
+
+  .lg\:active\:-translate-y-14:active {
+    --tw-translate-y: -3.5rem;
+  }
+
+  .lg\:active\:-translate-y-16:active {
+    --tw-translate-y: -4rem;
+  }
+
+  .lg\:active\:-translate-y-20:active {
+    --tw-translate-y: -5rem;
+  }
+
+  .lg\:active\:-translate-y-24:active {
+    --tw-translate-y: -6rem;
+  }
+
+  .lg\:active\:-translate-y-28:active {
+    --tw-translate-y: -7rem;
+  }
+
+  .lg\:active\:-translate-y-32:active {
+    --tw-translate-y: -8rem;
+  }
+
+  .lg\:active\:-translate-y-36:active {
+    --tw-translate-y: -9rem;
+  }
+
+  .lg\:active\:-translate-y-40:active {
+    --tw-translate-y: -10rem;
+  }
+
+  .lg\:active\:-translate-y-44:active {
+    --tw-translate-y: -11rem;
+  }
+
+  .lg\:active\:-translate-y-48:active {
+    --tw-translate-y: -12rem;
+  }
+
+  .lg\:active\:-translate-y-52:active {
+    --tw-translate-y: -13rem;
+  }
+
+  .lg\:active\:-translate-y-56:active {
+    --tw-translate-y: -14rem;
+  }
+
+  .lg\:active\:-translate-y-60:active {
+    --tw-translate-y: -15rem;
+  }
+
+  .lg\:active\:-translate-y-64:active {
+    --tw-translate-y: -16rem;
+  }
+
+  .lg\:active\:-translate-y-72:active {
+    --tw-translate-y: -18rem;
+  }
+
+  .lg\:active\:-translate-y-80:active {
+    --tw-translate-y: -20rem;
+  }
+
+  .lg\:active\:-translate-y-96:active {
+    --tw-translate-y: -24rem;
+  }
+
+  .lg\:active\:-translate-y-px:active {
+    --tw-translate-y: -1px;
+  }
+
+  .lg\:active\:-translate-y-0\.5:active {
+    --tw-translate-y: -0.125rem;
+  }
+
+  .lg\:active\:-translate-y-1\.5:active {
+    --tw-translate-y: -0.375rem;
+  }
+
+  .lg\:active\:-translate-y-2\.5:active {
+    --tw-translate-y: -0.625rem;
+  }
+
+  .lg\:active\:-translate-y-3\.5:active {
+    --tw-translate-y: -0.875rem;
+  }
+
+  .lg\:active\:translate-y-1\/2:active {
+    --tw-translate-y: 50%;
+  }
+
+  .lg\:active\:translate-y-1\/3:active {
+    --tw-translate-y: 33.333333%;
+  }
+
+  .lg\:active\:translate-y-2\/3:active {
+    --tw-translate-y: 66.666667%;
+  }
+
+  .lg\:active\:translate-y-1\/4:active {
+    --tw-translate-y: 25%;
+  }
+
+  .lg\:active\:translate-y-2\/4:active {
+    --tw-translate-y: 50%;
+  }
+
+  .lg\:active\:translate-y-3\/4:active {
+    --tw-translate-y: 75%;
+  }
+
+  .lg\:active\:translate-y-full:active {
+    --tw-translate-y: 100%;
+  }
+
+  .lg\:active\:-translate-y-1\/2:active {
+    --tw-translate-y: -50%;
+  }
+
+  .lg\:active\:-translate-y-1\/3:active {
+    --tw-translate-y: -33.333333%;
+  }
+
+  .lg\:active\:-translate-y-2\/3:active {
+    --tw-translate-y: -66.666667%;
+  }
+
+  .lg\:active\:-translate-y-1\/4:active {
+    --tw-translate-y: -25%;
+  }
+
+  .lg\:active\:-translate-y-2\/4:active {
+    --tw-translate-y: -50%;
+  }
+
+  .lg\:active\:-translate-y-3\/4:active {
+    --tw-translate-y: -75%;
+  }
+
+  .lg\:active\:-translate-y-full:active {
+    --tw-translate-y: -100%;
+  }
+
   .lg\:skew-x-0 {
     --tw-skew-x: 0deg;
   }
@@ -114775,6 +118399,230 @@ video {
 
   .lg\:animate-bounce {
     animation: bounce 1s infinite;
+  }
+
+  .lg\:hover\:animate-none:hover {
+    animation: none;
+  }
+
+  .lg\:hover\:animate-spin:hover {
+    animation: spin 1s linear infinite;
+  }
+
+  .lg\:hover\:animate-ping:hover {
+    animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+  }
+
+  .lg\:hover\:animate-pulse:hover {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .lg\:hover\:animate-bounce:hover {
+    animation: bounce 1s infinite;
+  }
+
+  .group:hover .lg\:group-hover\:animate-none {
+    animation: none;
+  }
+
+  .group:hover .lg\:group-hover\:animate-spin {
+    animation: spin 1s linear infinite;
+  }
+
+  .group:hover .lg\:group-hover\:animate-ping {
+    animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+  }
+
+  .group:hover .lg\:group-hover\:animate-pulse {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .group:hover .lg\:group-hover\:animate-bounce {
+    animation: bounce 1s infinite;
+  }
+
+  .lg\:active\:animate-none:active {
+    animation: none;
+  }
+
+  .lg\:active\:animate-spin:active {
+    animation: spin 1s linear infinite;
+  }
+
+  .lg\:active\:animate-ping:active {
+    animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+  }
+
+  .lg\:active\:animate-pulse:active {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .lg\:active\:animate-bounce:active {
+    animation: bounce 1s infinite;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .lg\:motion-safe\:animate-none {
+      animation: none;
+    }
+
+    .lg\:motion-safe\:animate-spin {
+      animation: spin 1s linear infinite;
+    }
+
+    .lg\:motion-safe\:animate-ping {
+      animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+    }
+
+    .lg\:motion-safe\:animate-pulse {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+
+    .lg\:motion-safe\:animate-bounce {
+      animation: bounce 1s infinite;
+    }
+
+    .lg\:motion-safe\:hover\:animate-none:hover {
+      animation: none;
+    }
+
+    .lg\:motion-safe\:hover\:animate-spin:hover {
+      animation: spin 1s linear infinite;
+    }
+
+    .lg\:motion-safe\:hover\:animate-ping:hover {
+      animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+    }
+
+    .lg\:motion-safe\:hover\:animate-pulse:hover {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+
+    .lg\:motion-safe\:hover\:animate-bounce:hover {
+      animation: bounce 1s infinite;
+    }
+
+    .group:hover .lg\:motion-safe\:group-hover\:animate-none {
+      animation: none;
+    }
+
+    .group:hover .lg\:motion-safe\:group-hover\:animate-spin {
+      animation: spin 1s linear infinite;
+    }
+
+    .group:hover .lg\:motion-safe\:group-hover\:animate-ping {
+      animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+    }
+
+    .group:hover .lg\:motion-safe\:group-hover\:animate-pulse {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+
+    .group:hover .lg\:motion-safe\:group-hover\:animate-bounce {
+      animation: bounce 1s infinite;
+    }
+
+    .lg\:motion-safe\:active\:animate-none:active {
+      animation: none;
+    }
+
+    .lg\:motion-safe\:active\:animate-spin:active {
+      animation: spin 1s linear infinite;
+    }
+
+    .lg\:motion-safe\:active\:animate-ping:active {
+      animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+    }
+
+    .lg\:motion-safe\:active\:animate-pulse:active {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+
+    .lg\:motion-safe\:active\:animate-bounce:active {
+      animation: bounce 1s infinite;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .lg\:motion-reduce\:animate-none {
+      animation: none;
+    }
+
+    .lg\:motion-reduce\:animate-spin {
+      animation: spin 1s linear infinite;
+    }
+
+    .lg\:motion-reduce\:animate-ping {
+      animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+    }
+
+    .lg\:motion-reduce\:animate-pulse {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+
+    .lg\:motion-reduce\:animate-bounce {
+      animation: bounce 1s infinite;
+    }
+
+    .lg\:motion-reduce\:hover\:animate-none:hover {
+      animation: none;
+    }
+
+    .lg\:motion-reduce\:hover\:animate-spin:hover {
+      animation: spin 1s linear infinite;
+    }
+
+    .lg\:motion-reduce\:hover\:animate-ping:hover {
+      animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+    }
+
+    .lg\:motion-reduce\:hover\:animate-pulse:hover {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+
+    .lg\:motion-reduce\:hover\:animate-bounce:hover {
+      animation: bounce 1s infinite;
+    }
+
+    .group:hover .lg\:motion-reduce\:group-hover\:animate-none {
+      animation: none;
+    }
+
+    .group:hover .lg\:motion-reduce\:group-hover\:animate-spin {
+      animation: spin 1s linear infinite;
+    }
+
+    .group:hover .lg\:motion-reduce\:group-hover\:animate-ping {
+      animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+    }
+
+    .group:hover .lg\:motion-reduce\:group-hover\:animate-pulse {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+
+    .group:hover .lg\:motion-reduce\:group-hover\:animate-bounce {
+      animation: bounce 1s infinite;
+    }
+
+    .lg\:motion-reduce\:active\:animate-none:active {
+      animation: none;
+    }
+
+    .lg\:motion-reduce\:active\:animate-spin:active {
+      animation: spin 1s linear infinite;
+    }
+
+    .lg\:motion-reduce\:active\:animate-ping:active {
+      animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+    }
+
+    .lg\:motion-reduce\:active\:animate-pulse:active {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+
+    .lg\:motion-reduce\:active\:animate-bounce:active {
+      animation: bounce 1s infinite;
+    }
   }
 }
 
@@ -133773,6 +137621,46 @@ video {
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   }
 
+  .xl\:active\:shadow-sm:active {
+    --tw-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+
+  .xl\:active\:shadow:active {
+    --tw-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+
+  .xl\:active\:shadow-md:active {
+    --tw-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+
+  .xl\:active\:shadow-lg:active {
+    --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+
+  .xl\:active\:shadow-xl:active {
+    --tw-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+
+  .xl\:active\:shadow-2xl:active {
+    --tw-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+
+  .xl\:active\:shadow-inner:active {
+    --tw-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+
+  .xl\:active\:shadow-none:active {
+    --tw-shadow: 0 0 #0000;
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+
   .xl\:ring-0 {
     --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
     --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(0px + var(--tw-ring-offset-width)) var(--tw-ring-color);
@@ -140277,6 +144165,32 @@ video {
     transform: none;
   }
 
+  .xl\:active\:transform:active {
+    --tw-translate-x: 0;
+    --tw-translate-y: 0;
+    --tw-rotate: 0;
+    --tw-skew-x: 0;
+    --tw-skew-y: 0;
+    --tw-scale-x: 1;
+    --tw-scale-y: 1;
+    transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .xl\:active\:transform-gpu:active {
+    --tw-translate-x: 0;
+    --tw-translate-y: 0;
+    --tw-rotate: 0;
+    --tw-skew-x: 0;
+    --tw-skew-y: 0;
+    --tw-scale-x: 1;
+    --tw-scale-y: 1;
+    transform: translate3d(var(--tw-translate-x), var(--tw-translate-y), 0) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .xl\:active\:transform-none:active {
+    transform: none;
+  }
+
   .xl\:origin-center {
     transform-origin: center;
   }
@@ -142923,6 +146837,678 @@ video {
     --tw-translate-y: -100%;
   }
 
+  .xl\:active\:translate-x-0:active {
+    --tw-translate-x: 0px;
+  }
+
+  .xl\:active\:translate-x-1:active {
+    --tw-translate-x: 0.25rem;
+  }
+
+  .xl\:active\:translate-x-2:active {
+    --tw-translate-x: 0.5rem;
+  }
+
+  .xl\:active\:translate-x-3:active {
+    --tw-translate-x: 0.75rem;
+  }
+
+  .xl\:active\:translate-x-4:active {
+    --tw-translate-x: 1rem;
+  }
+
+  .xl\:active\:translate-x-5:active {
+    --tw-translate-x: 1.25rem;
+  }
+
+  .xl\:active\:translate-x-6:active {
+    --tw-translate-x: 1.5rem;
+  }
+
+  .xl\:active\:translate-x-7:active {
+    --tw-translate-x: 1.75rem;
+  }
+
+  .xl\:active\:translate-x-8:active {
+    --tw-translate-x: 2rem;
+  }
+
+  .xl\:active\:translate-x-9:active {
+    --tw-translate-x: 2.25rem;
+  }
+
+  .xl\:active\:translate-x-10:active {
+    --tw-translate-x: 2.5rem;
+  }
+
+  .xl\:active\:translate-x-11:active {
+    --tw-translate-x: 2.75rem;
+  }
+
+  .xl\:active\:translate-x-12:active {
+    --tw-translate-x: 3rem;
+  }
+
+  .xl\:active\:translate-x-14:active {
+    --tw-translate-x: 3.5rem;
+  }
+
+  .xl\:active\:translate-x-16:active {
+    --tw-translate-x: 4rem;
+  }
+
+  .xl\:active\:translate-x-20:active {
+    --tw-translate-x: 5rem;
+  }
+
+  .xl\:active\:translate-x-24:active {
+    --tw-translate-x: 6rem;
+  }
+
+  .xl\:active\:translate-x-28:active {
+    --tw-translate-x: 7rem;
+  }
+
+  .xl\:active\:translate-x-32:active {
+    --tw-translate-x: 8rem;
+  }
+
+  .xl\:active\:translate-x-36:active {
+    --tw-translate-x: 9rem;
+  }
+
+  .xl\:active\:translate-x-40:active {
+    --tw-translate-x: 10rem;
+  }
+
+  .xl\:active\:translate-x-44:active {
+    --tw-translate-x: 11rem;
+  }
+
+  .xl\:active\:translate-x-48:active {
+    --tw-translate-x: 12rem;
+  }
+
+  .xl\:active\:translate-x-52:active {
+    --tw-translate-x: 13rem;
+  }
+
+  .xl\:active\:translate-x-56:active {
+    --tw-translate-x: 14rem;
+  }
+
+  .xl\:active\:translate-x-60:active {
+    --tw-translate-x: 15rem;
+  }
+
+  .xl\:active\:translate-x-64:active {
+    --tw-translate-x: 16rem;
+  }
+
+  .xl\:active\:translate-x-72:active {
+    --tw-translate-x: 18rem;
+  }
+
+  .xl\:active\:translate-x-80:active {
+    --tw-translate-x: 20rem;
+  }
+
+  .xl\:active\:translate-x-96:active {
+    --tw-translate-x: 24rem;
+  }
+
+  .xl\:active\:translate-x-px:active {
+    --tw-translate-x: 1px;
+  }
+
+  .xl\:active\:translate-x-0\.5:active {
+    --tw-translate-x: 0.125rem;
+  }
+
+  .xl\:active\:translate-x-1\.5:active {
+    --tw-translate-x: 0.375rem;
+  }
+
+  .xl\:active\:translate-x-2\.5:active {
+    --tw-translate-x: 0.625rem;
+  }
+
+  .xl\:active\:translate-x-3\.5:active {
+    --tw-translate-x: 0.875rem;
+  }
+
+  .xl\:active\:-translate-x-0:active {
+    --tw-translate-x: 0px;
+  }
+
+  .xl\:active\:-translate-x-1:active {
+    --tw-translate-x: -0.25rem;
+  }
+
+  .xl\:active\:-translate-x-2:active {
+    --tw-translate-x: -0.5rem;
+  }
+
+  .xl\:active\:-translate-x-3:active {
+    --tw-translate-x: -0.75rem;
+  }
+
+  .xl\:active\:-translate-x-4:active {
+    --tw-translate-x: -1rem;
+  }
+
+  .xl\:active\:-translate-x-5:active {
+    --tw-translate-x: -1.25rem;
+  }
+
+  .xl\:active\:-translate-x-6:active {
+    --tw-translate-x: -1.5rem;
+  }
+
+  .xl\:active\:-translate-x-7:active {
+    --tw-translate-x: -1.75rem;
+  }
+
+  .xl\:active\:-translate-x-8:active {
+    --tw-translate-x: -2rem;
+  }
+
+  .xl\:active\:-translate-x-9:active {
+    --tw-translate-x: -2.25rem;
+  }
+
+  .xl\:active\:-translate-x-10:active {
+    --tw-translate-x: -2.5rem;
+  }
+
+  .xl\:active\:-translate-x-11:active {
+    --tw-translate-x: -2.75rem;
+  }
+
+  .xl\:active\:-translate-x-12:active {
+    --tw-translate-x: -3rem;
+  }
+
+  .xl\:active\:-translate-x-14:active {
+    --tw-translate-x: -3.5rem;
+  }
+
+  .xl\:active\:-translate-x-16:active {
+    --tw-translate-x: -4rem;
+  }
+
+  .xl\:active\:-translate-x-20:active {
+    --tw-translate-x: -5rem;
+  }
+
+  .xl\:active\:-translate-x-24:active {
+    --tw-translate-x: -6rem;
+  }
+
+  .xl\:active\:-translate-x-28:active {
+    --tw-translate-x: -7rem;
+  }
+
+  .xl\:active\:-translate-x-32:active {
+    --tw-translate-x: -8rem;
+  }
+
+  .xl\:active\:-translate-x-36:active {
+    --tw-translate-x: -9rem;
+  }
+
+  .xl\:active\:-translate-x-40:active {
+    --tw-translate-x: -10rem;
+  }
+
+  .xl\:active\:-translate-x-44:active {
+    --tw-translate-x: -11rem;
+  }
+
+  .xl\:active\:-translate-x-48:active {
+    --tw-translate-x: -12rem;
+  }
+
+  .xl\:active\:-translate-x-52:active {
+    --tw-translate-x: -13rem;
+  }
+
+  .xl\:active\:-translate-x-56:active {
+    --tw-translate-x: -14rem;
+  }
+
+  .xl\:active\:-translate-x-60:active {
+    --tw-translate-x: -15rem;
+  }
+
+  .xl\:active\:-translate-x-64:active {
+    --tw-translate-x: -16rem;
+  }
+
+  .xl\:active\:-translate-x-72:active {
+    --tw-translate-x: -18rem;
+  }
+
+  .xl\:active\:-translate-x-80:active {
+    --tw-translate-x: -20rem;
+  }
+
+  .xl\:active\:-translate-x-96:active {
+    --tw-translate-x: -24rem;
+  }
+
+  .xl\:active\:-translate-x-px:active {
+    --tw-translate-x: -1px;
+  }
+
+  .xl\:active\:-translate-x-0\.5:active {
+    --tw-translate-x: -0.125rem;
+  }
+
+  .xl\:active\:-translate-x-1\.5:active {
+    --tw-translate-x: -0.375rem;
+  }
+
+  .xl\:active\:-translate-x-2\.5:active {
+    --tw-translate-x: -0.625rem;
+  }
+
+  .xl\:active\:-translate-x-3\.5:active {
+    --tw-translate-x: -0.875rem;
+  }
+
+  .xl\:active\:translate-x-1\/2:active {
+    --tw-translate-x: 50%;
+  }
+
+  .xl\:active\:translate-x-1\/3:active {
+    --tw-translate-x: 33.333333%;
+  }
+
+  .xl\:active\:translate-x-2\/3:active {
+    --tw-translate-x: 66.666667%;
+  }
+
+  .xl\:active\:translate-x-1\/4:active {
+    --tw-translate-x: 25%;
+  }
+
+  .xl\:active\:translate-x-2\/4:active {
+    --tw-translate-x: 50%;
+  }
+
+  .xl\:active\:translate-x-3\/4:active {
+    --tw-translate-x: 75%;
+  }
+
+  .xl\:active\:translate-x-full:active {
+    --tw-translate-x: 100%;
+  }
+
+  .xl\:active\:-translate-x-1\/2:active {
+    --tw-translate-x: -50%;
+  }
+
+  .xl\:active\:-translate-x-1\/3:active {
+    --tw-translate-x: -33.333333%;
+  }
+
+  .xl\:active\:-translate-x-2\/3:active {
+    --tw-translate-x: -66.666667%;
+  }
+
+  .xl\:active\:-translate-x-1\/4:active {
+    --tw-translate-x: -25%;
+  }
+
+  .xl\:active\:-translate-x-2\/4:active {
+    --tw-translate-x: -50%;
+  }
+
+  .xl\:active\:-translate-x-3\/4:active {
+    --tw-translate-x: -75%;
+  }
+
+  .xl\:active\:-translate-x-full:active {
+    --tw-translate-x: -100%;
+  }
+
+  .xl\:active\:translate-y-0:active {
+    --tw-translate-y: 0px;
+  }
+
+  .xl\:active\:translate-y-1:active {
+    --tw-translate-y: 0.25rem;
+  }
+
+  .xl\:active\:translate-y-2:active {
+    --tw-translate-y: 0.5rem;
+  }
+
+  .xl\:active\:translate-y-3:active {
+    --tw-translate-y: 0.75rem;
+  }
+
+  .xl\:active\:translate-y-4:active {
+    --tw-translate-y: 1rem;
+  }
+
+  .xl\:active\:translate-y-5:active {
+    --tw-translate-y: 1.25rem;
+  }
+
+  .xl\:active\:translate-y-6:active {
+    --tw-translate-y: 1.5rem;
+  }
+
+  .xl\:active\:translate-y-7:active {
+    --tw-translate-y: 1.75rem;
+  }
+
+  .xl\:active\:translate-y-8:active {
+    --tw-translate-y: 2rem;
+  }
+
+  .xl\:active\:translate-y-9:active {
+    --tw-translate-y: 2.25rem;
+  }
+
+  .xl\:active\:translate-y-10:active {
+    --tw-translate-y: 2.5rem;
+  }
+
+  .xl\:active\:translate-y-11:active {
+    --tw-translate-y: 2.75rem;
+  }
+
+  .xl\:active\:translate-y-12:active {
+    --tw-translate-y: 3rem;
+  }
+
+  .xl\:active\:translate-y-14:active {
+    --tw-translate-y: 3.5rem;
+  }
+
+  .xl\:active\:translate-y-16:active {
+    --tw-translate-y: 4rem;
+  }
+
+  .xl\:active\:translate-y-20:active {
+    --tw-translate-y: 5rem;
+  }
+
+  .xl\:active\:translate-y-24:active {
+    --tw-translate-y: 6rem;
+  }
+
+  .xl\:active\:translate-y-28:active {
+    --tw-translate-y: 7rem;
+  }
+
+  .xl\:active\:translate-y-32:active {
+    --tw-translate-y: 8rem;
+  }
+
+  .xl\:active\:translate-y-36:active {
+    --tw-translate-y: 9rem;
+  }
+
+  .xl\:active\:translate-y-40:active {
+    --tw-translate-y: 10rem;
+  }
+
+  .xl\:active\:translate-y-44:active {
+    --tw-translate-y: 11rem;
+  }
+
+  .xl\:active\:translate-y-48:active {
+    --tw-translate-y: 12rem;
+  }
+
+  .xl\:active\:translate-y-52:active {
+    --tw-translate-y: 13rem;
+  }
+
+  .xl\:active\:translate-y-56:active {
+    --tw-translate-y: 14rem;
+  }
+
+  .xl\:active\:translate-y-60:active {
+    --tw-translate-y: 15rem;
+  }
+
+  .xl\:active\:translate-y-64:active {
+    --tw-translate-y: 16rem;
+  }
+
+  .xl\:active\:translate-y-72:active {
+    --tw-translate-y: 18rem;
+  }
+
+  .xl\:active\:translate-y-80:active {
+    --tw-translate-y: 20rem;
+  }
+
+  .xl\:active\:translate-y-96:active {
+    --tw-translate-y: 24rem;
+  }
+
+  .xl\:active\:translate-y-px:active {
+    --tw-translate-y: 1px;
+  }
+
+  .xl\:active\:translate-y-0\.5:active {
+    --tw-translate-y: 0.125rem;
+  }
+
+  .xl\:active\:translate-y-1\.5:active {
+    --tw-translate-y: 0.375rem;
+  }
+
+  .xl\:active\:translate-y-2\.5:active {
+    --tw-translate-y: 0.625rem;
+  }
+
+  .xl\:active\:translate-y-3\.5:active {
+    --tw-translate-y: 0.875rem;
+  }
+
+  .xl\:active\:-translate-y-0:active {
+    --tw-translate-y: 0px;
+  }
+
+  .xl\:active\:-translate-y-1:active {
+    --tw-translate-y: -0.25rem;
+  }
+
+  .xl\:active\:-translate-y-2:active {
+    --tw-translate-y: -0.5rem;
+  }
+
+  .xl\:active\:-translate-y-3:active {
+    --tw-translate-y: -0.75rem;
+  }
+
+  .xl\:active\:-translate-y-4:active {
+    --tw-translate-y: -1rem;
+  }
+
+  .xl\:active\:-translate-y-5:active {
+    --tw-translate-y: -1.25rem;
+  }
+
+  .xl\:active\:-translate-y-6:active {
+    --tw-translate-y: -1.5rem;
+  }
+
+  .xl\:active\:-translate-y-7:active {
+    --tw-translate-y: -1.75rem;
+  }
+
+  .xl\:active\:-translate-y-8:active {
+    --tw-translate-y: -2rem;
+  }
+
+  .xl\:active\:-translate-y-9:active {
+    --tw-translate-y: -2.25rem;
+  }
+
+  .xl\:active\:-translate-y-10:active {
+    --tw-translate-y: -2.5rem;
+  }
+
+  .xl\:active\:-translate-y-11:active {
+    --tw-translate-y: -2.75rem;
+  }
+
+  .xl\:active\:-translate-y-12:active {
+    --tw-translate-y: -3rem;
+  }
+
+  .xl\:active\:-translate-y-14:active {
+    --tw-translate-y: -3.5rem;
+  }
+
+  .xl\:active\:-translate-y-16:active {
+    --tw-translate-y: -4rem;
+  }
+
+  .xl\:active\:-translate-y-20:active {
+    --tw-translate-y: -5rem;
+  }
+
+  .xl\:active\:-translate-y-24:active {
+    --tw-translate-y: -6rem;
+  }
+
+  .xl\:active\:-translate-y-28:active {
+    --tw-translate-y: -7rem;
+  }
+
+  .xl\:active\:-translate-y-32:active {
+    --tw-translate-y: -8rem;
+  }
+
+  .xl\:active\:-translate-y-36:active {
+    --tw-translate-y: -9rem;
+  }
+
+  .xl\:active\:-translate-y-40:active {
+    --tw-translate-y: -10rem;
+  }
+
+  .xl\:active\:-translate-y-44:active {
+    --tw-translate-y: -11rem;
+  }
+
+  .xl\:active\:-translate-y-48:active {
+    --tw-translate-y: -12rem;
+  }
+
+  .xl\:active\:-translate-y-52:active {
+    --tw-translate-y: -13rem;
+  }
+
+  .xl\:active\:-translate-y-56:active {
+    --tw-translate-y: -14rem;
+  }
+
+  .xl\:active\:-translate-y-60:active {
+    --tw-translate-y: -15rem;
+  }
+
+  .xl\:active\:-translate-y-64:active {
+    --tw-translate-y: -16rem;
+  }
+
+  .xl\:active\:-translate-y-72:active {
+    --tw-translate-y: -18rem;
+  }
+
+  .xl\:active\:-translate-y-80:active {
+    --tw-translate-y: -20rem;
+  }
+
+  .xl\:active\:-translate-y-96:active {
+    --tw-translate-y: -24rem;
+  }
+
+  .xl\:active\:-translate-y-px:active {
+    --tw-translate-y: -1px;
+  }
+
+  .xl\:active\:-translate-y-0\.5:active {
+    --tw-translate-y: -0.125rem;
+  }
+
+  .xl\:active\:-translate-y-1\.5:active {
+    --tw-translate-y: -0.375rem;
+  }
+
+  .xl\:active\:-translate-y-2\.5:active {
+    --tw-translate-y: -0.625rem;
+  }
+
+  .xl\:active\:-translate-y-3\.5:active {
+    --tw-translate-y: -0.875rem;
+  }
+
+  .xl\:active\:translate-y-1\/2:active {
+    --tw-translate-y: 50%;
+  }
+
+  .xl\:active\:translate-y-1\/3:active {
+    --tw-translate-y: 33.333333%;
+  }
+
+  .xl\:active\:translate-y-2\/3:active {
+    --tw-translate-y: 66.666667%;
+  }
+
+  .xl\:active\:translate-y-1\/4:active {
+    --tw-translate-y: 25%;
+  }
+
+  .xl\:active\:translate-y-2\/4:active {
+    --tw-translate-y: 50%;
+  }
+
+  .xl\:active\:translate-y-3\/4:active {
+    --tw-translate-y: 75%;
+  }
+
+  .xl\:active\:translate-y-full:active {
+    --tw-translate-y: 100%;
+  }
+
+  .xl\:active\:-translate-y-1\/2:active {
+    --tw-translate-y: -50%;
+  }
+
+  .xl\:active\:-translate-y-1\/3:active {
+    --tw-translate-y: -33.333333%;
+  }
+
+  .xl\:active\:-translate-y-2\/3:active {
+    --tw-translate-y: -66.666667%;
+  }
+
+  .xl\:active\:-translate-y-1\/4:active {
+    --tw-translate-y: -25%;
+  }
+
+  .xl\:active\:-translate-y-2\/4:active {
+    --tw-translate-y: -50%;
+  }
+
+  .xl\:active\:-translate-y-3\/4:active {
+    --tw-translate-y: -75%;
+  }
+
+  .xl\:active\:-translate-y-full:active {
+    --tw-translate-y: -100%;
+  }
+
   .xl\:skew-x-0 {
     --tw-skew-x: 0deg;
   }
@@ -143325,6 +147911,230 @@ video {
 
   .xl\:animate-bounce {
     animation: bounce 1s infinite;
+  }
+
+  .xl\:hover\:animate-none:hover {
+    animation: none;
+  }
+
+  .xl\:hover\:animate-spin:hover {
+    animation: spin 1s linear infinite;
+  }
+
+  .xl\:hover\:animate-ping:hover {
+    animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+  }
+
+  .xl\:hover\:animate-pulse:hover {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .xl\:hover\:animate-bounce:hover {
+    animation: bounce 1s infinite;
+  }
+
+  .group:hover .xl\:group-hover\:animate-none {
+    animation: none;
+  }
+
+  .group:hover .xl\:group-hover\:animate-spin {
+    animation: spin 1s linear infinite;
+  }
+
+  .group:hover .xl\:group-hover\:animate-ping {
+    animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+  }
+
+  .group:hover .xl\:group-hover\:animate-pulse {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .group:hover .xl\:group-hover\:animate-bounce {
+    animation: bounce 1s infinite;
+  }
+
+  .xl\:active\:animate-none:active {
+    animation: none;
+  }
+
+  .xl\:active\:animate-spin:active {
+    animation: spin 1s linear infinite;
+  }
+
+  .xl\:active\:animate-ping:active {
+    animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+  }
+
+  .xl\:active\:animate-pulse:active {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .xl\:active\:animate-bounce:active {
+    animation: bounce 1s infinite;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .xl\:motion-safe\:animate-none {
+      animation: none;
+    }
+
+    .xl\:motion-safe\:animate-spin {
+      animation: spin 1s linear infinite;
+    }
+
+    .xl\:motion-safe\:animate-ping {
+      animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+    }
+
+    .xl\:motion-safe\:animate-pulse {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+
+    .xl\:motion-safe\:animate-bounce {
+      animation: bounce 1s infinite;
+    }
+
+    .xl\:motion-safe\:hover\:animate-none:hover {
+      animation: none;
+    }
+
+    .xl\:motion-safe\:hover\:animate-spin:hover {
+      animation: spin 1s linear infinite;
+    }
+
+    .xl\:motion-safe\:hover\:animate-ping:hover {
+      animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+    }
+
+    .xl\:motion-safe\:hover\:animate-pulse:hover {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+
+    .xl\:motion-safe\:hover\:animate-bounce:hover {
+      animation: bounce 1s infinite;
+    }
+
+    .group:hover .xl\:motion-safe\:group-hover\:animate-none {
+      animation: none;
+    }
+
+    .group:hover .xl\:motion-safe\:group-hover\:animate-spin {
+      animation: spin 1s linear infinite;
+    }
+
+    .group:hover .xl\:motion-safe\:group-hover\:animate-ping {
+      animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+    }
+
+    .group:hover .xl\:motion-safe\:group-hover\:animate-pulse {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+
+    .group:hover .xl\:motion-safe\:group-hover\:animate-bounce {
+      animation: bounce 1s infinite;
+    }
+
+    .xl\:motion-safe\:active\:animate-none:active {
+      animation: none;
+    }
+
+    .xl\:motion-safe\:active\:animate-spin:active {
+      animation: spin 1s linear infinite;
+    }
+
+    .xl\:motion-safe\:active\:animate-ping:active {
+      animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+    }
+
+    .xl\:motion-safe\:active\:animate-pulse:active {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+
+    .xl\:motion-safe\:active\:animate-bounce:active {
+      animation: bounce 1s infinite;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .xl\:motion-reduce\:animate-none {
+      animation: none;
+    }
+
+    .xl\:motion-reduce\:animate-spin {
+      animation: spin 1s linear infinite;
+    }
+
+    .xl\:motion-reduce\:animate-ping {
+      animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+    }
+
+    .xl\:motion-reduce\:animate-pulse {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+
+    .xl\:motion-reduce\:animate-bounce {
+      animation: bounce 1s infinite;
+    }
+
+    .xl\:motion-reduce\:hover\:animate-none:hover {
+      animation: none;
+    }
+
+    .xl\:motion-reduce\:hover\:animate-spin:hover {
+      animation: spin 1s linear infinite;
+    }
+
+    .xl\:motion-reduce\:hover\:animate-ping:hover {
+      animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+    }
+
+    .xl\:motion-reduce\:hover\:animate-pulse:hover {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+
+    .xl\:motion-reduce\:hover\:animate-bounce:hover {
+      animation: bounce 1s infinite;
+    }
+
+    .group:hover .xl\:motion-reduce\:group-hover\:animate-none {
+      animation: none;
+    }
+
+    .group:hover .xl\:motion-reduce\:group-hover\:animate-spin {
+      animation: spin 1s linear infinite;
+    }
+
+    .group:hover .xl\:motion-reduce\:group-hover\:animate-ping {
+      animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+    }
+
+    .group:hover .xl\:motion-reduce\:group-hover\:animate-pulse {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+
+    .group:hover .xl\:motion-reduce\:group-hover\:animate-bounce {
+      animation: bounce 1s infinite;
+    }
+
+    .xl\:motion-reduce\:active\:animate-none:active {
+      animation: none;
+    }
+
+    .xl\:motion-reduce\:active\:animate-spin:active {
+      animation: spin 1s linear infinite;
+    }
+
+    .xl\:motion-reduce\:active\:animate-ping:active {
+      animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+    }
+
+    .xl\:motion-reduce\:active\:animate-pulse:active {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+
+    .xl\:motion-reduce\:active\:animate-bounce:active {
+      animation: bounce 1s infinite;
+    }
   }
 }
 
@@ -162323,6 +167133,46 @@ video {
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   }
 
+  .\32xl\:active\:shadow-sm:active {
+    --tw-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+
+  .\32xl\:active\:shadow:active {
+    --tw-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+
+  .\32xl\:active\:shadow-md:active {
+    --tw-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+
+  .\32xl\:active\:shadow-lg:active {
+    --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+
+  .\32xl\:active\:shadow-xl:active {
+    --tw-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+
+  .\32xl\:active\:shadow-2xl:active {
+    --tw-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+
+  .\32xl\:active\:shadow-inner:active {
+    --tw-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+
+  .\32xl\:active\:shadow-none:active {
+    --tw-shadow: 0 0 #0000;
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+
   .\32xl\:ring-0 {
     --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
     --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(0px + var(--tw-ring-offset-width)) var(--tw-ring-color);
@@ -168827,6 +173677,32 @@ video {
     transform: none;
   }
 
+  .\32xl\:active\:transform:active {
+    --tw-translate-x: 0;
+    --tw-translate-y: 0;
+    --tw-rotate: 0;
+    --tw-skew-x: 0;
+    --tw-skew-y: 0;
+    --tw-scale-x: 1;
+    --tw-scale-y: 1;
+    transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .\32xl\:active\:transform-gpu:active {
+    --tw-translate-x: 0;
+    --tw-translate-y: 0;
+    --tw-rotate: 0;
+    --tw-skew-x: 0;
+    --tw-skew-y: 0;
+    --tw-scale-x: 1;
+    --tw-scale-y: 1;
+    transform: translate3d(var(--tw-translate-x), var(--tw-translate-y), 0) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .\32xl\:active\:transform-none:active {
+    transform: none;
+  }
+
   .\32xl\:origin-center {
     transform-origin: center;
   }
@@ -171473,6 +176349,678 @@ video {
     --tw-translate-y: -100%;
   }
 
+  .\32xl\:active\:translate-x-0:active {
+    --tw-translate-x: 0px;
+  }
+
+  .\32xl\:active\:translate-x-1:active {
+    --tw-translate-x: 0.25rem;
+  }
+
+  .\32xl\:active\:translate-x-2:active {
+    --tw-translate-x: 0.5rem;
+  }
+
+  .\32xl\:active\:translate-x-3:active {
+    --tw-translate-x: 0.75rem;
+  }
+
+  .\32xl\:active\:translate-x-4:active {
+    --tw-translate-x: 1rem;
+  }
+
+  .\32xl\:active\:translate-x-5:active {
+    --tw-translate-x: 1.25rem;
+  }
+
+  .\32xl\:active\:translate-x-6:active {
+    --tw-translate-x: 1.5rem;
+  }
+
+  .\32xl\:active\:translate-x-7:active {
+    --tw-translate-x: 1.75rem;
+  }
+
+  .\32xl\:active\:translate-x-8:active {
+    --tw-translate-x: 2rem;
+  }
+
+  .\32xl\:active\:translate-x-9:active {
+    --tw-translate-x: 2.25rem;
+  }
+
+  .\32xl\:active\:translate-x-10:active {
+    --tw-translate-x: 2.5rem;
+  }
+
+  .\32xl\:active\:translate-x-11:active {
+    --tw-translate-x: 2.75rem;
+  }
+
+  .\32xl\:active\:translate-x-12:active {
+    --tw-translate-x: 3rem;
+  }
+
+  .\32xl\:active\:translate-x-14:active {
+    --tw-translate-x: 3.5rem;
+  }
+
+  .\32xl\:active\:translate-x-16:active {
+    --tw-translate-x: 4rem;
+  }
+
+  .\32xl\:active\:translate-x-20:active {
+    --tw-translate-x: 5rem;
+  }
+
+  .\32xl\:active\:translate-x-24:active {
+    --tw-translate-x: 6rem;
+  }
+
+  .\32xl\:active\:translate-x-28:active {
+    --tw-translate-x: 7rem;
+  }
+
+  .\32xl\:active\:translate-x-32:active {
+    --tw-translate-x: 8rem;
+  }
+
+  .\32xl\:active\:translate-x-36:active {
+    --tw-translate-x: 9rem;
+  }
+
+  .\32xl\:active\:translate-x-40:active {
+    --tw-translate-x: 10rem;
+  }
+
+  .\32xl\:active\:translate-x-44:active {
+    --tw-translate-x: 11rem;
+  }
+
+  .\32xl\:active\:translate-x-48:active {
+    --tw-translate-x: 12rem;
+  }
+
+  .\32xl\:active\:translate-x-52:active {
+    --tw-translate-x: 13rem;
+  }
+
+  .\32xl\:active\:translate-x-56:active {
+    --tw-translate-x: 14rem;
+  }
+
+  .\32xl\:active\:translate-x-60:active {
+    --tw-translate-x: 15rem;
+  }
+
+  .\32xl\:active\:translate-x-64:active {
+    --tw-translate-x: 16rem;
+  }
+
+  .\32xl\:active\:translate-x-72:active {
+    --tw-translate-x: 18rem;
+  }
+
+  .\32xl\:active\:translate-x-80:active {
+    --tw-translate-x: 20rem;
+  }
+
+  .\32xl\:active\:translate-x-96:active {
+    --tw-translate-x: 24rem;
+  }
+
+  .\32xl\:active\:translate-x-px:active {
+    --tw-translate-x: 1px;
+  }
+
+  .\32xl\:active\:translate-x-0\.5:active {
+    --tw-translate-x: 0.125rem;
+  }
+
+  .\32xl\:active\:translate-x-1\.5:active {
+    --tw-translate-x: 0.375rem;
+  }
+
+  .\32xl\:active\:translate-x-2\.5:active {
+    --tw-translate-x: 0.625rem;
+  }
+
+  .\32xl\:active\:translate-x-3\.5:active {
+    --tw-translate-x: 0.875rem;
+  }
+
+  .\32xl\:active\:-translate-x-0:active {
+    --tw-translate-x: 0px;
+  }
+
+  .\32xl\:active\:-translate-x-1:active {
+    --tw-translate-x: -0.25rem;
+  }
+
+  .\32xl\:active\:-translate-x-2:active {
+    --tw-translate-x: -0.5rem;
+  }
+
+  .\32xl\:active\:-translate-x-3:active {
+    --tw-translate-x: -0.75rem;
+  }
+
+  .\32xl\:active\:-translate-x-4:active {
+    --tw-translate-x: -1rem;
+  }
+
+  .\32xl\:active\:-translate-x-5:active {
+    --tw-translate-x: -1.25rem;
+  }
+
+  .\32xl\:active\:-translate-x-6:active {
+    --tw-translate-x: -1.5rem;
+  }
+
+  .\32xl\:active\:-translate-x-7:active {
+    --tw-translate-x: -1.75rem;
+  }
+
+  .\32xl\:active\:-translate-x-8:active {
+    --tw-translate-x: -2rem;
+  }
+
+  .\32xl\:active\:-translate-x-9:active {
+    --tw-translate-x: -2.25rem;
+  }
+
+  .\32xl\:active\:-translate-x-10:active {
+    --tw-translate-x: -2.5rem;
+  }
+
+  .\32xl\:active\:-translate-x-11:active {
+    --tw-translate-x: -2.75rem;
+  }
+
+  .\32xl\:active\:-translate-x-12:active {
+    --tw-translate-x: -3rem;
+  }
+
+  .\32xl\:active\:-translate-x-14:active {
+    --tw-translate-x: -3.5rem;
+  }
+
+  .\32xl\:active\:-translate-x-16:active {
+    --tw-translate-x: -4rem;
+  }
+
+  .\32xl\:active\:-translate-x-20:active {
+    --tw-translate-x: -5rem;
+  }
+
+  .\32xl\:active\:-translate-x-24:active {
+    --tw-translate-x: -6rem;
+  }
+
+  .\32xl\:active\:-translate-x-28:active {
+    --tw-translate-x: -7rem;
+  }
+
+  .\32xl\:active\:-translate-x-32:active {
+    --tw-translate-x: -8rem;
+  }
+
+  .\32xl\:active\:-translate-x-36:active {
+    --tw-translate-x: -9rem;
+  }
+
+  .\32xl\:active\:-translate-x-40:active {
+    --tw-translate-x: -10rem;
+  }
+
+  .\32xl\:active\:-translate-x-44:active {
+    --tw-translate-x: -11rem;
+  }
+
+  .\32xl\:active\:-translate-x-48:active {
+    --tw-translate-x: -12rem;
+  }
+
+  .\32xl\:active\:-translate-x-52:active {
+    --tw-translate-x: -13rem;
+  }
+
+  .\32xl\:active\:-translate-x-56:active {
+    --tw-translate-x: -14rem;
+  }
+
+  .\32xl\:active\:-translate-x-60:active {
+    --tw-translate-x: -15rem;
+  }
+
+  .\32xl\:active\:-translate-x-64:active {
+    --tw-translate-x: -16rem;
+  }
+
+  .\32xl\:active\:-translate-x-72:active {
+    --tw-translate-x: -18rem;
+  }
+
+  .\32xl\:active\:-translate-x-80:active {
+    --tw-translate-x: -20rem;
+  }
+
+  .\32xl\:active\:-translate-x-96:active {
+    --tw-translate-x: -24rem;
+  }
+
+  .\32xl\:active\:-translate-x-px:active {
+    --tw-translate-x: -1px;
+  }
+
+  .\32xl\:active\:-translate-x-0\.5:active {
+    --tw-translate-x: -0.125rem;
+  }
+
+  .\32xl\:active\:-translate-x-1\.5:active {
+    --tw-translate-x: -0.375rem;
+  }
+
+  .\32xl\:active\:-translate-x-2\.5:active {
+    --tw-translate-x: -0.625rem;
+  }
+
+  .\32xl\:active\:-translate-x-3\.5:active {
+    --tw-translate-x: -0.875rem;
+  }
+
+  .\32xl\:active\:translate-x-1\/2:active {
+    --tw-translate-x: 50%;
+  }
+
+  .\32xl\:active\:translate-x-1\/3:active {
+    --tw-translate-x: 33.333333%;
+  }
+
+  .\32xl\:active\:translate-x-2\/3:active {
+    --tw-translate-x: 66.666667%;
+  }
+
+  .\32xl\:active\:translate-x-1\/4:active {
+    --tw-translate-x: 25%;
+  }
+
+  .\32xl\:active\:translate-x-2\/4:active {
+    --tw-translate-x: 50%;
+  }
+
+  .\32xl\:active\:translate-x-3\/4:active {
+    --tw-translate-x: 75%;
+  }
+
+  .\32xl\:active\:translate-x-full:active {
+    --tw-translate-x: 100%;
+  }
+
+  .\32xl\:active\:-translate-x-1\/2:active {
+    --tw-translate-x: -50%;
+  }
+
+  .\32xl\:active\:-translate-x-1\/3:active {
+    --tw-translate-x: -33.333333%;
+  }
+
+  .\32xl\:active\:-translate-x-2\/3:active {
+    --tw-translate-x: -66.666667%;
+  }
+
+  .\32xl\:active\:-translate-x-1\/4:active {
+    --tw-translate-x: -25%;
+  }
+
+  .\32xl\:active\:-translate-x-2\/4:active {
+    --tw-translate-x: -50%;
+  }
+
+  .\32xl\:active\:-translate-x-3\/4:active {
+    --tw-translate-x: -75%;
+  }
+
+  .\32xl\:active\:-translate-x-full:active {
+    --tw-translate-x: -100%;
+  }
+
+  .\32xl\:active\:translate-y-0:active {
+    --tw-translate-y: 0px;
+  }
+
+  .\32xl\:active\:translate-y-1:active {
+    --tw-translate-y: 0.25rem;
+  }
+
+  .\32xl\:active\:translate-y-2:active {
+    --tw-translate-y: 0.5rem;
+  }
+
+  .\32xl\:active\:translate-y-3:active {
+    --tw-translate-y: 0.75rem;
+  }
+
+  .\32xl\:active\:translate-y-4:active {
+    --tw-translate-y: 1rem;
+  }
+
+  .\32xl\:active\:translate-y-5:active {
+    --tw-translate-y: 1.25rem;
+  }
+
+  .\32xl\:active\:translate-y-6:active {
+    --tw-translate-y: 1.5rem;
+  }
+
+  .\32xl\:active\:translate-y-7:active {
+    --tw-translate-y: 1.75rem;
+  }
+
+  .\32xl\:active\:translate-y-8:active {
+    --tw-translate-y: 2rem;
+  }
+
+  .\32xl\:active\:translate-y-9:active {
+    --tw-translate-y: 2.25rem;
+  }
+
+  .\32xl\:active\:translate-y-10:active {
+    --tw-translate-y: 2.5rem;
+  }
+
+  .\32xl\:active\:translate-y-11:active {
+    --tw-translate-y: 2.75rem;
+  }
+
+  .\32xl\:active\:translate-y-12:active {
+    --tw-translate-y: 3rem;
+  }
+
+  .\32xl\:active\:translate-y-14:active {
+    --tw-translate-y: 3.5rem;
+  }
+
+  .\32xl\:active\:translate-y-16:active {
+    --tw-translate-y: 4rem;
+  }
+
+  .\32xl\:active\:translate-y-20:active {
+    --tw-translate-y: 5rem;
+  }
+
+  .\32xl\:active\:translate-y-24:active {
+    --tw-translate-y: 6rem;
+  }
+
+  .\32xl\:active\:translate-y-28:active {
+    --tw-translate-y: 7rem;
+  }
+
+  .\32xl\:active\:translate-y-32:active {
+    --tw-translate-y: 8rem;
+  }
+
+  .\32xl\:active\:translate-y-36:active {
+    --tw-translate-y: 9rem;
+  }
+
+  .\32xl\:active\:translate-y-40:active {
+    --tw-translate-y: 10rem;
+  }
+
+  .\32xl\:active\:translate-y-44:active {
+    --tw-translate-y: 11rem;
+  }
+
+  .\32xl\:active\:translate-y-48:active {
+    --tw-translate-y: 12rem;
+  }
+
+  .\32xl\:active\:translate-y-52:active {
+    --tw-translate-y: 13rem;
+  }
+
+  .\32xl\:active\:translate-y-56:active {
+    --tw-translate-y: 14rem;
+  }
+
+  .\32xl\:active\:translate-y-60:active {
+    --tw-translate-y: 15rem;
+  }
+
+  .\32xl\:active\:translate-y-64:active {
+    --tw-translate-y: 16rem;
+  }
+
+  .\32xl\:active\:translate-y-72:active {
+    --tw-translate-y: 18rem;
+  }
+
+  .\32xl\:active\:translate-y-80:active {
+    --tw-translate-y: 20rem;
+  }
+
+  .\32xl\:active\:translate-y-96:active {
+    --tw-translate-y: 24rem;
+  }
+
+  .\32xl\:active\:translate-y-px:active {
+    --tw-translate-y: 1px;
+  }
+
+  .\32xl\:active\:translate-y-0\.5:active {
+    --tw-translate-y: 0.125rem;
+  }
+
+  .\32xl\:active\:translate-y-1\.5:active {
+    --tw-translate-y: 0.375rem;
+  }
+
+  .\32xl\:active\:translate-y-2\.5:active {
+    --tw-translate-y: 0.625rem;
+  }
+
+  .\32xl\:active\:translate-y-3\.5:active {
+    --tw-translate-y: 0.875rem;
+  }
+
+  .\32xl\:active\:-translate-y-0:active {
+    --tw-translate-y: 0px;
+  }
+
+  .\32xl\:active\:-translate-y-1:active {
+    --tw-translate-y: -0.25rem;
+  }
+
+  .\32xl\:active\:-translate-y-2:active {
+    --tw-translate-y: -0.5rem;
+  }
+
+  .\32xl\:active\:-translate-y-3:active {
+    --tw-translate-y: -0.75rem;
+  }
+
+  .\32xl\:active\:-translate-y-4:active {
+    --tw-translate-y: -1rem;
+  }
+
+  .\32xl\:active\:-translate-y-5:active {
+    --tw-translate-y: -1.25rem;
+  }
+
+  .\32xl\:active\:-translate-y-6:active {
+    --tw-translate-y: -1.5rem;
+  }
+
+  .\32xl\:active\:-translate-y-7:active {
+    --tw-translate-y: -1.75rem;
+  }
+
+  .\32xl\:active\:-translate-y-8:active {
+    --tw-translate-y: -2rem;
+  }
+
+  .\32xl\:active\:-translate-y-9:active {
+    --tw-translate-y: -2.25rem;
+  }
+
+  .\32xl\:active\:-translate-y-10:active {
+    --tw-translate-y: -2.5rem;
+  }
+
+  .\32xl\:active\:-translate-y-11:active {
+    --tw-translate-y: -2.75rem;
+  }
+
+  .\32xl\:active\:-translate-y-12:active {
+    --tw-translate-y: -3rem;
+  }
+
+  .\32xl\:active\:-translate-y-14:active {
+    --tw-translate-y: -3.5rem;
+  }
+
+  .\32xl\:active\:-translate-y-16:active {
+    --tw-translate-y: -4rem;
+  }
+
+  .\32xl\:active\:-translate-y-20:active {
+    --tw-translate-y: -5rem;
+  }
+
+  .\32xl\:active\:-translate-y-24:active {
+    --tw-translate-y: -6rem;
+  }
+
+  .\32xl\:active\:-translate-y-28:active {
+    --tw-translate-y: -7rem;
+  }
+
+  .\32xl\:active\:-translate-y-32:active {
+    --tw-translate-y: -8rem;
+  }
+
+  .\32xl\:active\:-translate-y-36:active {
+    --tw-translate-y: -9rem;
+  }
+
+  .\32xl\:active\:-translate-y-40:active {
+    --tw-translate-y: -10rem;
+  }
+
+  .\32xl\:active\:-translate-y-44:active {
+    --tw-translate-y: -11rem;
+  }
+
+  .\32xl\:active\:-translate-y-48:active {
+    --tw-translate-y: -12rem;
+  }
+
+  .\32xl\:active\:-translate-y-52:active {
+    --tw-translate-y: -13rem;
+  }
+
+  .\32xl\:active\:-translate-y-56:active {
+    --tw-translate-y: -14rem;
+  }
+
+  .\32xl\:active\:-translate-y-60:active {
+    --tw-translate-y: -15rem;
+  }
+
+  .\32xl\:active\:-translate-y-64:active {
+    --tw-translate-y: -16rem;
+  }
+
+  .\32xl\:active\:-translate-y-72:active {
+    --tw-translate-y: -18rem;
+  }
+
+  .\32xl\:active\:-translate-y-80:active {
+    --tw-translate-y: -20rem;
+  }
+
+  .\32xl\:active\:-translate-y-96:active {
+    --tw-translate-y: -24rem;
+  }
+
+  .\32xl\:active\:-translate-y-px:active {
+    --tw-translate-y: -1px;
+  }
+
+  .\32xl\:active\:-translate-y-0\.5:active {
+    --tw-translate-y: -0.125rem;
+  }
+
+  .\32xl\:active\:-translate-y-1\.5:active {
+    --tw-translate-y: -0.375rem;
+  }
+
+  .\32xl\:active\:-translate-y-2\.5:active {
+    --tw-translate-y: -0.625rem;
+  }
+
+  .\32xl\:active\:-translate-y-3\.5:active {
+    --tw-translate-y: -0.875rem;
+  }
+
+  .\32xl\:active\:translate-y-1\/2:active {
+    --tw-translate-y: 50%;
+  }
+
+  .\32xl\:active\:translate-y-1\/3:active {
+    --tw-translate-y: 33.333333%;
+  }
+
+  .\32xl\:active\:translate-y-2\/3:active {
+    --tw-translate-y: 66.666667%;
+  }
+
+  .\32xl\:active\:translate-y-1\/4:active {
+    --tw-translate-y: 25%;
+  }
+
+  .\32xl\:active\:translate-y-2\/4:active {
+    --tw-translate-y: 50%;
+  }
+
+  .\32xl\:active\:translate-y-3\/4:active {
+    --tw-translate-y: 75%;
+  }
+
+  .\32xl\:active\:translate-y-full:active {
+    --tw-translate-y: 100%;
+  }
+
+  .\32xl\:active\:-translate-y-1\/2:active {
+    --tw-translate-y: -50%;
+  }
+
+  .\32xl\:active\:-translate-y-1\/3:active {
+    --tw-translate-y: -33.333333%;
+  }
+
+  .\32xl\:active\:-translate-y-2\/3:active {
+    --tw-translate-y: -66.666667%;
+  }
+
+  .\32xl\:active\:-translate-y-1\/4:active {
+    --tw-translate-y: -25%;
+  }
+
+  .\32xl\:active\:-translate-y-2\/4:active {
+    --tw-translate-y: -50%;
+  }
+
+  .\32xl\:active\:-translate-y-3\/4:active {
+    --tw-translate-y: -75%;
+  }
+
+  .\32xl\:active\:-translate-y-full:active {
+    --tw-translate-y: -100%;
+  }
+
   .\32xl\:skew-x-0 {
     --tw-skew-x: 0deg;
   }
@@ -171875,5 +177423,229 @@ video {
 
   .\32xl\:animate-bounce {
     animation: bounce 1s infinite;
+  }
+
+  .\32xl\:hover\:animate-none:hover {
+    animation: none;
+  }
+
+  .\32xl\:hover\:animate-spin:hover {
+    animation: spin 1s linear infinite;
+  }
+
+  .\32xl\:hover\:animate-ping:hover {
+    animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+  }
+
+  .\32xl\:hover\:animate-pulse:hover {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .\32xl\:hover\:animate-bounce:hover {
+    animation: bounce 1s infinite;
+  }
+
+  .group:hover .\32xl\:group-hover\:animate-none {
+    animation: none;
+  }
+
+  .group:hover .\32xl\:group-hover\:animate-spin {
+    animation: spin 1s linear infinite;
+  }
+
+  .group:hover .\32xl\:group-hover\:animate-ping {
+    animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+  }
+
+  .group:hover .\32xl\:group-hover\:animate-pulse {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .group:hover .\32xl\:group-hover\:animate-bounce {
+    animation: bounce 1s infinite;
+  }
+
+  .\32xl\:active\:animate-none:active {
+    animation: none;
+  }
+
+  .\32xl\:active\:animate-spin:active {
+    animation: spin 1s linear infinite;
+  }
+
+  .\32xl\:active\:animate-ping:active {
+    animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+  }
+
+  .\32xl\:active\:animate-pulse:active {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .\32xl\:active\:animate-bounce:active {
+    animation: bounce 1s infinite;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .\32xl\:motion-safe\:animate-none {
+      animation: none;
+    }
+
+    .\32xl\:motion-safe\:animate-spin {
+      animation: spin 1s linear infinite;
+    }
+
+    .\32xl\:motion-safe\:animate-ping {
+      animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+    }
+
+    .\32xl\:motion-safe\:animate-pulse {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+
+    .\32xl\:motion-safe\:animate-bounce {
+      animation: bounce 1s infinite;
+    }
+
+    .\32xl\:motion-safe\:hover\:animate-none:hover {
+      animation: none;
+    }
+
+    .\32xl\:motion-safe\:hover\:animate-spin:hover {
+      animation: spin 1s linear infinite;
+    }
+
+    .\32xl\:motion-safe\:hover\:animate-ping:hover {
+      animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+    }
+
+    .\32xl\:motion-safe\:hover\:animate-pulse:hover {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+
+    .\32xl\:motion-safe\:hover\:animate-bounce:hover {
+      animation: bounce 1s infinite;
+    }
+
+    .group:hover .\32xl\:motion-safe\:group-hover\:animate-none {
+      animation: none;
+    }
+
+    .group:hover .\32xl\:motion-safe\:group-hover\:animate-spin {
+      animation: spin 1s linear infinite;
+    }
+
+    .group:hover .\32xl\:motion-safe\:group-hover\:animate-ping {
+      animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+    }
+
+    .group:hover .\32xl\:motion-safe\:group-hover\:animate-pulse {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+
+    .group:hover .\32xl\:motion-safe\:group-hover\:animate-bounce {
+      animation: bounce 1s infinite;
+    }
+
+    .\32xl\:motion-safe\:active\:animate-none:active {
+      animation: none;
+    }
+
+    .\32xl\:motion-safe\:active\:animate-spin:active {
+      animation: spin 1s linear infinite;
+    }
+
+    .\32xl\:motion-safe\:active\:animate-ping:active {
+      animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+    }
+
+    .\32xl\:motion-safe\:active\:animate-pulse:active {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+
+    .\32xl\:motion-safe\:active\:animate-bounce:active {
+      animation: bounce 1s infinite;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .\32xl\:motion-reduce\:animate-none {
+      animation: none;
+    }
+
+    .\32xl\:motion-reduce\:animate-spin {
+      animation: spin 1s linear infinite;
+    }
+
+    .\32xl\:motion-reduce\:animate-ping {
+      animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+    }
+
+    .\32xl\:motion-reduce\:animate-pulse {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+
+    .\32xl\:motion-reduce\:animate-bounce {
+      animation: bounce 1s infinite;
+    }
+
+    .\32xl\:motion-reduce\:hover\:animate-none:hover {
+      animation: none;
+    }
+
+    .\32xl\:motion-reduce\:hover\:animate-spin:hover {
+      animation: spin 1s linear infinite;
+    }
+
+    .\32xl\:motion-reduce\:hover\:animate-ping:hover {
+      animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+    }
+
+    .\32xl\:motion-reduce\:hover\:animate-pulse:hover {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+
+    .\32xl\:motion-reduce\:hover\:animate-bounce:hover {
+      animation: bounce 1s infinite;
+    }
+
+    .group:hover .\32xl\:motion-reduce\:group-hover\:animate-none {
+      animation: none;
+    }
+
+    .group:hover .\32xl\:motion-reduce\:group-hover\:animate-spin {
+      animation: spin 1s linear infinite;
+    }
+
+    .group:hover .\32xl\:motion-reduce\:group-hover\:animate-ping {
+      animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+    }
+
+    .group:hover .\32xl\:motion-reduce\:group-hover\:animate-pulse {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+
+    .group:hover .\32xl\:motion-reduce\:group-hover\:animate-bounce {
+      animation: bounce 1s infinite;
+    }
+
+    .\32xl\:motion-reduce\:active\:animate-none:active {
+      animation: none;
+    }
+
+    .\32xl\:motion-reduce\:active\:animate-spin:active {
+      animation: spin 1s linear infinite;
+    }
+
+    .\32xl\:motion-reduce\:active\:animate-ping:active {
+      animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+    }
+
+    .\32xl\:motion-reduce\:active\:animate-pulse:active {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+
+    .\32xl\:motion-reduce\:active\:animate-bounce:active {
+      animation: bounce 1s infinite;
+    }
   }
 }
