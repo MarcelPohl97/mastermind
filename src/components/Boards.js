@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import Shape from './Shape';
 import Navigation from './Navigation';
+import Board from './Board';
+import CardBoard from './CardBoard';
 
-const Boards = () => {
+const Boards = ({toggleCardBoard, settoggleCardBoard, boards, setBoards, toggleLanding, settoggleLanding}) => {
 
     const shapes = [
         {
@@ -53,11 +55,32 @@ const Boards = () => {
         
     ]
 
+    const test = () => {
+        alert("Hello World");
+    }
+
+    const toggle_Landing = () => {
+        settoggleLanding(!toggleLanding);
+    }
+
+    const create_NewBoard = () => {
+        setBoards([...boards, {
+            board_emoji:'👌',
+            board_title:'New Board',
+            board_protected: true,
+            board_created:'Tester',
+        }])
+    }
+
+    const join_Board = () => {
+        settoggleCardBoard(!toggleCardBoard)
+    }
+
     const MenuItems = [
         {
             id:1,
             anchor_name:'➕ Board',
-            anchor_func: '',
+            anchor_func: create_NewBoard,
         },
         {
             id:2,
@@ -67,17 +90,26 @@ const Boards = () => {
         {
             id:3,
             anchor_name:'🔍 Board',
-            anchor_func:'',
-        }
+            anchor_func:test,
+        },
+        {
+            id:4,
+            anchor_name:'🏠 Home',
+            anchor_func: toggle_Landing,
+        },
     ]
 
     return (
         <>
-        <div className="relative bg-green-400 h-screen w-100">
+        {toggleCardBoard ? <CardBoard /> : ""}
+        <div className="relative bg-green-400 min-h-screen h-auto w-100">
             {shapes.map(shape => <Shape styles={shape.css_classes} key={shape.id} />)}
             <header className="container mx-auto p-5">
                 <Navigation MenuItems={MenuItems} />
             </header>
+            <div className="container mx-auto p-10 grid responsive-grid">
+                {boards.map(board => <Board onClick={join_Board} board={board} />)}
+            </div>
         </div>
         </>
     )

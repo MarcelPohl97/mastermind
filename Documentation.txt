@@ -1,13 +1,29 @@
 23.11.2020:
--> Created Excalidraw Mockup
--> Created Technologie List
--> Created Landing Component
+-> added Excalidraw Mockup
+-> added Technologie List
+-> added Landing Component
 -> Landing Component
 
 24.11.2020:
--> Created Menu Component
--> Created Board Component
--> Created Boards Component
--> Created Navigation Component
--> Created Shape Component
+-> added Menu Component
+-> added Board Component
+-> added Boards Component
+-> added Navigation Component
+-> added Shape Component
+
+26.11.2020:
+-> added calling dynamic functions based on menu items
+-> added svg spinner
+-> added dataLoader to activate Loading window when some type of data exchange happens 
+-> added boards container layout for boards
+-> added board ui
+-> added higher z-index for menu 
+-> added margin board component
+-> setup dummy data for board component
+-> added min-height 100vh if it extends make it height auto to boards component
+-> added creating board component in boards component
+
+-> todo: 
+
+
 

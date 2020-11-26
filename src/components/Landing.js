@@ -60,24 +60,24 @@ const Landing = ({toggleLanding, settoggleLanding}) => {
     const MenuItems = [
         {
             id:1,
-            anchor_name:'Features',
+            anchor_name:'💎 Features',
             anchor_func: '',
         },
         {
             id:2,
-            anchor_name:'About',
+            anchor_name:'❓ About',
             anchor_func: '',
         },
         {
             id:3,
-            anchor_name:'Support',
-            anchor_func: '',
+            anchor_name:'🛠 Support',
+            anchor_func:'',
         },
     ]
 
     return (
         <>
-        <div className="relative bg-green-400 h-screen w-100 clip-divider">
+        <div className="relative bg-green-400 h-screen w-100 clip-divider overflow-x-hidden">
             {shapes.map(shape => <Shape styles={shape.css_classes} key={shape.id} />)}
             <header className="container mx-auto p-5">
                 <Navigation MenuItems={MenuItems} />
