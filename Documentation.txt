@@ -23,7 +23,15 @@
 -> added min-height 100vh if it extends make it height auto to boards component
 -> added creating board component in boards component
 
+27.11.2020:
+-> added navigation back to boards and home in cardboard component
+-> added card component
+-> added add card functionality
+
 -> todo: 
+-> add dynamic card loading based on card ids 
+-> add board info
+-> add modal popup to add boards or a card
 
 
 

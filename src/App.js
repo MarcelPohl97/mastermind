@@ -13,61 +13,103 @@ function App() {
   const [boards, setBoards] = useState( 
   [
     {
-      board_emoji:'🤼',
-      board_title:'Card Talk',
-      board_protected: true,
-      board_created:'Flower Powers',
+      id:1,
+      emoji:'🤼',
+      title:'Card Talk',
+      protected: true,
+      created:'Flower Powers',
     },
     {
-      board_emoji:'☘',
-      board_title:'YugiOh Strats',
-      board_protected: false,
-      board_created:'Players',
+      id:2,
+      emoji:'☘',
+      title:'YugiOh Strats',
+      protected: false,
+      created:'Players',
     },
     {
-      board_emoji:'☕',
-      board_title:'Meal Planning',
-      board_protected: true,
-      board_created:'Bäckerei',
+      id:3,
+      emoji:'☕',
+      title:'Meal Planning',
+      protected: true,
+      created:'Bäckerei',
     },
     {
-      board_emoji:'⛽',
-      board_title:'Walkie Talkie',
-      board_protected: true,
-      board_created:'Talkies',
+      id:4,
+      emoji:'⛽',
+      title:'Walkie Talkie',
+      protected: true,
+      created:'Talkies',
     },
     {
-      board_emoji:'⛷',
-      board_title:'Kinds',
-      board_protected: true,
-      board_created:'Kindas',
+      id:5,
+      emoji:'⛷',
+      title:'Kinds',
+      protected: true,
+      created:'Kindas',
     },
     {
-      board_emoji:'⛳',
-      board_title:'Wirklars',
-      board_protected: false,
-      board_created:'Wirk',
+      id:6,
+      emoji:'⛳',
+      title:'Wirklars',
+      protected: false,
+      created:'Wirk',
     },
     {
-      board_emoji:'⚽',
-      board_title:'Lorem Ipsum',
-      board_protected: false,
-      board_created:'Lorem',
+      id:7,
+      emoji:'⚽',
+      title:'Lorem Ipsum',
+      protected: false,
+      created:'Lorem',
     },
     {
-      board_emoji:'✏',
-      board_title:'Design UI',
-      board_protected: true,
-      board_created:'Dribble',
+      id:8,
+      emoji:'✏',
+      title:'Design UI',
+      protected: true,
+      created:'Dribble',
     },
-
   ]
   )
+
+  const [cards, setCards] = useState(
+    [
+      {
+        id:1,
+        name:'Test1',
+        style:'shadow-lg rounded bg-white w-52 h-10 p-1 absolute top-80 left-80',
+        board_id:1,
+      },
+      {
+        id:2,
+        name:'Test2',
+        style:'shadow-lg rounded bg-white w-52 h-10 p-1 absolute inset-y-16',
+        board_id:1,
+      },
+      {
+        id:3,
+        name:'Test3',
+        style:'shadow-lg rounded bg-white w-52 h-10 p-1 absolute inset-40',
+        board_id:1,
+      },
+      {
+        id:4,
+        name:'Test4',
+        style:'shadow-lg rounded bg-white w-52 h-10 p-1 absolute inset-x-60',
+        board_id:2,
+      },
+    ]
+    )
 
   return (
     <>
       {dataLoader ? <LoaderContainer /> : ""}
-      {toggleLanding ? <Landing toggleLanding={toggleLanding} settoggleLanding={settoggleLanding} /> : <Boards toggleCardBoard={toggleCardBoard} settoggleCardBoard={settoggleCardBoard} boards={boards} setBoards={setBoards} toggleLanding={toggleLanding} settoggleLanding={settoggleLanding} />}
+      {toggleLanding ? 
+      <Landing toggleLanding={toggleLanding} settoggleLanding={settoggleLanding} /> 
+      : 
+      <Boards toggleCardBoard={toggleCardBoard} settoggleCardBoard={settoggleCardBoard} 
+              boards={boards} setBoards={setBoards} 
+              cards={cards} setCards={setCards} 
+              toggleLanding={toggleLanding} settoggleLanding={settoggleLanding} />}
     </>
   )
 }

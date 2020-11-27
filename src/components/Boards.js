@@ -4,7 +4,9 @@ import Navigation from './Navigation';
 import Board from './Board';
 import CardBoard from './CardBoard';
 
-const Boards = ({toggleCardBoard, settoggleCardBoard, boards, setBoards, toggleLanding, settoggleLanding}) => {
+const Boards = ({toggleCardBoard, settoggleCardBoard, boards, setBoards, cards, setCards, toggleLanding, settoggleLanding}) => {
+
+    let filtered_cards = [];
 
     const shapes = [
         {
@@ -55,10 +57,6 @@ const Boards = ({toggleCardBoard, settoggleCardBoard, boards, setBoards, toggleL
         
     ]
 
-    const test = () => {
-        alert("Hello World");
-    }
-
     const toggle_Landing = () => {
         settoggleLanding(!toggleLanding);
     }
@@ -73,6 +71,7 @@ const Boards = ({toggleCardBoard, settoggleCardBoard, boards, setBoards, toggleL
     }
 
     const join_Board = () => {
+        filtered_cards = cards.filter((card) => card.id === boards.id);
         settoggleCardBoard(!toggleCardBoard)
     }
 
@@ -90,7 +89,7 @@ const Boards = ({toggleCardBoard, settoggleCardBoard, boards, setBoards, toggleL
         {
             id:3,
             anchor_name:'🔍 Board',
-            anchor_func:test,
+            anchor_func:'',
         },
         {
             id:4,
@@ -101,8 +100,8 @@ const Boards = ({toggleCardBoard, settoggleCardBoard, boards, setBoards, toggleL
 
     return (
         <>
-        {toggleCardBoard ? <CardBoard /> : ""}
-        <div className="relative bg-green-400 min-h-screen h-auto w-100">
+        {toggleCardBoard ? <CardBoard cards={cards} setCards={setCards} filtered_cards={filtered_cards} toggle_Landing={toggle_Landing} join_Board={join_Board} /> : ""}
+        <div className="relative bg-green-400 min-h-screen h-auto w-100 overflow-x-hidden">
             {shapes.map(shape => <Shape styles={shape.css_classes} key={shape.id} />)}
             <header className="container mx-auto p-5">
                 <Navigation MenuItems={MenuItems} />

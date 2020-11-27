@@ -1,7 +1,9 @@
 import React from 'react';
 import Shape from './Shape';
+import Navigation from './Navigation';
+import Card from './Card';
 
-const CardBoard = () => {
+const CardBoard = ({cards, setCards, filtered_cards, toggle_Landing, join_Board}) => {
 
     const shapes = [
         {
@@ -52,11 +54,52 @@ const CardBoard = () => {
         
     ]
 
+    const back_Home = () => {
+        join_Board();
+        toggle_Landing();
+    }
+
+    const create_NewCard= () => {
+        setCards([...cards, {
+            id:2,
+            name:'New Board',
+            style:'shadow-lg rounded bg-blue-400 text-white w-52 h-10 p-1 absolute top-96 left-96',
+            board_id:1,
+        }])
+    }
+
+    const MenuItems = [
+        {
+            id:1,
+            anchor_name:'➕ Card',
+            anchor_func: create_NewCard,
+        },
+        {
+            id:2,
+            anchor_name:'📋 Details',
+            anchor_func: '',
+        },
+        {
+            id:3,
+            anchor_name:'📋 Boards',
+            anchor_func:join_Board,
+        },
+        {
+            id:3,
+            anchor_name:'🏠 Home',
+            anchor_func:back_Home,
+        },
+    ]
+    alert(filtered_cards)
+
     return (
         <>
-        <div className="absolute left-0 -top-0 z-50 bg-green-400 h-screen w-screen">
+        <div className="absolute left-0 -top-0 z-50 bg-green-400 h-screen w-screen overflow-x-hidden">
             {shapes.map(shape => <Shape styles={shape.css_classes} key={shape.id} />)}
-            <h1>Card Board</h1>
+            <header className="container mx-auto p-5">
+                <Navigation MenuItems={MenuItems} />
+            </header>
+            {filtered_cards.map(card => <Card CardData={card} />)}
         </div>
         </>
     )
