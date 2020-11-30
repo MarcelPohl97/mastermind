@@ -76,20 +76,24 @@ function App() {
       {
         id:1,
         name:'Test1',
-        style:'shadow-lg rounded bg-white w-52 h-10 p-1 absolute top-80 left-80',
+        style:'shadow-lg rounded bg-white w-52 h-10 p-1 absolute top-80 left-80 cursor-grabbing group',
+        editable:'false',
+        creator:'Marcellus',
         board_id:1,
       },
       {
         id:2,
         name:'Test2',
-        style:'shadow-lg rounded bg-white w-52 h-10 p-1 absolute inset-y-16',
+        style:'shadow-lg rounded bg-white w-52 h-10 p-1 absolute inset-y-16 cursor-grabbing group',
+        editable:'false',
+        creator:'Realtor',
         board_id:1,
       },
       {
         id:3,
         name:'Test3',
         style:'shadow-lg rounded bg-white w-52 h-10 p-1 absolute inset-40',
-        board_id:1,
+        board_id:2,
       },
       {
         id:4,

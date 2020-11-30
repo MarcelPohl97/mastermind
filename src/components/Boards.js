@@ -6,8 +6,6 @@ import CardBoard from './CardBoard';
 
 const Boards = ({toggleCardBoard, settoggleCardBoard, boards, setBoards, cards, setCards, toggleLanding, settoggleLanding}) => {
 
-    let filtered_cards = [];
-
     const shapes = [
         {
             id:1,
@@ -63,15 +61,45 @@ const Boards = ({toggleCardBoard, settoggleCardBoard, boards, setBoards, cards, 
 
     const create_NewBoard = () => {
         setBoards([...boards, {
-            board_emoji:'👌',
-            board_title:'New Board',
-            board_protected: true,
-            board_created:'Tester',
+            emoji:'👌',
+            title:'New Board',
+            protected: true,
+            created:'Tester',
         }])
     }
 
-    const join_Board = () => {
-        filtered_cards = cards.filter((card) => card.id === boards.id);
+    const join_Board = (board) => {
+        setCards(cards.filter(card => card.board_id === board.id))
+        settoggleCardBoard(!toggleCardBoard)
+    }
+
+    const leave_Board = () => {
+        setCards([
+            {
+              id:1,
+              name:'Test1',
+              style:'shadow-lg rounded bg-white w-52 h-10 p-1 absolute top-80 left-80',
+              board_id:1,
+            },
+            {
+              id:2,
+              name:'Test2',
+              style:'shadow-lg rounded bg-white w-52 h-10 p-1 absolute inset-y-16',
+              board_id:1,
+            },
+            {
+              id:3,
+              name:'Test3',
+              style:'shadow-lg rounded bg-white w-52 h-10 p-1 absolute inset-40',
+              board_id:2,
+            },
+            {
+              id:4,
+              name:'Test4',
+              style:'shadow-lg rounded bg-white w-52 h-10 p-1 absolute inset-x-60',
+              board_id:2,
+            },
+          ])
         settoggleCardBoard(!toggleCardBoard)
     }
 
@@ -100,14 +128,14 @@ const Boards = ({toggleCardBoard, settoggleCardBoard, boards, setBoards, cards, 
 
     return (
         <>
-        {toggleCardBoard ? <CardBoard cards={cards} setCards={setCards} filtered_cards={filtered_cards} toggle_Landing={toggle_Landing} join_Board={join_Board} /> : ""}
+        {toggleCardBoard ? <CardBoard boards={boards} cards={cards} setCards={setCards} toggle_Landing={toggle_Landing} leave_Board={leave_Board} /> : ""}
         <div className="relative bg-green-400 min-h-screen h-auto w-100 overflow-x-hidden">
             {shapes.map(shape => <Shape styles={shape.css_classes} key={shape.id} />)}
             <header className="container mx-auto p-5">
                 <Navigation MenuItems={MenuItems} />
             </header>
             <div className="container mx-auto p-10 grid responsive-grid">
-                {boards.map(board => <Board onClick={join_Board} board={board} />)}
+                {boards.map(board => <Board onClick={() => join_Board(board)} board={board} key={board.id} />)}
             </div>
         </div>
         </>

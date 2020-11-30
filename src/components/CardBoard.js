@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import Shape from './Shape';
 import Navigation from './Navigation';
 import Card from './Card';
+import { motion } from "framer-motion";
 
-const CardBoard = ({cards, setCards, filtered_cards, toggle_Landing, join_Board}) => {
+const CardBoard = ({boards, cards, setCards, toggle_Landing, leave_Board}) => {
 
     const shapes = [
         {
@@ -55,13 +56,13 @@ const CardBoard = ({cards, setCards, filtered_cards, toggle_Landing, join_Board}
     ]
 
     const back_Home = () => {
-        join_Board();
+        leave_Board();
         toggle_Landing();
     }
 
     const create_NewCard= () => {
         setCards([...cards, {
-            id:2,
+            id:5,
             name:'New Board',
             style:'shadow-lg rounded bg-blue-400 text-white w-52 h-10 p-1 absolute top-96 left-96',
             board_id:1,
@@ -82,7 +83,7 @@ const CardBoard = ({cards, setCards, filtered_cards, toggle_Landing, join_Board}
         {
             id:3,
             anchor_name:'📋 Boards',
-            anchor_func:join_Board,
+            anchor_func:leave_Board,
         },
         {
             id:3,
@@ -90,17 +91,17 @@ const CardBoard = ({cards, setCards, filtered_cards, toggle_Landing, join_Board}
             anchor_func:back_Home,
         },
     ]
-    alert(filtered_cards)
 
+    const constraintsRef = useRef(null);
     return (
         <>
-        <div className="absolute left-0 -top-0 z-50 bg-green-400 h-screen w-screen overflow-x-hidden">
+        <motion.div ref={constraintsRef} className="absolute left-0 -top-0 z-50 bg-green-400 h-screen w-screen overflow-x-hidden">
             {shapes.map(shape => <Shape styles={shape.css_classes} key={shape.id} />)}
             <header className="container mx-auto p-5">
                 <Navigation MenuItems={MenuItems} />
             </header>
-            {filtered_cards.map(card => <Card CardData={card} />)}
-        </div>
+            {cards.map((card) => <Card key={card.id} CardData={card} cards={cards} setCards={setCards} constraintsRef={constraintsRef} />)}
+        </motion.div>
         </>
     )
 }

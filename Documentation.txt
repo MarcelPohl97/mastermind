@@ -28,10 +28,21 @@
 -> added card component
 -> added add card functionality
 
--> todo: 
--> add dynamic card loading based on card ids 
--> add board info
--> add modal popup to add boards or a card
+30.11.2020:
+-> added dynamic card loading based on card, board id
+-> added grab to external css
+-> added edit card dblclick
+-> added unedit card onblur
+-> added tooltip creator of card when hovering
+-> added tooltip-form in css external
+-> added delete card functionality
+-> added drag and drop with framer motion for cards
+
+-> todo:
+-> add a dynamic modal which loads in different forms example: board info, add board, card with all information provided
+-> add board info in modal
+-> add card creation in modal
+-> add board creation in modal
 
 
 
