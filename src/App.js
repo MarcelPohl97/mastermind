@@ -4,11 +4,13 @@ import './style/main.css';
 import Landing from './components/Landing';
 import Boards from './components/Boards';
 import LoaderContainer from './components/LoaderContainer';
+import Modal from './components/Modal';
 
 function App() {
   const [toggleLanding, settoggleLanding] = useState(true);
   const [dataLoader, setdataLoader] = useState(false);
   const [toggleCardBoard, settoggleCardBoard] = useState(false);
+  const [showModal, setshowModal] = useState(true);
 
   const [boards, setBoards] = useState( 
   [
@@ -106,6 +108,7 @@ function App() {
 
   return (
     <>
+      {showModal ? <Modal /> : ""}
       {dataLoader ? <LoaderContainer /> : ""}
       {toggleLanding ? 
       <Landing toggleLanding={toggleLanding} settoggleLanding={settoggleLanding} /> 

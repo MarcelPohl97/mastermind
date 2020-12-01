@@ -38,6 +38,9 @@
 -> added delete card functionality
 -> added drag and drop with framer motion for cards
 
+1.12.2020:
+-> 
+
 -> todo:
 -> add a dynamic modal which loads in different forms example: board info, add board, card with all information provided
 -> add board info in modal
