@@ -4,6 +4,14 @@ import Navigation from './Navigation';
 import Board from './Board';
 import CardBoard from './CardBoard';
 
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+  } from "react-router-dom";
+  
+
 const Boards = ({toggleCardBoard, settoggleCardBoard, boards, setBoards, cards, setCards, toggleLanding, settoggleLanding}) => {
 
     const shapes = [
@@ -128,14 +136,13 @@ const Boards = ({toggleCardBoard, settoggleCardBoard, boards, setBoards, cards, 
 
     return (
         <>
-        {toggleCardBoard ? <CardBoard boards={boards} cards={cards} setCards={setCards} toggle_Landing={toggle_Landing} leave_Board={leave_Board} /> : ""}
         <div className="relative bg-green-400 min-h-screen h-auto w-100 overflow-x-hidden">
             {shapes.map(shape => <Shape styles={shape.css_classes} key={shape.id} />)}
             <header className="container mx-auto p-5">
                 <Navigation MenuItems={MenuItems} />
             </header>
             <div className="container mx-auto p-10 grid responsive-grid">
-                {boards.map(board => <Board onClick={() => join_Board(board)} board={board} key={board.id} />)}
+                {boards.map(board => <Board board={board} key={board.id} /> )}
             </div>
         </div>
         </>

@@ -44,7 +44,8 @@ const Card = ({CardData, cards, setCards, constraintsRef}) => {
             contentEditable={CardData.editable} 
             className={`${CardData.style} grab`}>
             {CardData.name}
-        <span className="absolute bg-black text-white tooltip-form p-3 -left-0 -top-10 opacity-0 group-hover:opacity-100">created by: {CardData.creator}</span>
+        
+        <span className="absolute bg-black text-white tooltip-form p-3 -left-0 -top-10 opacity-0 group-hover:opacity-100" contentEditable={'false'}>created by: {CardData.creator}</span>
         <button className="absolute right-0.5 top-0.5" onClick={delete_Card}>❌</button>
         </motion.div>
         </>

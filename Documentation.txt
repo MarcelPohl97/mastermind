@@ -39,7 +39,22 @@
 -> added drag and drop with framer motion for cards
 
 1.12.2020:
--> 
+-> added dynamic modal 
+
+08.12.2020:
+-> added template loading for modal
+-> planned for different forms maybe use formik
+
+09.12.2020:
+-> added react-router to remove endless toggle state hell
+-> added router
+-> added routes for components
+-> removed toggle states
+
+11.12.2020:
+-> added dynamic cardboard routing and loading only cards based on the cardboard id
+-> installed formik
+-> added cardform, boardform
 
 -> todo:
 -> add a dynamic modal which loads in different forms example: board info, add board, card with all information provided

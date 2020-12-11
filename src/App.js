@@ -5,12 +5,25 @@ import Landing from './components/Landing';
 import Boards from './components/Boards';
 import LoaderContainer from './components/LoaderContainer';
 import Modal from './components/Modal';
+import CardBoard from './components/CardBoard';
+
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
 function App() {
-  const [toggleLanding, settoggleLanding] = useState(true);
-  const [dataLoader, setdataLoader] = useState(false);
-  const [toggleCardBoard, settoggleCardBoard] = useState(false);
   const [showModal, setshowModal] = useState(true);
+
+  const initialformValues = {
+    board_emoji: '',
+    board_title: '',
+    board_protected: '',
+    board_created: '',
+    card_name: '',
+  };
 
   const [boards, setBoards] = useState( 
   [
@@ -108,15 +121,17 @@ function App() {
 
   return (
     <>
-      {showModal ? <Modal /> : ""}
-      {dataLoader ? <LoaderContainer /> : ""}
-      {toggleLanding ? 
-      <Landing toggleLanding={toggleLanding} settoggleLanding={settoggleLanding} /> 
-      : 
-      <Boards toggleCardBoard={toggleCardBoard} settoggleCardBoard={settoggleCardBoard} 
-              boards={boards} setBoards={setBoards} 
-              cards={cards} setCards={setCards} 
-              toggleLanding={toggleLanding} settoggleLanding={settoggleLanding} />}
+       <Router>
+          <Route exact path="/">
+            <Landing /> 
+          </Route>
+          <Route excact path="/boards">
+            <Boards boards={boards} setBoards={setBoards} cards={cards} setCards={setCards} />
+          </Route>
+          <Route excact path="/cardboard/:id">
+            <CardBoard boards={boards} cards={cards} setCards={setCards} />
+          </Route>
+        </Router>
     </>
   )
 }

@@ -1,12 +1,15 @@
 import React, { useState } from 'react';
 import Shape from './Shape';
 import Navigation from './Navigation';
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+  } from "react-router-dom";
+  
 
-const Landing = ({toggleLanding, settoggleLanding}) => {
-
-    const toggle_Landing = () => {
-        settoggleLanding(!toggleLanding)
-    }
+const Landing = () => {
 
     const shapes = [
         {
@@ -88,7 +91,7 @@ const Landing = ({toggleLanding, settoggleLanding}) => {
                     </div>
                     <p className="text-white text-2xl text-center mt-6">A simple, customizable Collaboration tool for teams 🤼 and individuals ⛹. <br></br> It's Free ✌.</p>
                     <div className="flex items-center mt-14">
-                        <button onClick={toggle_Landing} aria-controls="simple-menu" aria-haspopup="true" className="bg-white py-3 px-10 shadow-lg rounded-md text-black text-base uppercase mr-4 group"><span className="transform inline-block group-hover:animate-bounce">⚡</span> Try it out</button>
+                        <Link to="/boards"><button aria-controls="simple-menu" aria-haspopup="true" className="bg-white py-3 px-10 shadow-lg rounded-md text-black text-base uppercase mr-4 group"><span className="transform inline-block group-hover:animate-bounce">⚡</span> Try it out</button></Link>
                         <button aria-controls="simple-menu" aria-haspopup="true" className="bg-black py-3 px-10 shadow-lg rounded-md text-white text-base uppercase focus:border-2 focus:border-white group"><span className="transform inline-block group-hover:animate-bounce">☕</span> <span className="text-red-500">Buy me</span> a coffee</button>
                     </div>
                 </div>

@@ -1,8 +1,12 @@
-import React, { useRef } from 'react';
+import React, { useRef, useEffect } from 'react';
 import Shape from './Shape';
 import Navigation from './Navigation';
 import Card from './Card';
 import { motion } from "framer-motion";
+
+import {
+    Link, useParams
+  } from "react-router-dom";
 
 const CardBoard = ({boards, cards, setCards, toggle_Landing, leave_Board}) => {
 
@@ -92,6 +96,8 @@ const CardBoard = ({boards, cards, setCards, toggle_Landing, leave_Board}) => {
         },
     ]
 
+    const {id} = useParams();
+    
     const constraintsRef = useRef(null);
     return (
         <>
@@ -100,7 +106,9 @@ const CardBoard = ({boards, cards, setCards, toggle_Landing, leave_Board}) => {
             <header className="container mx-auto p-5">
                 <Navigation MenuItems={MenuItems} />
             </header>
-            {cards.map((card) => <Card key={card.id} CardData={card} cards={cards} setCards={setCards} constraintsRef={constraintsRef} />)}
+            {cards.filter(card => card.board_id === parseInt(id)).map(filteredCard => (
+                <Card key={filteredCard.id} CardData={filteredCard} cards={cards} setCards={setCards} constraintsRef={constraintsRef} />
+            ))}
         </motion.div>
         </>
     )
