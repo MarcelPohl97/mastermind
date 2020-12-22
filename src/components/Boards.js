@@ -3,6 +3,8 @@ import Shape from './Shape';
 import Navigation from './Navigation';
 import Board from './Board';
 import CardBoard from './CardBoard';
+import BoardForm from './BoardForm';
+import Modal from './Modal';
 
 import {
     BrowserRouter as Router,
@@ -12,7 +14,7 @@ import {
   } from "react-router-dom";
   
 
-const Boards = ({toggleCardBoard, settoggleCardBoard, boards, setBoards, cards, setCards, toggleLanding, settoggleLanding}) => {
+const Boards = ({boards, setBoards, cards, setCards, showModal, setshowModal, loadModal, setloadModal, get_Modal}) => {
 
     const shapes = [
         {
@@ -63,80 +65,48 @@ const Boards = ({toggleCardBoard, settoggleCardBoard, boards, setBoards, cards, 
         
     ]
 
-    const toggle_Landing = () => {
-        settoggleLanding(!toggleLanding);
-    }
-
-    const create_NewBoard = () => {
+    const create_NewBoard = (values) => {
         setBoards([...boards, {
-            emoji:'👌',
-            title:'New Board',
+            id:10,
+            emoji:values.emoji,
+            title:values.title,
             protected: true,
-            created:'Tester',
+            created:values.created,
         }])
-    }
-
-    const join_Board = (board) => {
-        setCards(cards.filter(card => card.board_id === board.id))
-        settoggleCardBoard(!toggleCardBoard)
-    }
-
-    const leave_Board = () => {
-        setCards([
-            {
-              id:1,
-              name:'Test1',
-              style:'shadow-lg rounded bg-white w-52 h-10 p-1 absolute top-80 left-80',
-              board_id:1,
-            },
-            {
-              id:2,
-              name:'Test2',
-              style:'shadow-lg rounded bg-white w-52 h-10 p-1 absolute inset-y-16',
-              board_id:1,
-            },
-            {
-              id:3,
-              name:'Test3',
-              style:'shadow-lg rounded bg-white w-52 h-10 p-1 absolute inset-40',
-              board_id:2,
-            },
-            {
-              id:4,
-              name:'Test4',
-              style:'shadow-lg rounded bg-white w-52 h-10 p-1 absolute inset-x-60',
-              board_id:2,
-            },
-          ])
-        settoggleCardBoard(!toggleCardBoard)
     }
 
     const MenuItems = [
         {
             id:1,
             anchor_name:'➕ Board',
-            anchor_func: create_NewBoard,
+            anchor_func: get_Modal,
+            anchor_additional: <BoardForm 
+                create={true} onSubmit={async (values) => {
+                    await new Promise((r) => setTimeout(r, 500));
+                    alert(JSON.stringify(values, null, 2));
+                    await create_NewBoard(values);
+
+                }} 
+            />
         },
         {
             id:2,
             anchor_name:'❓ Help',
             anchor_func: '',
+            anchor_additional: '',
         },
         {
             id:3,
             anchor_name:'🔍 Board',
             anchor_func:'',
-        },
-        {
-            id:4,
-            anchor_name:'🏠 Home',
-            anchor_func: toggle_Landing,
+            anchor_additional: '',
         },
     ]
 
     return (
         <>
         <div className="relative bg-green-400 min-h-screen h-auto w-100 overflow-x-hidden">
+            {showModal ? <Modal setshowModal={setshowModal} template={loadModal} /> : ''}
             {shapes.map(shape => <Shape styles={shape.css_classes} key={shape.id} />)}
             <header className="container mx-auto p-5">
                 <Navigation MenuItems={MenuItems} />

@@ -15,15 +15,13 @@ import {
 } from "react-router-dom";
 
 function App() {
-  const [showModal, setshowModal] = useState(true);
+  const [showModal, setshowModal] = useState(false);
+  const [loadModal, setloadModal] = useState(null);
 
-  const initialformValues = {
-    board_emoji: '',
-    board_title: '',
-    board_protected: '',
-    board_created: '',
-    card_name: '',
-  };
+  const get_Modal = (component) => {
+    setloadModal(component)
+    setshowModal(true);
+  }
 
   const [boards, setBoards] = useState( 
   [
@@ -123,13 +121,13 @@ function App() {
     <>
        <Router>
           <Route exact path="/">
-            <Landing /> 
+            <Landing showModal={showModal} setshowModal={setshowModal} loadModal={loadModal} setloadModal={setloadModal} get_Modal={get_Modal} /> 
           </Route>
           <Route excact path="/boards">
-            <Boards boards={boards} setBoards={setBoards} cards={cards} setCards={setCards} />
+            <Boards boards={boards} setBoards={setBoards} cards={cards} setCards={setCards} showModal={showModal} setshowModal={setshowModal} loadModal={loadModal} setloadModal={setloadModal} get_Modal={get_Modal} />
           </Route>
-          <Route excact path="/cardboard/:id">
-            <CardBoard boards={boards} cards={cards} setCards={setCards} />
+          <Route excact path="/cardboard/:board_id">
+            <CardBoard boards={boards} cards={cards} setCards={setCards} showModal={showModal} setshowModal={setshowModal} loadModal={loadModal} setloadModal={setloadModal} get_Modal={get_Modal} />
           </Route>
         </Router>
     </>

@@ -8,7 +8,7 @@ import {
   
 
 
-const Board = ({board, onClick}) => {
+const Board = ({board}) => {
     return (
         <>
         <div className="bg-white p-2 relative shadow-lg rounded-2xl flex flex-col items-center">

@@ -56,11 +56,30 @@
 -> installed formik
 -> added cardform, boardform
 
--> todo:
--> add a dynamic modal which loads in different forms example: board info, add board, card with all information provided
--> add board info in modal
+21.12.2020:
+-> added dynamic modal
+-> add states for modal to show and load in templates
+-> added modal specific components about, how, features
+-> fixed calling menuitem functions with additional inputs
+-> added add board in modal
+
+22.12.2020:
+-> added switching forms when u add and edit a board
+-> added dynamic card submit when on different boards
+-> added dynamic board info in cardboard
+-> added BoardDetails component
+
+todo:
+-> add edit board
 -> add card creation in modal
--> add board creation in modal
+-> add edit card
+
+after: mvp is done and working:
+-> add dynamic background/gradient background customizing aswell as the card
+-> gradients: https://raw.githubusercontent.com/ghosh/uiGradients/master/gradients.json
+-> inspiration for adding the gradients build switch block due to some gradients having more gradients length
+-> style={{backgroundImage: 'linear-gradient(to right, #439bfd, #73b3fb)'}}
+-> html emoji picker for boardcreation and cards
 
 
 

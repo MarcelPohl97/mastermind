@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import Shape from './Shape';
 import Navigation from './Navigation';
+import Modal from './Modal';
+import Features from './Features'
+import About from './About';
+import How from './How';
 import {
     BrowserRouter as Router,
     Switch,
@@ -9,7 +13,7 @@ import {
   } from "react-router-dom";
   
 
-const Landing = () => {
+const Landing = ({showModal, setshowModal, loadModal, setloadModal, get_Modal}) => {
 
     const shapes = [
         {
@@ -64,17 +68,20 @@ const Landing = () => {
         {
             id:1,
             anchor_name:'💎 Features',
-            anchor_func: '',
+            anchor_func: get_Modal,
+            anchor_additional: <Features />,
         },
         {
             id:2,
             anchor_name:'❓ About',
-            anchor_func: '',
+            anchor_func: get_Modal,
+            anchor_additional: <About />,
         },
         {
             id:3,
-            anchor_name:'🛠 Support',
-            anchor_func:'',
+            anchor_name:'🛠 How it works',
+            anchor_func: get_Modal,
+            anchor_additional: <How />,
         },
     ]
 
@@ -82,6 +89,7 @@ const Landing = () => {
         <>
         <div className="relative bg-green-400 h-screen w-100 clip-divider overflow-x-hidden">
             {shapes.map(shape => <Shape styles={shape.css_classes} key={shape.id} />)}
+            {showModal ? <Modal setshowModal={setshowModal} template={loadModal} /> : ''}
             <header className="container mx-auto p-5">
                 <Navigation MenuItems={MenuItems} />
                 <div className="flex flex-col items-center mt-24">

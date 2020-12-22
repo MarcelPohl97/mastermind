@@ -3,24 +3,12 @@ import { motion } from "framer-motion";
 
 const Card = ({CardData, cards, setCards, constraintsRef}) => {
 
-    const edit_Card = () => {
+    const edit_Card = (edit) => {
         setCards(cards.map((card) => {
             if(card.id === CardData.id) {
               return {
                 ...card,
-                editable:'true',
-              }
-            }
-            return card;  
-        })
-    )}
-
-    const unedit_Card = () => {
-        setCards(cards.map((card) => {
-            if(card.id === CardData.id) {
-              return {
-                ...card,
-                editable:'false',
+                editable: edit,
               }
             }
             return card;  
@@ -39,8 +27,8 @@ const Card = ({CardData, cards, setCards, constraintsRef}) => {
             onDragStart={(event, info) => console.log(info.point.x, info.point.y)}
             onDragEnd={(event, info) => console.log(info.point.x, info.point.y)}
             dragConstraints={constraintsRef}
-            onDoubleClick={edit_Card} 
-            onBlur={unedit_Card}
+            onDoubleClick={() => {edit_Card('true')}} 
+            onBlur={() => {edit_Card('false')}} 
             contentEditable={CardData.editable} 
             className={`${CardData.style} grab`}>
             {CardData.name}

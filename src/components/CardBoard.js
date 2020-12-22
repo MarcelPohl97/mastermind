@@ -7,8 +7,11 @@ import { motion } from "framer-motion";
 import {
     Link, useParams
   } from "react-router-dom";
+import BoardDetails from './BoardDetails';
+import Modal from './Modal';
+import BoardForm from './BoardForm';
 
-const CardBoard = ({boards, cards, setCards, toggle_Landing, leave_Board}) => {
+const CardBoard = ({boards, cards, setCards, showModal, setshowModal, loadModal, setloadModal, get_Modal}) => {
 
     const shapes = [
         {
@@ -59,54 +62,62 @@ const CardBoard = ({boards, cards, setCards, toggle_Landing, leave_Board}) => {
         
     ]
 
-    const back_Home = () => {
-        leave_Board();
-        toggle_Landing();
-    }
-
-    const create_NewCard= () => {
+    const create_NewCard= (board_id) => {
         setCards([...cards, {
             id:5,
             name:'New Board',
             style:'shadow-lg rounded bg-blue-400 text-white w-52 h-10 p-1 absolute top-96 left-96',
-            board_id:1,
+            board_id:board_id,
         }])
     }
+    const edit_Board = (board_id) => {
 
+    }
+    const {board_id} = useParams();
+    
+    const constraintsRef = useRef(null);
+
+    const filtered_Board = boards.filter(board => board.id === parseInt(board_id))
     const MenuItems = [
         {
             id:1,
             anchor_name:'➕ Card',
             anchor_func: create_NewCard,
+            anchor_additional: parseInt(board_id),
         },
         {
             id:2,
             anchor_name:'📋 Details',
-            anchor_func: '',
+            anchor_func: get_Modal,
+            anchor_additional:<BoardDetails filtered_Board={filtered_Board}/>,
         },
         {
             id:3,
-            anchor_name:'📋 Boards',
-            anchor_func:leave_Board,
+            anchor_name:'📋 Edit',
+            anchor_func: get_Modal,
+            anchor_additional: <BoardForm 
+            create={false} filtered_Board={filtered_Board} onEdit={async (values) => {
+                await new Promise((r) => setTimeout(r, 500));
+                alert("Test");
+            }}
+            />
         },
         {
             id:3,
             anchor_name:'🏠 Home',
-            anchor_func:back_Home,
+            anchor_func:'',
         },
     ]
 
-    const {id} = useParams();
-    
-    const constraintsRef = useRef(null);
     return (
         <>
         <motion.div ref={constraintsRef} className="absolute left-0 -top-0 z-50 bg-green-400 h-screen w-screen overflow-x-hidden">
+            {showModal ? <Modal setshowModal={setshowModal} template={loadModal} /> : ''}
             {shapes.map(shape => <Shape styles={shape.css_classes} key={shape.id} />)}
             <header className="container mx-auto p-5">
                 <Navigation MenuItems={MenuItems} />
             </header>
-            {cards.filter(card => card.board_id === parseInt(id)).map(filteredCard => (
+            {cards.filter(card => card.board_id === parseInt(board_id)).map(filteredCard => (
                 <Card key={filteredCard.id} CardData={filteredCard} cards={cards} setCards={setCards} constraintsRef={constraintsRef} />
             ))}
         </motion.div>
