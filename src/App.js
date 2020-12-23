@@ -127,7 +127,7 @@ function App() {
             <Boards boards={boards} setBoards={setBoards} cards={cards} setCards={setCards} showModal={showModal} setshowModal={setshowModal} loadModal={loadModal} setloadModal={setloadModal} get_Modal={get_Modal} />
           </Route>
           <Route excact path="/cardboard/:board_id">
-            <CardBoard boards={boards} cards={cards} setCards={setCards} showModal={showModal} setshowModal={setshowModal} loadModal={loadModal} setloadModal={setloadModal} get_Modal={get_Modal} />
+            <CardBoard boards={boards} setBoards={setBoards} cards={cards} setCards={setCards} showModal={showModal} setshowModal={setshowModal} loadModal={loadModal} setloadModal={setloadModal} get_Modal={get_Modal} />
           </Route>
         </Router>
     </>

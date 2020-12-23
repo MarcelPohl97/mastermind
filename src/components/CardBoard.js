@@ -10,8 +10,10 @@ import {
 import BoardDetails from './BoardDetails';
 import Modal from './Modal';
 import BoardForm from './BoardForm';
+import CardForm from './CardForm';
+import { parse } from 'postcss';
 
-const CardBoard = ({boards, cards, setCards, showModal, setshowModal, loadModal, setloadModal, get_Modal}) => {
+const CardBoard = ({boards, setBoards, cards, setCards, showModal, setshowModal, loadModal, setloadModal, get_Modal}) => {
 
     const shapes = [
         {
@@ -62,28 +64,46 @@ const CardBoard = ({boards, cards, setCards, showModal, setshowModal, loadModal,
         
     ]
 
-    const create_NewCard= (board_id) => {
+    const {board_id} = useParams();
+    const constraintsRef = useRef(null);
+
+    const filtered_Board = boards.filter(board => board.id === parseInt(board_id))
+
+    const create_NewCard= (values, board_id) => {
         setCards([...cards, {
             id:5,
-            name:'New Board',
+            name:values.name,
             style:'shadow-lg rounded bg-blue-400 text-white w-52 h-10 p-1 absolute top-96 left-96',
             board_id:board_id,
         }])
     }
-    const edit_Board = (board_id) => {
 
+    const edit_Board = (values) => {
+        setBoards(boards.map((board) => {
+            if(board.id === parseInt(filtered_Board[0].id)) {
+              return {
+                ...board,
+                id:filtered_Board[0].id,
+                emoji:values.emoji,
+                title:values.title,
+                protected: true,
+                created:values.created,
+              }
+            }
+            return board;  
+        }))
     }
-    const {board_id} = useParams();
-    
-    const constraintsRef = useRef(null);
 
-    const filtered_Board = boards.filter(board => board.id === parseInt(board_id))
     const MenuItems = [
         {
             id:1,
             anchor_name:'➕ Card',
-            anchor_func: create_NewCard,
-            anchor_additional: parseInt(board_id),
+            anchor_func: get_Modal,
+            anchor_additional: <CardForm onSubmit={async (values) => {
+                await new Promise((r) => setTimeout(r, 500));
+                create_NewCard(values, board_id);
+            }}
+            />
         },
         {
             id:2,
@@ -98,14 +118,10 @@ const CardBoard = ({boards, cards, setCards, showModal, setshowModal, loadModal,
             anchor_additional: <BoardForm 
             create={false} filtered_Board={filtered_Board} onEdit={async (values) => {
                 await new Promise((r) => setTimeout(r, 500));
-                alert("Test");
+                edit_Board(values);
+                alert("Hello World")
             }}
             />
-        },
-        {
-            id:3,
-            anchor_name:'🏠 Home',
-            anchor_func:'',
         },
     ]
 

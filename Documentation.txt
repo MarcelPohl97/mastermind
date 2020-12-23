@@ -69,8 +69,10 @@
 -> added dynamic board info in cardboard
 -> added BoardDetails component
 
+23.12.2020:
+-> added edit board
+
 todo:
--> add edit board
 -> add card creation in modal
 -> add edit card
 
