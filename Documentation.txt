@@ -72,9 +72,20 @@
 23.12.2020:
 -> added edit board
 
+11.01.2020:
+-> added card creation in modal
+
+12.01.2020:
+-> added edit card in modal
+-> added gradients component
+-> added gradient component
+-> added fetch gradients
+
 todo:
--> add card creation in modal
--> add edit card
+
+-> add state for dynamic background colors, direction
+-> write a function to check gradient length and then to load them in
+-> create a menu bar for all gradients you can add them to modals
 
 after: mvp is done and working:
 -> add dynamic background/gradient background customizing aswell as the card
@@ -82,6 +93,15 @@ after: mvp is done and working:
 -> inspiration for adding the gradients build switch block due to some gradients having more gradients length
 -> style={{backgroundImage: 'linear-gradient(to right, #439bfd, #73b3fb)'}}
 -> html emoji picker for boardcreation and cards
+-> documentation for tailwindcss card editing
+
+future addons for every card:
+-> chat
+-> mini trello
+-> drawing
+-> calendar
+-> teams position
+
 
 
 

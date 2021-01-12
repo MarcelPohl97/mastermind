@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Shape from './Shape';
 import Navigation from './Navigation';
 import Modal from './Modal';
 import Features from './Features'
 import About from './About';
 import How from './How';
+import Gradients from './Gradients';
 import {
     BrowserRouter as Router,
     Switch,
@@ -13,7 +14,7 @@ import {
   } from "react-router-dom";
   
 
-const Landing = ({showModal, setshowModal, loadModal, setloadModal, get_Modal}) => {
+const Landing = ({showModal, setshowModal, loadModal, setloadModal, get_Modal, loadBgColor, setloadBgColor, gradients, setGradients}) => {
 
     const shapes = [
         {
@@ -83,11 +84,27 @@ const Landing = ({showModal, setshowModal, loadModal, setloadModal, get_Modal}) 
             anchor_func: get_Modal,
             anchor_additional: <How />,
         },
+        {
+            id:4,
+            anchor_name: '🏞 Theme',
+            anchor_func: get_Modal,
+            anchor_additional: <Gradients gradients={gradients} setGradients={setGradients} />,
+        }
     ]
+
+    const fetchGradients = async () => {
+        const data = await fetch("https://raw.githubusercontent.com/ghosh/uiGradients/master/gradients.json");
+        const jsonData = await data.json();
+        setGradients(jsonData);
+      }
+
+    useEffect(() => {
+        fetchGradients();
+    })
 
     return (
         <>
-        <div className="relative bg-green-400 h-screen w-100 clip-divider overflow-x-hidden">
+        <div className="relative bg-green-400 h-screen w-100 clip-divider overflow-x-hidden" style={{backgroundImage: `linear-gradient(${loadBgColor.direction}, ${loadBgColor.colors})`}}>
             {shapes.map(shape => <Shape styles={shape.css_classes} key={shape.id} />)}
             {showModal ? <Modal setshowModal={setshowModal} template={loadModal} /> : ''}
             <header className="container mx-auto p-5">

@@ -13,7 +13,7 @@ import BoardForm from './BoardForm';
 import CardForm from './CardForm';
 import { parse } from 'postcss';
 
-const CardBoard = ({boards, setBoards, cards, setCards, showModal, setshowModal, loadModal, setloadModal, get_Modal}) => {
+const CardBoard = ({boards, setBoards, cards, setCards, showModal, setshowModal, loadModal, setloadModal, get_Modal, loadBgColor, setloadBgColor}) => {
 
     const shapes = [
         {
@@ -99,9 +99,9 @@ const CardBoard = ({boards, setBoards, cards, setCards, showModal, setshowModal,
             id:1,
             anchor_name:'➕ Card',
             anchor_func: get_Modal,
-            anchor_additional: <CardForm onSubmit={async (values) => {
+            anchor_additional: <CardForm create={true} onSubmit={async (values) => {
                 await new Promise((r) => setTimeout(r, 500));
-                create_NewCard(values, board_id);
+                create_NewCard(values, filtered_Board[0].id);
             }}
             />
         },
@@ -119,7 +119,6 @@ const CardBoard = ({boards, setBoards, cards, setCards, showModal, setshowModal,
             create={false} filtered_Board={filtered_Board} onEdit={async (values) => {
                 await new Promise((r) => setTimeout(r, 500));
                 edit_Board(values);
-                alert("Hello World")
             }}
             />
         },
@@ -127,14 +126,14 @@ const CardBoard = ({boards, setBoards, cards, setCards, showModal, setshowModal,
 
     return (
         <>
-        <motion.div ref={constraintsRef} className="absolute left-0 -top-0 z-50 bg-green-400 h-screen w-screen overflow-x-hidden">
+        <motion.div ref={constraintsRef} className="absolute left-0 -top-0 z-50 bg-green-400 h-screen w-screen overflow-x-hidden" style={{backgroundImage: `linear-gradient(${loadBgColor.direction}, ${loadBgColor.colors})`}}>
             {showModal ? <Modal setshowModal={setshowModal} template={loadModal} /> : ''}
             {shapes.map(shape => <Shape styles={shape.css_classes} key={shape.id} />)}
             <header className="container mx-auto p-5">
                 <Navigation MenuItems={MenuItems} />
             </header>
             {cards.filter(card => card.board_id === parseInt(board_id)).map(filteredCard => (
-                <Card key={filteredCard.id} CardData={filteredCard} cards={cards} setCards={setCards} constraintsRef={constraintsRef} />
+                <Card key={filteredCard.id} filteredCard={filteredCard} cards={cards} setCards={setCards} constraintsRef={constraintsRef} filtered_Board={filtered_Board} get_Modal={get_Modal} />
             ))}
         </motion.div>
         </>

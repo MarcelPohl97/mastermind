@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './style/external.css';
 import './style/main.css';
 import Landing from './components/Landing';
@@ -17,6 +17,12 @@ import {
 function App() {
   const [showModal, setshowModal] = useState(false);
   const [loadModal, setloadModal] = useState(null);
+  const [loadBgColor, setloadBgColor] = useState({
+    direction: 'to right',
+    colors: '#439bfd, #73b3fb',
+  })
+
+  const [gradients, setGradients] = useState()
 
   const get_Modal = (component) => {
     setloadModal(component)
@@ -89,16 +95,14 @@ function App() {
       {
         id:1,
         name:'Test1',
-        style:'shadow-lg rounded bg-white w-52 h-10 p-1 absolute top-80 left-80 cursor-grabbing group',
-        editable:'false',
+        style:'shadow-lg rounded bg-white w-52 h-10 p-1 absolute top-80 left-80',
         creator:'Marcellus',
         board_id:1,
       },
       {
         id:2,
         name:'Test2',
-        style:'shadow-lg rounded bg-white w-52 h-10 p-1 absolute inset-y-16 cursor-grabbing group',
-        editable:'false',
+        style:'shadow-lg rounded bg-white w-52 h-10 p-1 absolute inset-y-16',
         creator:'Realtor',
         board_id:1,
       },
@@ -116,18 +120,18 @@ function App() {
       },
     ]
     )
-
+   
   return (
     <>
        <Router>
           <Route exact path="/">
-            <Landing showModal={showModal} setshowModal={setshowModal} loadModal={loadModal} setloadModal={setloadModal} get_Modal={get_Modal} /> 
+            <Landing showModal={showModal} setshowModal={setshowModal} loadModal={loadModal} setloadModal={setloadModal} get_Modal={get_Modal} loadBgColor={loadBgColor} setloadBgColor={setloadBgColor} gradients={gradients} setGradients={setGradients}/> 
           </Route>
           <Route excact path="/boards">
-            <Boards boards={boards} setBoards={setBoards} cards={cards} setCards={setCards} showModal={showModal} setshowModal={setshowModal} loadModal={loadModal} setloadModal={setloadModal} get_Modal={get_Modal} />
+            <Boards boards={boards} setBoards={setBoards} cards={cards} setCards={setCards} showModal={showModal} setshowModal={setshowModal} loadModal={loadModal} setloadModal={setloadModal} get_Modal={get_Modal} loadBgColor={loadBgColor} setloadBgColor={setloadBgColor}/>
           </Route>
           <Route excact path="/cardboard/:board_id">
-            <CardBoard boards={boards} setBoards={setBoards} cards={cards} setCards={setCards} showModal={showModal} setshowModal={setshowModal} loadModal={loadModal} setloadModal={setloadModal} get_Modal={get_Modal} />
+            <CardBoard boards={boards} setBoards={setBoards} cards={cards} setCards={setCards} showModal={showModal} setshowModal={setshowModal} loadModal={loadModal} setloadModal={setloadModal} get_Modal={get_Modal} loadBgColor={loadBgColor} setloadBgColor={setloadBgColor}/>
           </Route>
         </Router>
     </>

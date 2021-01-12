@@ -14,7 +14,7 @@ import {
   } from "react-router-dom";
   
 
-const Boards = ({boards, setBoards, cards, setCards, showModal, setshowModal, loadModal, setloadModal, get_Modal}) => {
+const Boards = ({boards, setBoards, cards, setCards, showModal, setshowModal, loadModal, setloadModal, get_Modal, loadBgColor, setloadBgColor}) => {
 
     const shapes = [
         {
@@ -83,8 +83,7 @@ const Boards = ({boards, setBoards, cards, setCards, showModal, setshowModal, lo
             anchor_additional: <BoardForm 
                 create={true} onSubmit={async (values) => {
                     await new Promise((r) => setTimeout(r, 500));
-                    alert(JSON.stringify(values, null, 2));
-                    await create_NewBoard(values);
+                    create_NewBoard(values);
 
                 }} 
             />
@@ -105,7 +104,7 @@ const Boards = ({boards, setBoards, cards, setCards, showModal, setshowModal, lo
 
     return (
         <>
-        <div className="relative bg-green-400 min-h-screen h-auto w-100 overflow-x-hidden">
+        <div className="relative bg-green-400 min-h-screen h-auto w-100 overflow-x-hidden" style={{backgroundImage: `linear-gradient(${loadBgColor.direction}, ${loadBgColor.colors})`}}>
             {showModal ? <Modal setshowModal={setshowModal} template={loadModal} /> : ''}
             {shapes.map(shape => <Shape styles={shape.css_classes} key={shape.id} />)}
             <header className="container mx-auto p-5">
