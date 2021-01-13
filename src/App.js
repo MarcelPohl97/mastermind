@@ -6,6 +6,10 @@ import Boards from './components/Boards';
 import LoaderContainer from './components/LoaderContainer';
 import Modal from './components/Modal';
 import CardBoard from './components/CardBoard';
+import Features from './components/Features'
+import About from './components/About';
+import How from './components/How';
+import Gradients from './components/Gradients';
 
 import {
   BrowserRouter as Router,
@@ -18,11 +22,10 @@ function App() {
   const [showModal, setshowModal] = useState(false);
   const [loadModal, setloadModal] = useState(null);
   const [loadBgColor, setloadBgColor] = useState({
-    direction: 'to right',
-    colors: '#439bfd, #73b3fb',
+    colors: '',
   })
 
-  const [gradients, setGradients] = useState()
+  const [gradients, setGradients] = useState(null)
 
   const get_Modal = (component) => {
     setloadModal(component)
@@ -125,7 +128,7 @@ function App() {
     <>
        <Router>
           <Route exact path="/">
-            <Landing showModal={showModal} setshowModal={setshowModal} loadModal={loadModal} setloadModal={setloadModal} get_Modal={get_Modal} loadBgColor={loadBgColor} setloadBgColor={setloadBgColor} gradients={gradients} setGradients={setGradients}/> 
+            <Landing showModal={showModal} setshowModal={setshowModal} loadModal={loadModal} setloadModal={setloadModal} get_Modal={get_Modal} loadBgColor={loadBgColor} setloadBgColor={setloadBgColor} gradients={gradients} setGradients={setGradients} /> 
           </Route>
           <Route excact path="/boards">
             <Boards boards={boards} setBoards={setBoards} cards={cards} setCards={setCards} showModal={showModal} setshowModal={setshowModal} loadModal={loadModal} setloadModal={setloadModal} get_Modal={get_Modal} loadBgColor={loadBgColor} setloadBgColor={setloadBgColor}/>

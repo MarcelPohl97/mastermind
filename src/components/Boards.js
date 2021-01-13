@@ -104,7 +104,7 @@ const Boards = ({boards, setBoards, cards, setCards, showModal, setshowModal, lo
 
     return (
         <>
-        <div className="relative bg-green-400 min-h-screen h-auto w-100 overflow-x-hidden" style={{backgroundImage: `linear-gradient(${loadBgColor.direction}, ${loadBgColor.colors})`}}>
+        <div className="relative bg-green-400 min-h-screen h-auto w-100 overflow-x-hidden" style={{background: `linear-gradient(${loadBgColor.colors})`}}>
             {showModal ? <Modal setshowModal={setshowModal} template={loadModal} /> : ''}
             {shapes.map(shape => <Shape styles={shape.css_classes} key={shape.id} />)}
             <header className="container mx-auto p-5">

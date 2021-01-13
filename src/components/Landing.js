@@ -88,7 +88,7 @@ const Landing = ({showModal, setshowModal, loadModal, setloadModal, get_Modal, l
             id:4,
             anchor_name: '🏞 Theme',
             anchor_func: get_Modal,
-            anchor_additional: <Gradients gradients={gradients} setGradients={setGradients} />,
+            anchor_additional: <Gradients gradients={gradients} setGradients={setGradients} setloadBgColor={setloadBgColor}/>,
         }
     ]
 
@@ -104,7 +104,7 @@ const Landing = ({showModal, setshowModal, loadModal, setloadModal, get_Modal, l
 
     return (
         <>
-        <div className="relative bg-green-400 h-screen w-100 clip-divider overflow-x-hidden" style={{backgroundImage: `linear-gradient(${loadBgColor.direction}, ${loadBgColor.colors})`}}>
+        <div className="relative bg-green-400 h-screen w-100 clip-divider overflow-x-hidden" style={{background: `linear-gradient(${loadBgColor.colors})`}}>
             {shapes.map(shape => <Shape styles={shape.css_classes} key={shape.id} />)}
             {showModal ? <Modal setshowModal={setshowModal} template={loadModal} /> : ''}
             <header className="container mx-auto p-5">
@@ -117,7 +117,7 @@ const Landing = ({showModal, setshowModal, loadModal, setloadModal, get_Modal, l
                     <p className="text-white text-2xl text-center mt-6">A simple, customizable Collaboration tool for teams 🤼 and individuals ⛹. <br></br> It's Free ✌.</p>
                     <div className="flex items-center mt-14">
                         <Link to="/boards"><button aria-controls="simple-menu" aria-haspopup="true" className="bg-white py-3 px-10 shadow-lg rounded-md text-black text-base uppercase mr-4 group"><span className="transform inline-block group-hover:animate-bounce">⚡</span> Try it out</button></Link>
-                        <button aria-controls="simple-menu" aria-haspopup="true" className="bg-black py-3 px-10 shadow-lg rounded-md text-white text-base uppercase focus:border-2 focus:border-white group"><span className="transform inline-block group-hover:animate-bounce">☕</span> <span className="text-red-500">Buy me</span> a coffee</button>
+                        <button aria-controls="simple-menu" aria-haspopup="true" className="bg-black py-3 px-10 shadow-lg rounded-md text-white text-base uppercase focus:border-2 focus:border-white group" onClick={() => {alert(loadBgColor.colors)}}><span className="transform inline-block group-hover:animate-bounce">☕</span> <span className="text-red-500">Buy me</span> a coffee</button>
                     </div>
                 </div>
             </header>

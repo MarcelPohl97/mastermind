@@ -126,7 +126,7 @@ const CardBoard = ({boards, setBoards, cards, setCards, showModal, setshowModal,
 
     return (
         <>
-        <motion.div ref={constraintsRef} className="absolute left-0 -top-0 z-50 bg-green-400 h-screen w-screen overflow-x-hidden" style={{backgroundImage: `linear-gradient(${loadBgColor.direction}, ${loadBgColor.colors})`}}>
+        <motion.div ref={constraintsRef} className="absolute left-0 -top-0 z-50 bg-green-400 h-screen w-screen overflow-x-hidden" style={{background: `linear-gradient(${loadBgColor.colors})`}}>
             {showModal ? <Modal setshowModal={setshowModal} template={loadModal} /> : ''}
             {shapes.map(shape => <Shape styles={shape.css_classes} key={shape.id} />)}
             <header className="container mx-auto p-5">
