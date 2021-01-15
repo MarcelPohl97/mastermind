@@ -86,15 +86,23 @@
 13.01.2021:
 -> added change theme functionality
 
+14.01.2021:
+-> added globalprovider
+-> changed all states in app to usecontext
+
+15.01.2021:
+-> added styling for forms
+-> added preventing card text to overflow and make it auto height when text is bigger than card
+
 todo:
 
 after: mvp is done and working:
--> add dynamic background/gradient background customizing aswell as the card
--> gradients: https://raw.githubusercontent.com/ghosh/uiGradients/master/gradients.json
--> inspiration for adding the gradients build switch block due to some gradients having more gradients length
--> style={{backgroundImage: 'linear-gradient(to right, #439bfd, #73b3fb)'}}
--> html emoji picker for boardcreation and cards
--> documentation for tailwindcss card editing
+-> html emoji picker for boardcreation
+-> 3-4 colors to change for cards to set priority, blue, red, green, yellow
+
+to add:
+-> add based on theme changing also change menu text, board colors, form colors, 
+-> prob make card scrollable at some height
 
 future addons for every card:
 -> chat

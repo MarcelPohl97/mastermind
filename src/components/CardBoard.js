@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useContext } from 'react';
 import Shape from './Shape';
 import Navigation from './Navigation';
 import Card from './Card';
@@ -12,57 +12,15 @@ import Modal from './Modal';
 import BoardForm from './BoardForm';
 import CardForm from './CardForm';
 import { parse } from 'postcss';
+import Gradients from './Gradients';
+import { GlobalContext } from '../provider/GlobalProvider';
 
-const CardBoard = ({boards, setBoards, cards, setCards, showModal, setshowModal, loadModal, setloadModal, get_Modal, loadBgColor, setloadBgColor}) => {
 
-    const shapes = [
-        {
-            id:1,
-            css_classes: "rounded-full bg-white opacity-25 w-24 h-24 absolute inset-20"
 
-        },
-        {
-            id:2,
-            css_classes: "rounded-full bg-white opacity-50 w-14 h-14 absolute inset-2/3"
 
-        },
-        {
-            id:3,
-            css_classes: "rounded-full bg-white opacity-30 w-11 h-11 absolute inset-1/4"
+const CardBoard = () => {
 
-        },
-        {
-            id:4,
-            css_classes: "rounded-full bg-white opacity-50 w-14 h-14 absolute inset-x-3/4 inset-y-1/4"
-
-        },
-        {
-            id:5,
-            css_classes: "rounded-full bg-white opacity-25 w-32 h-32 absolute inset-96"
-
-        },
-        {
-            id:6,
-            css_classes: "rounded-full bg-white opacity-40 w-16 h-16 absolute inset-80"
-
-        },
-        {
-            id:7,
-            css_classes: "rounded-full bg-white opacity-25 w-16 h-16 absolute inset-y-1/3 inset-x-2/3"
-
-        },
-        {
-            id:8,
-            css_classes: "rounded-full bg-white opacity-25 w-28 h-28 absolute inset-y-2/3 inset-x-3/4"
-
-        },
-        {
-            id:9,
-            css_classes: "rounded-full bg-white opacity-25 w-12 h-12 absolute inset-x-96 inset-y-3/4"
-
-        },
-        
-    ]
+    const {boards, setBoards, cards, setCards, showModal, setshowModal, loadModal, setloadModal, loadBgColor, gradients, setGradients, setloadBgColor, get_Modal, shapes} = useContext(GlobalContext);
 
     const {board_id} = useParams();
     const constraintsRef = useRef(null);
@@ -100,7 +58,6 @@ const CardBoard = ({boards, setBoards, cards, setCards, showModal, setshowModal,
             anchor_name:'➕ Card',
             anchor_func: get_Modal,
             anchor_additional: <CardForm create={true} onSubmit={async (values) => {
-                await new Promise((r) => setTimeout(r, 500));
                 create_NewCard(values, filtered_Board[0].id);
             }}
             />
@@ -117,11 +74,16 @@ const CardBoard = ({boards, setBoards, cards, setCards, showModal, setshowModal,
             anchor_func: get_Modal,
             anchor_additional: <BoardForm 
             create={false} filtered_Board={filtered_Board} onEdit={async (values) => {
-                await new Promise((r) => setTimeout(r, 500));
                 edit_Board(values);
             }}
             />
         },
+        {
+            id:4,
+            anchor_name: '🏞 Theme',
+            anchor_func: get_Modal,
+            anchor_additional: <Gradients gradients={gradients} setGradients={setGradients} setloadBgColor={setloadBgColor}/>,
+        }
     ]
 
     return (
