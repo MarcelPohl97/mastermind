@@ -90,20 +90,20 @@ const GlobalProvider = (props) => {
         {
             id:2,
             name:'Test2',
-            style:'shadow-lg rounded bg-white w-52 h-10 p-1 absolute inset-y-16',
+            style:'shadow-lg rounded bg-white w-52 h-10 p-1 absolute inset-y-16 group break-words h-auto',
             creator:'Realtor',
             board_id:1,
         },
         {
             id:3,
             name:'Test3',
-            style:'shadow-lg rounded bg-white w-52 h-10 p-1 absolute inset-40',
+            style:'shadow-lg rounded bg-white w-52 h-10 p-1 absolute inset-40 group break-words h-auto',
             board_id:2,
         },
         {
             id:4,
             name:'Test4',
-            style:'shadow-lg rounded bg-white w-52 h-10 p-1 absolute inset-x-60',
+            style:'shadow-lg rounded bg-white w-52 h-10 p-1 absolute inset-x-60 group break-words h-auto',
             board_id:2,
         },
         ]

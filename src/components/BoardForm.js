@@ -1,8 +1,9 @@
 import React from 'react';
 import { Formik, Field, Form } from 'formik';
+import FormField from './FormField';
 
 
-const BoardForm = ({create, onSubmit, onEdit, filtered_Board}) => {
+const BoardForm = ({create, onSubmit, onEdit, filtered_Board, loadBgColor}) => {
     return (
         <>
         <Formik
@@ -22,23 +23,11 @@ const BoardForm = ({create, onSubmit, onEdit, filtered_Board}) => {
             onSubmit={create ? onSubmit : onEdit}
         >
             <Form>
-                <div className="mb-4 relative flex flex-col mt-10">
-                    <label className="absolute -top-4 left-5 pr-1 bg-white text-green-500 text-xl" htmlFor="emoji">Emoji</label>
-                    <Field className="rounded-lg border-2 p-2 border-green-500" id="emoji" name="emoji" placeholder="Example: 🤼" />
-                </div>
-                <div className="mb-4 relative flex flex-col mt-4">
-                    <label className="absolute -top-4 left-5 pr-1 bg-white text-green-500 text-xl" htmlFor="title">Title</label>
-                    <Field className="rounded-lg border-2 p-2 border-green-500" id="title" name="title" placeholder="Example: The Wrestler" />
-                </div>
-                <div className="mb-4 relative flex flex-col mt-4">
-                    <label className="absolute -top-4 left-5 pr-1 bg-white text-green-500 text-xl" htmlFor="protected">Protected</label>
-                    <Field className="rounded-lg border-2 p-2 border-green-500" id="title" id="protected" name="protected" placeholder="Example: true/false" />
-                </div>
-                <div className="mb-4 relative flex flex-col mt-4">
-                    <label className="absolute -top-4 left-5 pr-1 bg-white text-green-500 text-xl" htmlFor="created">Creator</label>
-                    <Field className="rounded-lg border-2 p-2 border-green-500" id="created" name="created" placeholder="Example: Steve Austin" />
-                </div>
-                <button type="submit" className="bg-green-500 py-3 px-10 shadow-lg rounded-md text-white text-base uppercase mr-4">{create ? "➕ Add Board" : "📋 Edit Board"}</button>
+                <FormField loadBgColor={loadBgColor} placeholder={"Example: 🤼"} input_tag={"emoji"} label={"Emoji"}/>
+                <FormField loadBgColor={loadBgColor} placeholder={"Example: The Wrestler"} input_tag={"title"} label={"Title"}/>
+                <FormField loadBgColor={loadBgColor} placeholder={"Example: true/false"} input_tag={"protected"} label={"Protected"}/>
+                <FormField loadBgColor={loadBgColor} placeholder={"Example: Steve Austin"} input_tag={"created"} label={"Creator"}/>
+                <button type="submit" className="bg-green-400 py-3 px-10 shadow-lg rounded-md text-white text-base uppercase mr-4" style={{backgroundColor:`${loadBgColor.colors[0]}`}}>{create ? "➕ Add Board" : "📋 Edit Board"}</button>
             </Form>
         </Formik>
         </>

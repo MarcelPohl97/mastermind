@@ -94,15 +94,27 @@
 -> added styling for forms
 -> added preventing card text to overflow and make it auto height when text is bigger than card
 
+18.01.2020:
+-> added theme changing colors for menu text, board, forms
+
 todo:
 
 after: mvp is done and working:
 -> html emoji picker for boardcreation
 -> 3-4 colors to change for cards to set priority, blue, red, green, yellow
-
-to add:
--> add based on theme changing also change menu text, board colors, form colors, 
 -> prob make card scrollable at some height
+-> make delete card, color picker above, style it a bit differently white bg and border based on card importance color
+-> make bubbles draggable and make them so they turn back to original position
+-> create "responsive" bubbles basically at certain breakpoints we switch their coordinates and make them smaller
+
+to add: 
+
+-> connect firebase to frontend and make app real time
+-> add free version without it getting saved and a logged in version where your boards are gonna get saved
+-> add authentication to app
+-> add realtime card updating once the card lost focus
+-> make it so you see someone working on that card
+-> make it undraggable while its getting worked on
 
 future addons for every card:
 -> chat
@@ -110,6 +122,10 @@ future addons for every card:
 -> drawing
 -> calendar
 -> teams position
+
+app direction:
+-> maybe create templates for brainstorming to use different techniques basically
+the app focus complete on brainstorming
 
 
 

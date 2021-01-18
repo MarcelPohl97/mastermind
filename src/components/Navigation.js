@@ -8,7 +8,7 @@ import {
     Link
   } from "react-router-dom";
 
-const Navigation = ({MenuItems}) => {
+const Navigation = ({MenuItems, loadBgColor}) => {
     return (
         <>
             <nav className="flex items-center justify-between">
@@ -18,7 +18,7 @@ const Navigation = ({MenuItems}) => {
                         <h2 className="text-2xl text-red-500"><span className="text-black">Master</span>mind</h2>
                     </div>
                 </Link>
-                <Menu items={MenuItems} />
+                <Menu items={MenuItems} loadBgColor={loadBgColor} />
             </nav>
         </>
     )

@@ -1,8 +1,9 @@
 import React from 'react';
 import { Formik, Field, Form } from 'formik';
+import FormField from './FormField';
 
 
-const CardForm = ({onSubmit, onEdit, create, filteredCard}) => {
+const CardForm = ({onSubmit, onEdit, create, filteredCard, loadBgColor}) => {
     return (
         <>
         <Formik
@@ -16,11 +17,8 @@ const CardForm = ({onSubmit, onEdit, create, filteredCard}) => {
             onSubmit={create ? onSubmit : onEdit}
         > 
             <Form>
-                <div className="mb-4 relative flex flex-col mt-10">
-                    <label className="absolute -top-4 left-5 pr-1 bg-white text-green-500 text-xl" htmlFor="name">Card Name</label>
-                    <Field className="rounded-lg border-2 p-2 border-green-500" id="name" name="name" placeholder="Example: TestCard" />
-                </div>
-                <button className="bg-green-500 py-3 px-10 shadow-lg rounded-md text-white text-base uppercase mr-4" type="submit">{create ? "➕ Add Card" : "📝 Edit Card"}</button>
+                <FormField loadBgColor={loadBgColor} placeholder={"Example: TestCard"} input_tag={"name"} label={"Card Name"}/>
+                <button className="bg-green-500 py-3 px-10 shadow-lg rounded-md text-white text-base uppercase mr-4" style={{backgroundColor:`${loadBgColor.colors[0]}`}} type="submit">{create ? "➕ Add Card" : "📝 Edit Card"}</button>
             </Form> 
         </Formik>
         </>

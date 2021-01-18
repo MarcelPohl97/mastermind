@@ -2,7 +2,7 @@ import React, {useEffect} from 'react';
 
 import Gradient from './Gradient';
 
-const Gradients = ({gradients, setGradients, setloadBgColor}) => {
+const Gradients = ({gradients, setloadBgColor}) => {
 
     return (
         <div className="container mx-auto p-10 grid responsive-grid">

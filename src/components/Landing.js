@@ -64,7 +64,7 @@ const Landing = () => {
             {shapes.map(shape => <Shape styles={shape.css_classes} key={shape.id} />)}
             {showModal ? <Modal setshowModal={setshowModal} template={loadModal} /> : ''}
             <header className="container mx-auto p-5">
-                <Navigation MenuItems={MenuItems} />
+                <Navigation MenuItems={MenuItems} loadBgColor={loadBgColor} />
                 <div className="flex flex-col items-center mt-24">
                     <div className="flex items-center">
                         <img src={"https://www.flaticon.com/svg/static/icons/svg/2491/2491288.svg"} className="w-16 h-16 mr-2" alt="Mastermind Icon"/>

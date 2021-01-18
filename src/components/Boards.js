@@ -30,7 +30,7 @@ const Boards = () => {
             anchor_name:'➕ Board',
             anchor_func: get_Modal,
             anchor_additional: <BoardForm 
-                create={true} onSubmit={async (values) => {
+                create={true} loadBgColor={loadBgColor} onSubmit={async (values) => {
                     await new Promise((r) => setTimeout(r, 500));
                     create_NewBoard(values);
 
@@ -63,10 +63,10 @@ const Boards = () => {
             {showModal ? <Modal setshowModal={setshowModal} template={loadModal} /> : ''}
             {shapes.map(shape => <Shape styles={shape.css_classes} key={shape.id} />)}
             <header className="container mx-auto p-5">
-                <Navigation MenuItems={MenuItems} />
+                <Navigation MenuItems={MenuItems} loadBgColor={loadBgColor} />
             </header>
             <div className="container mx-auto p-10 grid responsive-grid">
-                {boards.map(board => <Board board={board} key={board.id} /> )}
+                {boards.map(board => <Board board={board} key={board.id} loadBgColor={loadBgColor} /> )}
             </div>
         </div>
         </>
