@@ -16,6 +16,39 @@ const GlobalProvider = (props) => {
         setshowModal(true);
     };
 
+    const [priorities, setPriorities] = useState([
+        {
+            id:1,
+            prioritie:'Neutral',
+            color:'bg-white',
+        },
+        {
+            id:1,
+            prioritie:'Critical',
+            color:'bg-red-500',
+        },
+        {
+            id:1,
+            prioritie:'High',
+            color:'bg-yellow-500',
+        },
+        {
+            id:1,
+            prioritie:'Medium',
+            color:'bg-blue-500',
+        },
+        {
+            id:1,
+            prioritie:'Low',
+            color:'bg-green-500',
+        },
+        
+    ])
+
+    const [cardPriority, setCardPriority] = useState({
+        color:'bg-white'
+    })
+
 
     const [boards, setBoards] = useState( 
     [
@@ -83,28 +116,42 @@ const GlobalProvider = (props) => {
         {
             id:1,
             name:'Test1',
-            style:'shadow-lg rounded bg-white w-52 h-10 p-1 absolute top-80 left-80 group break-words h-auto',
+            style:'shadow-lg rounded w-52 h-10 p-1 absolute top-80 left-80 break-words h-auto',
             creator:'Marcellus',
             board_id:1,
+            priority:'bg-white',
         },
         {
             id:2,
             name:'Test2',
-            style:'shadow-lg rounded bg-white w-52 h-10 p-1 absolute inset-y-16 group break-words h-auto',
+            style:'shadow-lg rounded w-52 h-10 p-1 absolute inset-y-16 break-words h-auto',
             creator:'Realtor',
             board_id:1,
+            priority:'bg-red-500',
         },
         {
             id:3,
             name:'Test3',
-            style:'shadow-lg rounded bg-white w-52 h-10 p-1 absolute inset-40 group break-words h-auto',
+            style:'shadow-lg rounded w-52 h-10 p-1 absolute inset-40 break-words h-auto',
+            creator:'Marcellus',
             board_id:2,
+            priority:'bg-blue-500',
         },
         {
             id:4,
             name:'Test4',
-            style:'shadow-lg rounded bg-white w-52 h-10 p-1 absolute inset-x-60 group break-words h-auto',
+            style:'shadow-lg rounded w-52 h-10 p-1 absolute inset-x-60 break-words h-auto',
+            creator:'Marcellus',
             board_id:2,
+            priority:'bg-yellow-500',
+        },
+        {
+            id:5,
+            name:'Test4',
+            style:'shadow-lg rounded w-52 h-10 p-1 absolute inset-x-60 break-words h-auto',
+            creator:'Marcellus',
+            board_id:3,
+            priority:'bg-green-500',
         },
         ]
         )

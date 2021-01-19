@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import { motion } from "framer-motion";
 import CardForm from './CardForm';
 
@@ -38,13 +38,12 @@ const Card = ({filteredCard, cards, setCards, constraintsRef, filtered_Board, ge
                 await new Promise((r) => setTimeout(r, 500));
                 edit_Card(values);
             }}
-            />)}} 
+            />
+            )}} 
             contentEditable={filteredCard.editable} 
-            className={`${filteredCard.style} grab`}
+            className={`${filteredCard.style} ${filteredCard.priority} grab`}
             ref={cardRef}>
             {filteredCard.name}
-        
-        <span className="absolute bg-black text-white tooltip-form p-3 -left-0 -top-10 opacity-0 group-hover:opacity-100" contentEditable={'false'}>created by: {filteredCard.creator}</span>
         <button className="absolute right-0.5 top-0.5" onClick={delete_Card} contentEditable={'false'}>❌</button>
         </motion.div>
         </>

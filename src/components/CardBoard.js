@@ -13,6 +13,7 @@ import BoardForm from './BoardForm';
 import CardForm from './CardForm';
 import { parse } from 'postcss';
 import Gradients from './Gradients';
+import Priority from './Priority';
 import { GlobalContext } from '../provider/GlobalProvider';
 
 
@@ -20,7 +21,7 @@ import { GlobalContext } from '../provider/GlobalProvider';
 
 const CardBoard = () => {
 
-    const {boards, setBoards, cards, setCards, showModal, setshowModal, loadModal, setloadModal, loadBgColor, gradients, setGradients, setloadBgColor, get_Modal, shapes} = useContext(GlobalContext);
+    const {boards, setBoards, cards, setCards, showModal, setshowModal, loadModal, setloadModal, loadBgColor, gradients, setGradients, setloadBgColor, get_Modal, shapes, cardPriority} = useContext(GlobalContext);
 
     const {board_id} = useParams();
     const constraintsRef = useRef(null);
@@ -31,8 +32,10 @@ const CardBoard = () => {
         setCards([...cards, {
             id:5,
             name:values.name,
-            style:'shadow-lg rounded bg-blue-400 text-white w-52 h-10 p-1 absolute top-96 left-96 group break-words h-auto',
+            style:'shadow-lg rounded text-white w-52 h-12 p-1 absolute top-96 left-96 group break-words h-auto',
+            creator:'Marcellus',
             board_id:board_id,
+            priority:cardPriority.color,
         }])
     }
 
@@ -57,7 +60,7 @@ const CardBoard = () => {
             id:1,
             anchor_name:'➕ Card',
             anchor_func: get_Modal,
-            anchor_additional: <CardForm create={true} loadBgColor={loadBgColor} onSubmit={async (values) => {
+            anchor_additional:<CardForm create={true} loadBgColor={loadBgColor} onSubmit={async (values) => {
                 create_NewCard(values, filtered_Board[0].id);
             }}
             />
@@ -97,6 +100,7 @@ const CardBoard = () => {
             {cards.filter(card => card.board_id === parseInt(board_id)).map(filteredCard => (
                 <Card key={filteredCard.id} filteredCard={filteredCard} cards={cards} setCards={setCards} constraintsRef={constraintsRef} filtered_Board={filtered_Board} get_Modal={get_Modal} />
             ))}
+            <span className="absolute bottom-10 right-10 text-2xl">🗑️</span>
         </motion.div>
         </>
     )

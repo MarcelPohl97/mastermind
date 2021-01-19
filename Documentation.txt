@@ -97,11 +97,17 @@
 18.01.2020:
 -> added theme changing colors for menu text, board, forms
 
+19.01.2020:
+-> added priorities for cards
+-> removed card creator hover from card
+-> added trash can in cardboard for delete functionality of cards
+->
+
 todo:
 
 after: mvp is done and working:
 -> html emoji picker for boardcreation
--> 3-4 colors to change for cards to set priority, blue, red, green, yellow
+-> 3-4 colors to change for cards to set priority, blue, red, green, yellow, white
 -> prob make card scrollable at some height
 -> make delete card, color picker above, style it a bit differently white bg and border based on card importance color
 -> make bubbles draggable and make them so they turn back to original position
