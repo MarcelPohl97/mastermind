@@ -101,7 +101,15 @@
 -> added priorities for cards
 -> removed card creator hover from card
 -> added trash can in cardboard for delete functionality of cards
-->
+-> added priority component
+
+20.01.2020:
+-> fixed bug forgot to add loadbgcolors to card edit function
+-> added set card priority when adding card
+
+to fix:
+-> first card added doesnt change priority
+-> editing cards doesnt change priority
 
 todo:
 

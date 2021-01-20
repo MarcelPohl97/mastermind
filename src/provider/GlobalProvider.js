@@ -19,28 +19,23 @@ const GlobalProvider = (props) => {
     const [priorities, setPriorities] = useState([
         {
             id:1,
-            prioritie:'Neutral',
-            color:'bg-white',
+            priority:'Low',
+            color:'bg-green-500',
         },
         {
-            id:1,
-            prioritie:'Critical',
-            color:'bg-red-500',
-        },
-        {
-            id:1,
-            prioritie:'High',
-            color:'bg-yellow-500',
-        },
-        {
-            id:1,
-            prioritie:'Medium',
+            id:2,
+            priority:'Medium',
             color:'bg-blue-500',
         },
         {
-            id:1,
-            prioritie:'Low',
-            color:'bg-green-500',
+            id:3,
+            priority:'High',
+            color:'bg-yellow-500',
+        },
+        {
+            id:4,
+            priority:'Critical',
+            color:'bg-red-500',
         },
         
     ])
@@ -221,7 +216,11 @@ const GlobalProvider = (props) => {
         setBoards,
         cards,
         setCards,
-        shapes
+        shapes,
+        priorities, 
+        setPriorities,
+        cardPriority, 
+        setCardPriority
       }}
     >
       {props.children}

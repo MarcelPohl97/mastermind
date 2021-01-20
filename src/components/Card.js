@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react';
 import { motion } from "framer-motion";
 import CardForm from './CardForm';
 
-const Card = ({filteredCard, cards, setCards, constraintsRef, filtered_Board, get_Modal}) => {
+const Card = ({filteredCard, cards, setCards, constraintsRef, filtered_Board, get_Modal, loadBgColor, priorities, setCardPriority, cardPriority}) => {
 
     const cardRef = useRef(null)
 
@@ -16,6 +16,7 @@ const Card = ({filteredCard, cards, setCards, constraintsRef, filtered_Board, ge
                 style:card.style,
                 creator:card.creator,
                 board_id:filtered_Board[0].id,
+                priority:cardPriority.color,
               }
             }
             return card;  
@@ -34,7 +35,7 @@ const Card = ({filteredCard, cards, setCards, constraintsRef, filtered_Board, ge
             onDragStart={(event, info) => console.log(info.point.x, info.point.y)}
             onDragEnd={(event, info) => console.log(info.point.x, info.point.y)}
             dragConstraints={constraintsRef}
-            onDoubleClick={() => {get_Modal(<CardForm create={false} filteredCard={filteredCard} onEdit={async (values) => {
+            onDoubleClick={() => {get_Modal(<CardForm create={false} filteredCard={filteredCard} loadBgColor={loadBgColor} priorities={priorities} setCardPriority={setCardPriority} onEdit={async (values) => {
                 await new Promise((r) => setTimeout(r, 500));
                 edit_Card(values);
             }}

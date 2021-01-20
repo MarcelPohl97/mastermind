@@ -21,7 +21,7 @@ import { GlobalContext } from '../provider/GlobalProvider';
 
 const CardBoard = () => {
 
-    const {boards, setBoards, cards, setCards, showModal, setshowModal, loadModal, setloadModal, loadBgColor, gradients, setGradients, setloadBgColor, get_Modal, shapes, cardPriority} = useContext(GlobalContext);
+    const {boards, setBoards, cards, setCards, showModal, setshowModal, loadModal, setloadModal, loadBgColor, gradients, setGradients, setloadBgColor, get_Modal, shapes, priorities, setCardPriority, cardPriority} = useContext(GlobalContext);
 
     const {board_id} = useParams();
     const constraintsRef = useRef(null);
@@ -60,7 +60,7 @@ const CardBoard = () => {
             id:1,
             anchor_name:'➕ Card',
             anchor_func: get_Modal,
-            anchor_additional:<CardForm create={true} loadBgColor={loadBgColor} onSubmit={async (values) => {
+            anchor_additional:<CardForm create={true} loadBgColor={loadBgColor} priorities={priorities} setCardPriority={setCardPriority} onSubmit={async (values) => {
                 create_NewCard(values, filtered_Board[0].id);
             }}
             />
@@ -98,7 +98,7 @@ const CardBoard = () => {
                 <Navigation MenuItems={MenuItems} loadBgColor={loadBgColor} />
             </header>
             {cards.filter(card => card.board_id === parseInt(board_id)).map(filteredCard => (
-                <Card key={filteredCard.id} filteredCard={filteredCard} cards={cards} setCards={setCards} constraintsRef={constraintsRef} filtered_Board={filtered_Board} get_Modal={get_Modal} />
+                <Card key={filteredCard.id} filteredCard={filteredCard} cards={cards} setCards={setCards} constraintsRef={constraintsRef} filtered_Board={filtered_Board} get_Modal={get_Modal} loadBgColor={loadBgColor} priorities={priorities} setCardPriority={setCardPriority} cardPriority={cardPriority} />
             ))}
             <span className="absolute bottom-10 right-10 text-2xl">🗑️</span>
         </motion.div>
