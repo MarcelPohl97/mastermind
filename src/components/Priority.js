@@ -1,14 +1,12 @@
 import React from 'react';
 
-const Priority = ({id, priority, color, setCardPriority }) => {
-
-    const add_card_priority = (color) => {
-        setCardPriority({color:color})
-    }
+const Priority = ({id, priority, color, radio}) => {
 
     return (
         <>
-            <div tabindex="0" className={`w-8 h-8 mr-2 rounded-full cursor-pointer ${color}`} key={id} title={priority} onClick={() => {add_card_priority(color);}}></div>
+            <div tabindex="0" className={`w-8 h-8 mr-2 rounded-full relative cursor-pointer ${color}`} key={id} title={priority}>
+                {radio}
+            </div>
         </>
     )
 }

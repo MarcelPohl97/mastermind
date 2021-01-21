@@ -107,17 +107,18 @@
 -> fixed bug forgot to add loadbgcolors to card edit function
 -> added set card priority when adding card
 
-to fix:
--> first card added doesnt change priority
--> editing cards doesnt change priority
+21.01.2020:
+-> fixed first card added doesnt change priority
+-> fixed cards doesnt change priority
+-> replaced priority choosing usestate through formik with radio buttons
+-> added FormRadio for Priorites set in cards
+-> removed delete cards on card
+-> added delete cards on modal edit click on card
 
 todo:
 
 after: mvp is done and working:
 -> html emoji picker for boardcreation
--> 3-4 colors to change for cards to set priority, blue, red, green, yellow, white
--> prob make card scrollable at some height
--> make delete card, color picker above, style it a bit differently white bg and border based on card importance color
 -> make bubbles draggable and make them so they turn back to original position
 -> create "responsive" bubbles basically at certain breakpoints we switch their coordinates and make them smaller
 
@@ -129,6 +130,9 @@ to add:
 -> add realtime card updating once the card lost focus
 -> make it so you see someone working on that card
 -> make it undraggable while its getting worked on
+
+to think:
+make modals swipeable to close them
 
 future addons for every card:
 -> chat

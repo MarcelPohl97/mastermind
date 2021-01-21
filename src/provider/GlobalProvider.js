@@ -16,6 +16,10 @@ const GlobalProvider = (props) => {
         setshowModal(true);
     };
 
+    const hide_Modal = () => {
+        setshowModal(false);
+    }
+
     const [priorities, setPriorities] = useState([
         {
             id:1,
@@ -39,11 +43,6 @@ const GlobalProvider = (props) => {
         },
         
     ])
-
-    const [cardPriority, setCardPriority] = useState({
-        color:'bg-white'
-    })
-
 
     const [boards, setBoards] = useState( 
     [
@@ -209,7 +208,8 @@ const GlobalProvider = (props) => {
         setloadModal,
         loadBgColor,
         setloadBgColor,
-        get_Modal, 
+        get_Modal,
+        hide_Modal, 
         gradients,
         setGradients,
         boards,
@@ -219,8 +219,6 @@ const GlobalProvider = (props) => {
         shapes,
         priorities, 
         setPriorities,
-        cardPriority, 
-        setCardPriority
       }}
     >
       {props.children}

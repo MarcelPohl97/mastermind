@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react';
 import { motion } from "framer-motion";
 import CardForm from './CardForm';
 
-const Card = ({filteredCard, cards, setCards, constraintsRef, filtered_Board, get_Modal, loadBgColor, priorities, setCardPriority, cardPriority}) => {
+const Card = ({filteredCard, cards, setCards, constraintsRef, filtered_Board, get_Modal, hide_Modal, loadBgColor, priorities}) => {
 
     const cardRef = useRef(null)
 
@@ -16,7 +16,7 @@ const Card = ({filteredCard, cards, setCards, constraintsRef, filtered_Board, ge
                 style:card.style,
                 creator:card.creator,
                 board_id:filtered_Board[0].id,
-                priority:cardPriority.color,
+                priority:values.priority,
               }
             }
             return card;  
@@ -35,7 +35,7 @@ const Card = ({filteredCard, cards, setCards, constraintsRef, filtered_Board, ge
             onDragStart={(event, info) => console.log(info.point.x, info.point.y)}
             onDragEnd={(event, info) => console.log(info.point.x, info.point.y)}
             dragConstraints={constraintsRef}
-            onDoubleClick={() => {get_Modal(<CardForm create={false} filteredCard={filteredCard} loadBgColor={loadBgColor} priorities={priorities} setCardPriority={setCardPriority} onEdit={async (values) => {
+            onDoubleClick={() => {get_Modal(<CardForm create={false} hide_Modal={hide_Modal} filteredCard={filteredCard} loadBgColor={loadBgColor} priorities={priorities} delete_Card={delete_Card} onEdit={async (values) => {
                 await new Promise((r) => setTimeout(r, 500));
                 edit_Card(values);
             }}
@@ -45,7 +45,6 @@ const Card = ({filteredCard, cards, setCards, constraintsRef, filtered_Board, ge
             className={`${filteredCard.style} ${filteredCard.priority} grab`}
             ref={cardRef}>
             {filteredCard.name}
-        <button className="absolute right-0.5 top-0.5" onClick={delete_Card} contentEditable={'false'}>❌</button>
         </motion.div>
         </>
     )
