@@ -115,14 +115,19 @@
 -> removed delete cards on card
 -> added delete cards on modal edit click on card
 
+22.01.2021:
+-> added swipe on modals to hide them
+-> fixed bug where it stopped dragging when you used translateY and translateX, removing transform is important due to changing drag functionality of framer motion
+
 todo:
 
 after: mvp is done and working:
+-> make modals swipeable to close them
 -> html emoji picker for boardcreation
 -> make bubbles draggable and make them so they turn back to original position
--> create "responsive" bubbles basically at certain breakpoints we switch their coordinates and make them smaller
 
-to add: 
+to add:
+-> create "responsive" bubbles basically at certain breakpoints we switch their coordinates and make them smaller
 
 -> connect firebase to frontend and make app real time
 -> add free version without it getting saved and a logged in version where your boards are gonna get saved
@@ -130,9 +135,6 @@ to add:
 -> add realtime card updating once the card lost focus
 -> make it so you see someone working on that card
 -> make it undraggable while its getting worked on
-
-to think:
-make modals swipeable to close them
 
 future addons for every card:
 -> chat

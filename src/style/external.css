@@ -18,3 +18,7 @@
 .tooltip-form {
   clip-path: polygon(0% 0%, 100% 0, 99% 83%, 57% 84%, 50% 100%, 43% 84%, 0 84%);
 }
+
+.modal-transform {
+  transform:translate(-50%, -50%) !important;
+}

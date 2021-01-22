@@ -33,7 +33,7 @@ const Card = ({filteredCard, cards, setCards, constraintsRef, filtered_Board, ge
         <motion.div
             drag
             onDragStart={(event, info) => console.log(info.point.x, info.point.y)}
-            onDragEnd={(event, info) => console.log(info.point.x, info.point.y)}
+            onDragEnd={(event, info) => console.log(info.point.x, info.point.y, window.innerHeight)}
             dragConstraints={constraintsRef}
             onDoubleClick={() => {get_Modal(<CardForm create={false} hide_Modal={hide_Modal} filteredCard={filteredCard} loadBgColor={loadBgColor} priorities={priorities} delete_Card={delete_Card} onEdit={async (values) => {
                 await new Promise((r) => setTimeout(r, 500));
