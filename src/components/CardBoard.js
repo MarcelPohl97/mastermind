@@ -1,4 +1,4 @@
-import React, { useRef, useContext } from 'react';
+import React, { useRef, useContext, useEffect } from 'react';
 import Shape from './Shape';
 import Navigation from './Navigation';
 import Card from './Card';
@@ -21,7 +21,7 @@ import { GlobalContext } from '../provider/GlobalProvider';
 
 const CardBoard = () => {
 
-    const {boards, setBoards, cards, setCards, showModal, setshowModal, loadModal, setloadModal, loadBgColor, gradients, setGradients, setloadBgColor, get_Modal, hide_Modal, shapes, priorities} = useContext(GlobalContext);
+    const {boards, setBoards, cards, setCards, showModal, setshowModal, loadModal, setloadModal, loadBgColor, gradients, setGradients, setloadBgColor, get_Modal, hide_Modal, shapes, priorities, fetchGradients, Emoji} = useContext(GlobalContext);
 
     const {board_id} = useParams();
     const constraintsRef = useRef(null);
@@ -45,7 +45,7 @@ const CardBoard = () => {
               return {
                 ...board,
                 id:filtered_Board[0].id,
-                emoji:values.emoji,
+                emoji:Emoji,
                 title:values.title,
                 protected: true,
                 created:values.created,
@@ -76,7 +76,7 @@ const CardBoard = () => {
             anchor_name:'📋 Edit',
             anchor_func: get_Modal,
             anchor_additional: <BoardForm 
-            create={false} filtered_Board={filtered_Board} onEdit={async (values) => {
+            create={false} filtered_Board={filtered_Board} loadBgColor={loadBgColor} onEdit={async (values) => {
                 edit_Board(values);
             }}
             />

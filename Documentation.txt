@@ -119,12 +119,19 @@
 -> added swipe on modals to hide them
 -> fixed bug where it stopped dragging when you used translateY and translateX, removing transform is important due to changing drag functionality of framer motion
 
+25.01.2021:
+-> installed emoji picker react
+-> added emoji picker to boardform
+-> added emoji to add and edit board (bug only updates if form rerender need a fix)
+
 todo:
 
 after: mvp is done and working:
--> make modals swipeable to close them
--> html emoji picker for boardcreation
 -> make bubbles draggable and make them so they turn back to original position
+
+to fix:
+-> fix position and width on smaller screensizes for modal
+-> fix emoji only updates after rerender of form
 
 to add:
 -> create "responsive" bubbles basically at certain breakpoints we switch their coordinates and make them smaller

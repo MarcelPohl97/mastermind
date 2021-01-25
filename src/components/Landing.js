@@ -19,7 +19,7 @@ import {
 
 const Landing = () => {
 
-    const {showModal, setshowModal, loadModal, setloadModal, loadBgColor, setloadBgColor, gradients, setGradients, get_Modal, shapes} = useContext(GlobalContext);
+    const {showModal, setshowModal, loadModal, setloadModal, loadBgColor, setloadBgColor, gradients, setGradients, get_Modal, shapes, fetchGradients} = useContext(GlobalContext);
 
     const MenuItems = [
         {
@@ -47,12 +47,6 @@ const Landing = () => {
             anchor_additional: <Gradients gradients={gradients} setGradients={setGradients} setloadBgColor={setloadBgColor}/>,
         }
     ]
-
-    const fetchGradients = async () => {
-        const data = await fetch("https://raw.githubusercontent.com/ghosh/uiGradients/master/gradients.json");
-        const jsonData = await data.json();
-        setGradients(jsonData);
-      }
 
     useEffect(() => {
         fetchGradients();

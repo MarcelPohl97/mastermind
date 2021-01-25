@@ -9,6 +9,8 @@ const GlobalProvider = (props) => {
         colors: '',
     });
 
+    const [Emoji, setEmoji] = useState(null);
+
     const [gradients, setGradients] = useState(null);
 
     const get_Modal = (component) => {
@@ -197,6 +199,16 @@ const GlobalProvider = (props) => {
             },
             
         ]);
+
+        const fetchGradients = async () => {
+            const data = await fetch("https://raw.githubusercontent.com/ghosh/uiGradients/master/gradients.json");
+            const jsonData = await data.json();
+            setGradients(jsonData);
+          }
+
+          const getEmoji = (event, emoji) => {
+            setEmoji(emoji.emoji);
+        };
   
 
   return (
@@ -219,6 +231,10 @@ const GlobalProvider = (props) => {
         shapes,
         priorities, 
         setPriorities,
+        fetchGradients,
+        Emoji,
+        setEmoji,
+        getEmoji,
       }}
     >
       {props.children}

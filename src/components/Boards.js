@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import Shape from './Shape';
 import Navigation from './Navigation';
 import Board from './Board';
@@ -12,12 +12,12 @@ import { GlobalContext } from '../provider/GlobalProvider';
 
 const Boards = () => {
 
-    const {boards, setBoards, showModal, setshowModal, loadModal, loadBgColor, gradients, setGradients, setloadBgColor, get_Modal, shapes} = useContext(GlobalContext);
+    const {boards, setBoards, showModal, setshowModal, loadModal, loadBgColor, gradients, setGradients, setloadBgColor, get_Modal, shapes, fetchGradients, Emoji} = useContext(GlobalContext);
 
     const create_NewBoard = (values) => {
         setBoards([...boards, {
             id:10,
-            emoji:values.emoji,
+            emoji:Emoji,
             title:values.title,
             protected: true,
             created:values.created,
@@ -30,7 +30,7 @@ const Boards = () => {
             anchor_name:'➕ Board',
             anchor_func: get_Modal,
             anchor_additional: <BoardForm 
-                create={true} loadBgColor={loadBgColor} onSubmit={async (values) => {
+                create={true} loadBgColor={loadBgColor} Emoji={Emoji} onSubmit={async (values) => {
                     await new Promise((r) => setTimeout(r, 500));
                     create_NewBoard(values);
 
@@ -56,6 +56,10 @@ const Boards = () => {
             anchor_additional: <Gradients gradients={gradients} setGradients={setGradients} setloadBgColor={setloadBgColor}/>,
         },
     ]
+
+    useEffect(() => {
+        fetchGradients();
+    })
 
     return (
         <>
