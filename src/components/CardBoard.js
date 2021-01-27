@@ -5,7 +5,7 @@ import Card from './Card';
 import { motion } from "framer-motion";
 
 import {
-    Link, useParams
+    Link, useParams, useHistory
   } from "react-router-dom";
 import BoardDetails from './BoardDetails';
 import Modal from './Modal';
@@ -22,11 +22,16 @@ import { GlobalContext } from '../provider/GlobalProvider';
 const CardBoard = () => {
 
     const {boards, setBoards, cards, setCards, showModal, setshowModal, loadModal, setloadModal, loadBgColor, gradients, setGradients, setloadBgColor, get_Modal, hide_Modal, shapes, priorities, fetchGradients, Emoji} = useContext(GlobalContext);
+    const history = useHistory();
 
     const {board_id} = useParams();
     const constraintsRef = useRef(null);
 
-    const filtered_Board = boards.filter(board => board.id === parseInt(board_id))
+    const filtered_Board = boards.filter(board => board.id === parseInt(board_id));
+
+    const redirect = (link) => {
+        history.push(link);
+    };
 
     const create_NewCard= (values, board_id) => {
         setCards([...cards, {
@@ -86,7 +91,37 @@ const CardBoard = () => {
             anchor_name: '🏞 Theme',
             anchor_func: get_Modal,
             anchor_additional: <Gradients gradients={gradients} setGradients={setGradients} setloadBgColor={setloadBgColor}/>,
-        }
+        },
+        {
+            id:5,
+            anchor_name: '💬 Chat',
+            anchor_func: redirect,
+            anchor_additional: '/chat',
+        },
+        {
+            id:6,
+            anchor_name: '🗄 Kanban',
+            anchor_func: redirect,
+            anchor_additional: '/kanban',
+        },
+        {
+            id:7,
+            anchor_name: '🎨 Drawing',
+            anchor_func: redirect,
+            anchor_additional: '/drawing',
+        },
+        {
+            id:8,
+            anchor_name: '📅 Calendar',
+            anchor_func: redirect,
+            anchor_additional: '/calendar',
+        },
+        {
+            id:9,
+            anchor_name: '🤛Team',
+            anchor_func: redirect,
+            anchor_additional: '/teams',
+        },
     ]
 
     return (

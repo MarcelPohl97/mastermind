@@ -124,10 +124,36 @@
 -> added emoji picker to boardform
 -> added emoji to add and edit board (bug only updates if form rerender need a fix)
 
-todo:
+26.01.2021:
+-> added useHistory and history.push to navigate back and forth to other pages
+-> added links in cardboard to other boards like chat, kanban, drawing, calendar, teams
+-> edited all container main component divs to motion divs
+-> edited all shape divs to motion divs
+-> made shape divs draggable but remain same position after release
+-> installed firebase
+-> created firebase project
+-> installed react-firebase-hooks
+-> setup deployment on firebase hosting
 
-after: mvp is done and working:
--> make bubbles draggable and make them so they turn back to original position
+27.01.2021:
+-> created firebase.js init 
+-> created AuthProvider
+
+
+firebase credentials:
+MasterMindOwner1
+MasterMindOwner13579!
+
+todo:
+-> connect firebase to frontend
+-> add authentication to app
+-> register
+-> login
+-> forgot password
+-> add dummy data to firebase
+-> make firebase db calls and set that data in states based on useffect
+-> add crud functionality based on database for boards and cards
+-> add a continous deployment/integration everytime a build commands runs for the app
 
 to fix:
 -> fix position and width on smaller screensizes for modal
@@ -136,12 +162,6 @@ to fix:
 to add:
 -> create "responsive" bubbles basically at certain breakpoints we switch their coordinates and make them smaller
 
--> connect firebase to frontend and make app real time
--> add free version without it getting saved and a logged in version where your boards are gonna get saved
--> add authentication to app
--> add realtime card updating once the card lost focus
--> make it so you see someone working on that card
--> make it undraggable while its getting worked on
 
 future addons for every card:
 -> chat

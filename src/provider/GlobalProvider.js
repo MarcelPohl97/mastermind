@@ -13,6 +13,7 @@ const GlobalProvider = (props) => {
 
     const [gradients, setGradients] = useState(null);
 
+
     const get_Modal = (component) => {
         setloadModal(component)
         setshowModal(true);
@@ -209,7 +210,6 @@ const GlobalProvider = (props) => {
           const getEmoji = (event, emoji) => {
             setEmoji(emoji.emoji);
         };
-  
 
   return (
     <GlobalContext.Provider

@@ -8,7 +8,6 @@ import How from './How';
 import Gradients from './Gradients';
 import { motion } from "framer-motion";
 import { GlobalContext } from '../provider/GlobalProvider';
-import { auth } from '../firebase/firebase';
 
 
 import {
@@ -19,44 +18,25 @@ import {
   } from "react-router-dom";
   
 
-const Landing = () => {
-    const register = () => {
-        auth.createUserWithEmailAndPassword('test@gmx.de', 'Hallo12345').then((userCredential) => {
-        // Signed in 
-        var user = userCredential.user;
-        console.log(user);
-        // ...
-    })
-    .catch((error) => {
-        var errorCode = error.code;
-        var errorMessage = error.message;
-        console.log(errorCode, errorMessage);
-        // ..
-    });
-    }
+const Login = () => {
+
     const {showModal, setshowModal, loadModal, setloadModal, loadBgColor, setloadBgColor, gradients, setGradients, get_Modal, shapes, fetchGradients} = useContext(GlobalContext);
 
     const MenuItems = [
         {
             id:1,
-            anchor_name:'💎 Features',
+            anchor_name:'💎 Register',
             anchor_func: get_Modal,
             anchor_additional: <Features />,
         },
         {
             id:2,
-            anchor_name:'❓ About',
+            anchor_name:'❓ Forgot Password',
             anchor_func: get_Modal,
             anchor_additional: <About />,
         },
         {
             id:3,
-            anchor_name:'🛠 How it works',
-            anchor_func: get_Modal,
-            anchor_additional: <How />,
-        },
-        {
-            id:4,
             anchor_name: '🏞 Theme',
             anchor_func: get_Modal,
             anchor_additional: <Gradients gradients={gradients} setGradients={setGradients} setloadBgColor={setloadBgColor}/>,
@@ -77,10 +57,10 @@ const Landing = () => {
                         <img src={"https://www.flaticon.com/svg/static/icons/svg/2491/2491288.svg"} className="w-16 h-16 mr-2" alt="Mastermind Icon"/>
                         <h2 className="text-4xl text-red-500"><span className="text-black">Master</span>mind</h2>
                     </div>
-                    <p className="text-white text-2xl text-center mt-6">A simple, customizable Collaboration tool for teams 🤼 and individuals ⛹. <br></br> It's Free ✌.</p>
+                    <p className="text-white text-2xl text-center mt-6">Welcome back login now! and start collaborating <br></br> It's Free ✌.</p>
                     <div className="flex items-center mt-14">
-                        <Link to="/boards"><button aria-controls="simple-menu" aria-haspopup="true" className="bg-white py-3 px-10 shadow-lg rounded-md text-black text-base uppercase mr-4 group"><span className="transform inline-block group-hover:animate-bounce">⚡</span> Try it out</button></Link>
-                        <button aria-controls="simple-menu" aria-haspopup="true" className="bg-black py-3 px-10 shadow-lg rounded-md text-white text-base uppercase focus:border-2 focus:border-white group"><span className="transform inline-block group-hover:animate-bounce">☕</span> <span className="text-red-500">Buy me</span> a coffee</button>
+                        <Link to="/boards"><button aria-controls="simple-menu" aria-haspopup="true" className="bg-white py-3 px-10 shadow-lg rounded-md text-black text-base uppercase mr-4 group"><span className="transform inline-block group-hover:animate-bounce">⚡</span> Login</button></Link>
+                        <button aria-controls="simple-menu" aria-haspopup="true" className="bg-black py-3 px-10 shadow-lg rounded-md text-white text-base uppercase focus:border-2 focus:border-white group" onClick={() => {alert(loadBgColor.colors)}}><span className="transform inline-block group-hover:animate-bounce">☕</span> <span className="text-red-500">or</span> Forgot Password?</button>
                     </div>
                 </div>
             </header>
@@ -89,4 +69,4 @@ const Landing = () => {
     );
 }
 
-export default Landing;
+export default Login;
