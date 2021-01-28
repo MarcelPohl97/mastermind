@@ -5,6 +5,8 @@ import Modal from './Modal';
 import Features from './Features'
 import About from './About';
 import How from './How';
+import { Formik, Field, Form } from 'formik';
+import FormField from './FormField'; 
 import Gradients from './Gradients';
 import { motion } from "framer-motion";
 import { GlobalContext } from '../provider/GlobalProvider';
@@ -57,10 +59,22 @@ const ForgotPassword = () => {
                         <img src={"https://www.flaticon.com/svg/static/icons/svg/2491/2491288.svg"} className="w-16 h-16 mr-2" alt="Mastermind Icon"/>
                         <h2 className="text-4xl text-red-500"><span className="text-black">Master</span>mind</h2>
                     </div>
-                    <p className="text-white text-2xl text-center mt-6">Welcome back login now! and start collaborating <br></br> It's Free ✌.</p>
-                    <div className="flex items-center mt-14">
-                        <Link to="/boards"><button aria-controls="simple-menu" aria-haspopup="true" className="bg-white py-3 px-10 shadow-lg rounded-md text-black text-base uppercase mr-4 group"><span className="transform inline-block group-hover:animate-bounce">⚡</span> Send Email</button></Link>
-                        <button aria-controls="simple-menu" aria-haspopup="true" className="bg-black py-3 px-10 shadow-lg rounded-md text-white text-base uppercase focus:border-2 focus:border-white group" onClick={() => {alert(loadBgColor.colors)}}><span className="transform inline-block group-hover:animate-bounce">☕</span> <span className="text-red-500">or</span> Login?</button>
+                    <p className="text-white text-2xl text-center mt-6">Forgot your Password? NP. reset it now and resume collaborating <br></br> It's Free ✌.</p>
+                    <div className="p-4 md:w-2/4 bg-white w-full sm:w-full max-h-96 rounded-md shadow-md mt-5">
+                        <Formik
+                            initialValues={{
+                                email: '',
+                            }}
+                        
+                            > 
+                            <Form>
+                                <FormField loadBgColor={loadBgColor} placeholder={"Example: JonDoe@gmail.com"} input_tag={"email"} label={"Email"}/>
+                                <div className="flex flex-row items-center space-between">
+                                    <button className="bg-white py-3 bg-green-400 px-10 shadow-lg rounded-md text-white text-base uppercase mr-4 group" style={{backgroundColor:`${loadBgColor.colors[0]}`}}><span className="transform inline-block group-hover:animate-bounce">📩</span> Send Request</button>
+                                    <Link to="/login"><button className="bg-white py-3 px-10 bg-green-400 px-10 shadow-lg rounded-md text-white text-base uppercase mr-4 group"><span className="transform inline-block group-hover:animate-bounce">⛳ </span> or Login</button></Link>
+                                </div>
+                            </Form> 
+                        </Formik>
                     </div>
                 </div>
             </header>

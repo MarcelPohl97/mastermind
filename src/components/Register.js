@@ -5,6 +5,8 @@ import Modal from './Modal';
 import Features from './Features'
 import About from './About';
 import How from './How';
+import { Formik, Field, Form } from 'formik';
+import FormField from './FormField'; 
 import Gradients from './Gradients';
 import { motion } from "framer-motion";
 import { GlobalContext } from '../provider/GlobalProvider';
@@ -58,9 +60,26 @@ const Register = () => {
                         <h2 className="text-4xl text-red-500"><span className="text-black">Master</span>mind</h2>
                     </div>
                     <p className="text-white text-2xl text-center mt-6">Register for free! and start collaborating <br></br> It's Free ✌.</p>
-                    <div className="flex items-center mt-14">
-                        <Link to="/boards"><button aria-controls="simple-menu" aria-haspopup="true" className="bg-white py-3 px-10 shadow-lg rounded-md text-black text-base uppercase mr-4 group"><span className="transform inline-block group-hover:animate-bounce">⚡</span> Register</button></Link>
-                        <button aria-controls="simple-menu" aria-haspopup="true" className="bg-black py-3 px-10 shadow-lg rounded-md text-white text-base uppercase focus:border-2 focus:border-white group" onClick={() => {alert(loadBgColor.colors)}}><span className="transform inline-block group-hover:animate-bounce">☕</span> <span className="text-red-500">or</span> Login</button>
+                    <div className="p-4 md:w-2/4 bg-white w-full sm:w-full max-h-96 rounded-md shadow-md mt-5">
+                        <Formik
+                            initialValues={{
+                                username:'',
+                                password:'',
+                                email: '',
+                            }}
+                        
+                            > 
+                            <Form>
+                                <FormField loadBgColor={loadBgColor} placeholder={"Example: JonDoe"} input_tag={"username"} label={"Username"}/>
+                                <FormField loadBgColor={loadBgColor} placeholder={"Example: SuperSecretPassword"} input_tag={"password"} label={"Password"}/>
+                                <FormField loadBgColor={loadBgColor} placeholder={"Example: JonDoe@gmail.com"} input_tag={"email"} label={"Email"}/>
+                                <div className="flex flex-row items-center space-between">
+                                    <button className="bg-white py-3 bg-green-400 px-10 shadow-lg rounded-md text-white text-base uppercase mr-4 group" style={{backgroundColor:`${loadBgColor.colors[0]}`}}><span className="transform inline-block group-hover:animate-bounce">✏</span> Register</button>
+                                    <Link to="/login"><button className="bg-white py-3 px-10 bg-green-400 px-10 shadow-lg rounded-md text-white text-base uppercase mr-4 group"><span className="transform inline-block group-hover:animate-bounce">⛳ </span> or Login</button></Link>
+                                </div>
+                                
+                            </Form> 
+                        </Formik>
                     </div>
                 </div>
             </header>

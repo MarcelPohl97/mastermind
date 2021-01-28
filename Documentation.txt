@@ -136,8 +136,19 @@
 -> setup deployment on firebase hosting
 
 27.01.2021:
--> created firebase.js init 
+-> created firebase.js init
+-> created Register component
+-> created Login component
+-> created Forgotpassword component
 -> created AuthProvider
+-> added Test Login and redirect based on react-firebase-hooks
+
+28.01.2021:
+-> styled register component
+-> styled login component
+-> styled forgotpassword component
+
+
 
 
 firebase credentials:

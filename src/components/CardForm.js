@@ -37,7 +37,6 @@ const CardForm = ({onSubmit, onEdit, create, filteredCard, loadBgColor, prioriti
                     </>
                     }
                 </div>
-                
             </Form> 
         </Formik>
         </>

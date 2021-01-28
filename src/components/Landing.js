@@ -8,20 +8,20 @@ import How from './How';
 import Gradients from './Gradients';
 import { motion } from "framer-motion";
 import { GlobalContext } from '../provider/GlobalProvider';
+import { AuthContext } from '../provider/AuthProvider';
 import { auth } from '../firebase/firebase';
-
 
 import {
     BrowserRouter as Router,
     Switch,
     Route,
-    Link
+    Link,
+    useHistory
   } from "react-router-dom";
   
-
 const Landing = () => {
-    const register = () => {
-        auth.createUserWithEmailAndPassword('test@gmx.de', 'Hallo12345').then((userCredential) => {
+    const login = () => {
+        auth.signInWithEmailAndPassword('test@gmail.com', 'test123456').then((userCredential) => {
         // Signed in 
         var user = userCredential.user;
         console.log(user);
@@ -34,6 +34,7 @@ const Landing = () => {
         // ..
     });
     }
+    const {user, loading, error} = useContext(AuthContext)
     const {showModal, setshowModal, loadModal, setloadModal, loadBgColor, setloadBgColor, gradients, setGradients, get_Modal, shapes, fetchGradients} = useContext(GlobalContext);
 
     const MenuItems = [
@@ -63,6 +64,14 @@ const Landing = () => {
         }
     ]
 
+    const history = useHistory();
+    useEffect(() => {
+        if(user) {
+            history.push('/boards');
+        }else {
+            alert("Your not logged in")
+        }
+    });
     
 
     return (
@@ -79,8 +88,8 @@ const Landing = () => {
                     </div>
                     <p className="text-white text-2xl text-center mt-6">A simple, customizable Collaboration tool for teams 🤼 and individuals ⛹. <br></br> It's Free ✌.</p>
                     <div className="flex items-center mt-14">
-                        <Link to="/boards"><button aria-controls="simple-menu" aria-haspopup="true" className="bg-white py-3 px-10 shadow-lg rounded-md text-black text-base uppercase mr-4 group"><span className="transform inline-block group-hover:animate-bounce">⚡</span> Try it out</button></Link>
-                        <button aria-controls="simple-menu" aria-haspopup="true" className="bg-black py-3 px-10 shadow-lg rounded-md text-white text-base uppercase focus:border-2 focus:border-white group"><span className="transform inline-block group-hover:animate-bounce">☕</span> <span className="text-red-500">Buy me</span> a coffee</button>
+                        <Link to="/register"><button aria-controls="simple-menu" aria-haspopup="true" className="bg-white py-3 px-10 shadow-lg rounded-md text-black text-base uppercase mr-4 group"><span className="transform inline-block group-hover:animate-bounce">⚡</span> Try it out</button></Link>
+                        <button onClick={() => {login();}} aria-controls="simple-menu" aria-haspopup="true" className="bg-black py-3 px-10 shadow-lg rounded-md text-white text-base uppercase focus:border-2 focus:border-white group"><span className="transform inline-block group-hover:animate-bounce">☕</span> <span className="text-red-500">Buy me</span> a coffee</button>
                     </div>
                 </div>
             </header>
