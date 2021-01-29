@@ -6,6 +6,16 @@ import BoardForm from './BoardForm';
 import Modal from './Modal';
 import Gradients from './Gradients';
 import { GlobalContext } from '../provider/GlobalProvider';
+import { AuthContext } from '../provider/AuthProvider';
+import { auth } from '../firebase/firebase';
+
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link,
+    useHistory,
+  } from "react-router-dom";
 
 
   
@@ -13,7 +23,7 @@ import { GlobalContext } from '../provider/GlobalProvider';
 const Boards = () => {
 
     const {boards, setBoards, showModal, setshowModal, loadModal, loadBgColor, gradients, setGradients, setloadBgColor, get_Modal, shapes, fetchGradients, Emoji} = useContext(GlobalContext);
-
+    const {user, loading, error, redirect, check_authenticated_user} = useContext(AuthContext)
     const create_NewBoard = (values) => {
         setBoards([...boards, {
             id:10,
@@ -22,6 +32,10 @@ const Boards = () => {
             protected: true,
             created:values.created,
         }])
+    }
+
+    const logout = () => {
+        auth.signOut();
     }
 
     const MenuItems = [
@@ -57,8 +71,11 @@ const Boards = () => {
         },
     ]
 
+    const history = useHistory();
+
     useEffect(() => {
         fetchGradients();
+        check_authenticated_user(history, !user, 'Your not logged in!', '/');
     })
 
     return (
@@ -69,6 +86,7 @@ const Boards = () => {
             <header className="container mx-auto p-5">
                 <Navigation MenuItems={MenuItems} loadBgColor={loadBgColor} />
             </header>
+            <button onClick={logout}>Test</button>
             <div className="container mx-auto p-10 grid responsive-grid">
                 {boards.map(board => <Board board={board} key={board.id} loadBgColor={loadBgColor} /> )}
             </div>

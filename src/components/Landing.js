@@ -16,25 +16,19 @@ import {
     Switch,
     Route,
     Link,
-    useHistory
+    useHistory,
   } from "react-router-dom";
   
 const Landing = () => {
     const login = () => {
         auth.signInWithEmailAndPassword('test@gmail.com', 'test123456').then((userCredential) => {
-        // Signed in 
-        var user = userCredential.user;
-        console.log(user);
-        // ...
+        const user_data = userCredential.user;
     })
     .catch((error) => {
-        var errorCode = error.code;
-        var errorMessage = error.message;
-        console.log(errorCode, errorMessage);
-        // ..
+        const errorMessage = error.message;
     });
     }
-    const {user, loading, error} = useContext(AuthContext)
+    const {user, loading, error, redirect, check_authenticated_user} = useContext(AuthContext)
     const {showModal, setshowModal, loadModal, setloadModal, loadBgColor, setloadBgColor, gradients, setGradients, get_Modal, shapes, fetchGradients} = useContext(GlobalContext);
 
     const MenuItems = [
@@ -63,14 +57,11 @@ const Landing = () => {
             anchor_additional: <Gradients gradients={gradients} setGradients={setGradients} setloadBgColor={setloadBgColor}/>,
         }
     ]
-
     const history = useHistory();
+
+
     useEffect(() => {
-        if(user) {
-            history.push('/boards');
-        }else {
-            alert("Your not logged in")
-        }
+        check_authenticated_user(history, user, 'Your already logged in!', '/boards');
     });
     
 
