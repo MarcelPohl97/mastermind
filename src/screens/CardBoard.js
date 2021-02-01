@@ -1,20 +1,22 @@
 import React, { useRef, useContext, useEffect } from 'react';
-import Shape from './Shape';
-import Navigation from './Navigation';
-import Card from './Card';
+import Shape from '../components/Shape';
+import Navigation from '../components/Navigation';
+import Card from '../components/Card';
 import { motion } from "framer-motion";
 
 import {
     Link, useParams, useHistory
   } from "react-router-dom";
-import BoardDetails from './BoardDetails';
-import Modal from './Modal';
-import BoardForm from './BoardForm';
-import CardForm from './CardForm';
+import BoardDetails from '../components/BoardDetails';
+import Modal from '../components/Modal';
+import BoardForm from '../components/BoardForm';
+import CardForm from '../components/CardForm';
+import Settings from '../components/Settings';
 import { parse } from 'postcss';
-import Gradients from './Gradients';
-import Priority from './Priority';
+import Gradients from '../components/Gradients';
+import Priority from '../components/Priority';
 import { GlobalContext } from '../provider/GlobalProvider';
+import { AuthContext } from '../provider/AuthProvider';
 
 
 
@@ -23,15 +25,11 @@ const CardBoard = () => {
 
     const {boards, setBoards, cards, setCards, showModal, setshowModal, loadModal, setloadModal, loadBgColor, gradients, setGradients, setloadBgColor, get_Modal, hide_Modal, shapes, priorities, fetchGradients, Emoji} = useContext(GlobalContext);
     const history = useHistory();
-
+    const {user, loading, error, redirect, check_authenticated_user, logout} = useContext(AuthContext)
     const {board_id} = useParams();
     const constraintsRef = useRef(null);
 
     const filtered_Board = boards.filter(board => board.id === parseInt(board_id));
-
-    const redirect = (link) => {
-        history.push(link);
-    };
 
     const create_NewCard= (values, board_id) => {
         setCards([...cards, {
@@ -64,65 +62,77 @@ const CardBoard = () => {
         {
             id:1,
             anchor_name:'➕ Card',
-            anchor_func: get_Modal,
-            anchor_additional:<CardForm create={true} loadBgColor={loadBgColor} priorities={priorities} onSubmit={async (values) => {
+            anchor_func: () => {get_Modal(<CardForm create={true} loadBgColor={loadBgColor} priorities={priorities} onSubmit={async (values) => {
                 create_NewCard(values, filtered_Board[0].id);
             }}
-            />
+            />)},
         },
         {
             id:2,
             anchor_name:'📋 Details',
-            anchor_func: get_Modal,
-            anchor_additional:<BoardDetails filtered_Board={filtered_Board}/>,
+            anchor_func: () => {get_Modal(<BoardDetails filtered_Board={filtered_Board}/>)},
         },
         {
             id:3,
             anchor_name:'📋 Edit',
-            anchor_func: get_Modal,
-            anchor_additional: <BoardForm 
-            create={false} filtered_Board={filtered_Board} loadBgColor={loadBgColor} onEdit={async (values) => {
-                edit_Board(values);
-            }}
-            />
+            anchor_func: () => {get_Modal(<BoardForm 
+                create={false} filtered_Board={filtered_Board} loadBgColor={loadBgColor} onEdit={async (values) => {
+                    edit_Board(values);
+                }}
+                />)},
         },
         {
             id:4,
-            anchor_name: '🏞 Theme',
-            anchor_func: get_Modal,
-            anchor_additional: <Gradients gradients={gradients} setGradients={setGradients} setloadBgColor={setloadBgColor}/>,
+            anchor_name:'📋 Back to',
+            anchor_func: () => {check_authenticated_user(history, user, 'Your already logged in!', '/boards')},
+            
+        },
+        {
+            id:4,
+            anchor_name:'⚙ Settings',
+            anchor_func: () => {get_Modal(<Settings />)},
         },
         {
             id:5,
-            anchor_name: '💬 Chat',
-            anchor_func: redirect,
-            anchor_additional: '/chat',
+            anchor_name: '🚪 Logout',
+            anchor_func: logout,
+        },
+        {
+            id:5,
+            anchor_name: '🏞 Theme',
+            anchor_func: () => {get_Modal(<Gradients gradients={gradients} setGradients={setGradients} setloadBgColor={setloadBgColor}/>)},
         },
         {
             id:6,
-            anchor_name: '🗄 Kanban',
-            anchor_func: redirect,
-            anchor_additional: '/kanban',
+            anchor_name: '💬 Chat',
+            anchor_func: () => {redirect('/chat')},
         },
         {
             id:7,
-            anchor_name: '🎨 Drawing',
-            anchor_func: redirect,
-            anchor_additional: '/drawing',
+            anchor_name: '🗄 Kanban',
+            anchor_func: () => {redirect('/kanban')},
         },
         {
             id:8,
-            anchor_name: '📅 Calendar',
-            anchor_func: redirect,
-            anchor_additional: '/calendar',
+            anchor_name: '🎨 Drawing',
+            anchor_func: () => {redirect('/drawing')},
         },
         {
             id:9,
+            anchor_name: '📅 Calendar',
+            anchor_func: () => {redirect('/calendar')},
+        },
+        {
+            id:10,
             anchor_name: '🤛Team',
-            anchor_func: redirect,
-            anchor_additional: '/teams',
+            anchor_func: () => {redirect('/teams')},
         },
     ]
+
+    useEffect(() => {
+        fetchGradients();
+        check_authenticated_user(history, !user, 'Your not logged in!', '/');
+    })
 
     return (
         <>

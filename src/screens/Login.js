@@ -1,51 +1,70 @@
 import React, { useEffect, useState, useContext } from 'react';
-import Shape from './Shape';
-import Navigation from './Navigation';
-import Modal from './Modal';
-import Features from './Features'
-import About from './About';
-import How from './How';
+import Shape from '../components/Shape';
+import Navigation from '../components/Navigation';
+import Modal from '../components/Modal';
+import Features from '../components/Features'
+import About from '../components/About';
+import How from '../components/How';
 import { Formik, Field, Form } from 'formik';
-import FormField from './FormField'; 
-import Gradients from './Gradients';
+import FormField from '../components/FormField'; 
+import Gradients from '../components/Gradients';
+import InfoMessage from '../components/InfoMessage';
+import { auth } from '../firebase/firebase';
 import { motion } from "framer-motion";
 import { GlobalContext } from '../provider/GlobalProvider';
+import { AuthContext } from '../provider/AuthProvider';
 
 
 import {
     BrowserRouter as Router,
     Switch,
     Route,
-    Link
+    Link,
+    useHistory
   } from "react-router-dom";
   
 
 const Login = () => {
 
-    const {showModal, setshowModal, loadModal, setloadModal, loadBgColor, setloadBgColor, gradients, setGradients, get_Modal, shapes, fetchGradients} = useContext(GlobalContext);
+    const login = (email, password) => {
+        auth.signInWithEmailAndPassword(email, password).then((userCredential) => {
+        const user_data = userCredential.user;
+        console.log(user_data)
+        get_Modal(<InfoMessage message={`Welcome back ${user_data.username}`} info_color={'text-green-400'}/>)
+    })
+    .catch((error) => {
+        const errorMessage = error.message;
+        get_Modal(<InfoMessage message={errorMessage} info_color={'text-red-400'}/>)
 
+    });
+    }
+
+    const {showModal, setshowModal, loadModal, setloadModal, loadBgColor, setloadBgColor, gradients, setGradients, get_Modal, shapes, fetchGradients} = useContext(GlobalContext);
+    const {user, loading, error, redirect, check_authenticated_user} = useContext(AuthContext);
     const MenuItems = [
         {
             id:1,
             anchor_name:'💎 Register',
-            anchor_func: get_Modal,
-            anchor_additional: <Features />,
+            anchor_func: () => {get_Modal(<Features />)},
         },
         {
             id:2,
             anchor_name:'❓ Forgot Password',
-            anchor_func: get_Modal,
-            anchor_additional: <About />,
+            anchor_func: () => {get_Modal(<About />)},
         },
         {
             id:3,
             anchor_name: '🏞 Theme',
-            anchor_func: get_Modal,
-            anchor_additional: <Gradients gradients={gradients} setGradients={setGradients} setloadBgColor={setloadBgColor}/>,
+            anchor_func: () => {get_Modal(<Gradients gradients={gradients} setGradients={setGradients} setloadBgColor={setloadBgColor}/>)},
         }
     ]
 
-    
+    const history = useHistory();
+
+
+    useEffect(() => {
+        check_authenticated_user(history, user, 'Your already logged in!', '/boards');
+    });
 
     return (
         <>
@@ -66,14 +85,14 @@ const Login = () => {
                                 password:'',
                                 email: '',
                             }}
-                        
+                            onSubmit={(values) => {login(values.email, values.password);}}
                             > 
                             <Form>
                                 <FormField loadBgColor={loadBgColor} placeholder={"Example: SuperSecretPassword"} input_tag={"password"} label={"Password"}/>
                                 <FormField loadBgColor={loadBgColor} placeholder={"Example: JonDoe@gmail.com"} input_tag={"email"} label={"Email"}/>
                                 <div className="flex flex-row items-center space-between">
-                                    <button className="bg-white py-3 bg-green-400 px-10 shadow-lg rounded-md text-white text-base uppercase mr-4 group" style={{backgroundColor:`${loadBgColor.colors[0]}`}}><span className="transform inline-block group-hover:animate-bounce">⛳</span> Login</button>
-                                    <Link to="/forgotpassword"><button className="bg-white py-3 px-10 bg-green-400 px-10 shadow-lg rounded-md text-white text-base uppercase mr-4 group"><span className="transform inline-block group-hover:animate-bounce">💭 </span> or forgot Password?</button></Link>
+                                    <button type="submit" className="bg-white py-3 bg-green-400 px-10 shadow-lg rounded-md text-white text-base uppercase mr-4 group" style={{backgroundColor:`${loadBgColor.colors[0]}`}}><span className="transform inline-block group-hover:animate-bounce">⛳</span> Login</button>
+                                    <Link to="/forgotpassword"><button type="button" className="bg-white py-3 px-10 bg-green-400 px-10 shadow-lg rounded-md text-white text-base uppercase mr-4 group"><span className="transform inline-block group-hover:animate-bounce">💭 </span> or forgot Password?</button></Link>
                                 </div>
                             </Form> 
                         </Formik>

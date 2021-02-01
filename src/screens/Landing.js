@@ -1,11 +1,11 @@
 import React, { useEffect, useState, useContext } from 'react';
-import Shape from './Shape';
-import Navigation from './Navigation';
-import Modal from './Modal';
-import Features from './Features'
-import About from './About';
-import How from './How';
-import Gradients from './Gradients';
+import Shape from '../components/Shape';
+import Navigation from '../components/Navigation';
+import Modal from '../components/Modal';
+import Features from '../components/Features'
+import About from '../components/About';
+import How from '../components/How';
+import Gradients from '../components/Gradients';
 import { motion } from "framer-motion";
 import { GlobalContext } from '../provider/GlobalProvider';
 import { AuthContext } from '../provider/AuthProvider';
@@ -20,15 +20,8 @@ import {
   } from "react-router-dom";
   
 const Landing = () => {
-    const login = () => {
-        auth.signInWithEmailAndPassword('test@gmail.com', 'test123456').then((userCredential) => {
-        const user_data = userCredential.user;
-    })
-    .catch((error) => {
-        const errorMessage = error.message;
-    });
-    }
-    const {user, loading, error, redirect, check_authenticated_user} = useContext(AuthContext)
+    
+    const {user, loading, error, redirect, check_authenticated_user} = useContext(AuthContext);
     const {showModal, setshowModal, loadModal, setloadModal, loadBgColor, setloadBgColor, gradients, setGradients, get_Modal, shapes, fetchGradients} = useContext(GlobalContext);
 
     const MenuItems = [
@@ -80,7 +73,7 @@ const Landing = () => {
                     <p className="text-white text-2xl text-center mt-6">A simple, customizable Collaboration tool for teams 🤼 and individuals ⛹. <br></br> It's Free ✌.</p>
                     <div className="flex items-center mt-14">
                         <Link to="/register"><button aria-controls="simple-menu" aria-haspopup="true" className="bg-white py-3 px-10 shadow-lg rounded-md text-black text-base uppercase mr-4 group"><span className="transform inline-block group-hover:animate-bounce">⚡</span> Try it out</button></Link>
-                        <button onClick={() => {login();}} aria-controls="simple-menu" aria-haspopup="true" className="bg-black py-3 px-10 shadow-lg rounded-md text-white text-base uppercase focus:border-2 focus:border-white group"><span className="transform inline-block group-hover:animate-bounce">☕</span> <span className="text-red-500">Buy me</span> a coffee</button>
+                        <button aria-controls="simple-menu" aria-haspopup="true" className="bg-black py-3 px-10 shadow-lg rounded-md text-white text-base uppercase focus:border-2 focus:border-white group"><span className="transform inline-block group-hover:animate-bounce">☕</span> <span className="text-red-500">Buy me</span> a coffee</button>
                     </div>
                 </div>
             </header>

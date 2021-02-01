@@ -149,7 +149,17 @@
 -> styled forgotpassword component
 
 29.01.2021:
-->
+->created check_authentication function to create protected routes
+
+1.02.2021:
+-> redesigned menu functions
+-> added logout to boards and cardboards
+-> added InfoMessage components for important notifications
+-> added register functionality to register screen
+-> added login functionality to login screen
+-> added logout functionality boards
+-> added logout functionality to cardboard
+-> added forgot password functionality to forgotpassword screen
 
 
 
@@ -159,11 +169,7 @@ MasterMindOwner1
 MasterMindOwner13579!
 
 todo:
--> connect firebase to frontend
--> add authentication to app
--> register
--> login
--> forgot password
+-> create boards data in firebase
 -> add dummy data to firebase
 -> make firebase db calls and set that data in states based on useffect
 -> add crud functionality based on database for boards and cards
