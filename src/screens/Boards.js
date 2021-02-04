@@ -7,10 +7,11 @@ import Modal from '../components/Modal';
 import Gradients from '../components/Gradients';
 import Settings from '../components/Settings';
 import InfoMessage from '../components/InfoMessage';
+import LoaderContainer from '../components/LoaderContainer';
 import { GlobalContext } from '../provider/GlobalProvider';
 import { AuthContext } from '../provider/AuthProvider';
 import { auth, firestore } from '../firebase/firebase';
-import { useCollection } from 'react-firebase-hooks/firestore';
+import { useCollection, useCollectionData } from 'react-firebase-hooks/firestore';
 
 import {
     BrowserRouter as Router,
@@ -26,31 +27,40 @@ import {
 const Boards = () => {
 
     const {boards, setBoards, showModal, setshowModal, loadModal, loadBgColor, gradients, setGradients, setloadBgColor, get_Modal, shapes, fetchGradients, Emoji} = useContext(GlobalContext);
-    const {user, loading, error, redirect, check_authenticated_user, logout} = useContext(AuthContext)
-    const create_NewBoard = (values) => {
-        setBoards([...boards, {
-            id:10,
-            emoji:Emoji,
-            title:values.title,
-            protected: true,
-            created:values.created,
-        }])
+    const {user, redirect, check_authenticated_user, logout} = useContext(AuthContext);
+
+    const [value, loading, error] = useCollectionData(
+        firestore.collection('boards'),
+        {
+          snapshotListenOptions: { includeMetadataChanges: true },
+        }
+      );
+
+    const add_boards = (value) => {
+        {value && setBoards(value)}
     }
 
-    
+    const create_NewBoard = (values) => {
+       const new_board = firestore.collection("boards").doc();
+       new_board.set({
+           emoji:Emoji,
+           title:values.title,
+           protected: true,
+           created:values.created,
+           id:new_board.id,
+        })
+    }
 
     const MenuItems = [
         {
             id:1,
             anchor_name:'➕ Board',
-            anchor_func: get_Modal,
-            anchor_additional: <BoardForm 
+            anchor_func: () => {get_Modal(<BoardForm 
                 create={true} loadBgColor={loadBgColor} Emoji={Emoji} onSubmit={async (values) => {
                     await new Promise((r) => setTimeout(r, 500));
                     create_NewBoard(values);
-
                 }} 
-            />
+            />)}
         },
         {
             id:2,
@@ -87,12 +97,13 @@ const Boards = () => {
 
     useEffect(() => {
         fetchGradients();
-        check_authenticated_user(history, !user, 'Your not logged in!', '/');
-
+        check_authenticated_user(history, !user, 'Your not logged in!', '/login');
+        add_boards(value);
     })
 
     return (
         <>
+        {loading ? <LoaderContainer /> : 
         <div className="relative bg-green-400 min-h-screen h-auto w-100 overflow-x-hidden" style={{background: `linear-gradient(${loadBgColor.colors})`}}>
             {showModal ? <Modal setshowModal={setshowModal} template={loadModal} /> : ''}
             {shapes.map(shape => <Shape styles={shape.css_classes} key={shape.id} />)}
@@ -100,9 +111,10 @@ const Boards = () => {
                 <Navigation MenuItems={MenuItems} loadBgColor={loadBgColor} />
             </header>
             <div className="container mx-auto p-10 grid responsive-grid">
-                {boards.map(board => <Board board={board} key={board.id} loadBgColor={loadBgColor} /> )}
+                {value && boards.map(board => <Board board={board} key={board.id} loadBgColor={loadBgColor} /> )}
             </div>
         </div>
+        }
         </>
     )
 }

@@ -161,18 +161,19 @@
 -> added logout functionality to cardboard
 -> added forgot password functionality to forgotpassword screen
 
-
-
+04.02.2021:
+-> added boards data in firebase
+-> added boards fetching 
+-> added loader container based on if boards are loaded
+-> added create firebase call to add board
+-> changed add create firebase call to add board to doc and set to get the auto generated id for routing and linking
 
 firebase credentials:
 MasterMindOwner1
 MasterMindOwner13579!
 
 todo:
--> create boards data in firebase
--> add dummy data to firebase
--> make firebase db calls and set that data in states based on useffect
--> add crud functionality based on database for boards and cards
+-> add crud functionality based on database for boards
 -> add a continous deployment/integration everytime a build commands runs for the app
 
 to fix:
@@ -181,7 +182,7 @@ to fix:
 
 to add:
 -> create "responsive" bubbles basically at certain breakpoints we switch their coordinates and make them smaller
-
+-> make fields in forms required based on boolean 
 
 future addons for every card:
 -> chat

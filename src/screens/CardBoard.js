@@ -18,6 +18,8 @@ import Priority from '../components/Priority';
 import { GlobalContext } from '../provider/GlobalProvider';
 import { AuthContext } from '../provider/AuthProvider';
 
+import { auth, firestore } from '../firebase/firebase';
+
 
 
 
@@ -43,19 +45,15 @@ const CardBoard = () => {
     }
 
     const edit_Board = (values) => {
-        setBoards(boards.map((board) => {
-            if(board.id === parseInt(filtered_Board[0].id)) {
-              return {
-                ...board,
-                id:filtered_Board[0].id,
-                emoji:Emoji,
-                title:values.title,
-                protected: true,
-                created:values.created,
-              }
-            }
-            return board;  
-        }))
+        const boardRef = firestore.collection("boards").doc(filtered_Board[0].id);
+
+        boardRef.update({
+            id:filtered_Board[0].id,
+            emoji:Emoji,
+            title:values.title,
+            protected: true,
+            created:values.created,
+        });
     }
 
     const MenuItems = [
@@ -131,7 +129,7 @@ const CardBoard = () => {
 
     useEffect(() => {
         fetchGradients();
-        check_authenticated_user(history, !user, 'Your not logged in!', '/');
+        check_authenticated_user(history, !user, 'Your not logged in!', '/login');
     })
 
     return (
