@@ -4,7 +4,7 @@ import FormField from './FormField';
 import EmojiPicker from './EmojiPicker';
 
 
-const BoardForm = ({create, onSubmit, onEdit, filtered_Board, loadBgColor, Emoji}) => {
+const BoardForm = ({create, onSubmit, onEdit, filtered_Board, loadBgColor, Emoji, delete_Board, hide_Modal}) => {
 
     return (
         <>
@@ -33,6 +33,7 @@ const BoardForm = ({create, onSubmit, onEdit, filtered_Board, loadBgColor, Emoji
                 <FormField loadBgColor={loadBgColor} placeholder={"Example: true/false"} input_tag={"protected"} label={"Protected"}/>
                 <FormField loadBgColor={loadBgColor} placeholder={"Example: Steve Austin"} input_tag={"created"} label={"Creator"}/>
                 <button type="submit" className="bg-green-400 py-3 px-10 shadow-lg rounded-md text-white text-base uppercase mr-4" style={{backgroundColor:`${loadBgColor.colors[0]}`}}>{create ? "➕ Add Board" : "📋 Edit Board"}</button>
+                <button className="bg-red-500 py-3 px-10 shadow-lg rounded-md text-white text-base uppercase mr-4" type="button" onClick={() => {delete_Board(filtered_Board[0].id); hide_Modal(); }} >🗑️ Delete Board</button>
             </Form>
         </Formik>
         </>

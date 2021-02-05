@@ -168,12 +168,17 @@
 -> added create firebase call to add board
 -> changed add create firebase call to add board to doc and set to get the auto generated id for routing and linking
 
+05.02.2021:
+-> fixed edit board in cardboard bug because id wasnt integer and just removed parseint
+-> added delete board functionality based on dbl click in boards on board
+->
+
 firebase credentials:
 MasterMindOwner1
 MasterMindOwner13579!
 
 todo:
--> add crud functionality based on database for boards
+-> add edit functionality based on database for boards
 -> add a continous deployment/integration everytime a build commands runs for the app
 
 to fix:
@@ -183,6 +188,7 @@ to fix:
 to add:
 -> create "responsive" bubbles basically at certain breakpoints we switch their coordinates and make them smaller
 -> make fields in forms required based on boolean 
+-> add better ux/interactivy small successfull interactions and then hiding away the form and clearing it
 
 future addons for every card:
 -> chat

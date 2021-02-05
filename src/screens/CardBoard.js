@@ -25,13 +25,13 @@ import { auth, firestore } from '../firebase/firebase';
 
 const CardBoard = () => {
 
-    const {boards, setBoards, cards, setCards, showModal, setshowModal, loadModal, setloadModal, loadBgColor, gradients, setGradients, setloadBgColor, get_Modal, hide_Modal, shapes, priorities, fetchGradients, Emoji} = useContext(GlobalContext);
+    const {boards, setBoards, cards, setCards, showModal, setshowModal, loadModal, setloadModal, loadBgColor, gradients, setGradients, setloadBgColor, get_Modal, hide_Modal, shapes, priorities, fetchGradients, Emoji, delete_Board} = useContext(GlobalContext);
     const history = useHistory();
     const {user, loading, error, redirect, check_authenticated_user, logout} = useContext(AuthContext)
     const {board_id} = useParams();
     const constraintsRef = useRef(null);
 
-    const filtered_Board = boards.filter(board => board.id === parseInt(board_id));
+    const filtered_Board = boards.filter(board => board.id === board_id);
 
     const create_NewCard= (values, board_id) => {
         setCards([...cards, {
@@ -45,7 +45,7 @@ const CardBoard = () => {
     }
 
     const edit_Board = (values) => {
-        const boardRef = firestore.collection("boards").doc(filtered_Board[0].id);
+        const boardRef = firestore.collection("boards").doc(filtered_Board[0].id.toString());
 
         boardRef.update({
             id:filtered_Board[0].id,

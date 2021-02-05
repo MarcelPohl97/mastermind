@@ -1,17 +1,39 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import {
     BrowserRouter as Router,
     Switch,
     Route,
     Link
   } from "react-router-dom";
+import BoardForm from './BoardForm';
+import { GlobalContext } from '../provider/GlobalProvider';
+import { firestore } from '../firebase/firebase';
   
 
 
-const Board = ({board, loadBgColor}) => {
+const Board = ({board, loadBgColor, hide_Modal}) => {
+
+    const edit_Board = (values) => {
+        const boardRef = firestore.collection("boards").doc(board.id.toString());
+
+        boardRef.update({
+            id:board.id,
+            emoji:Emoji,
+            title:values.title,
+            protected: true,
+            created:values.created,
+        });
+    }
+
+    const { get_Modal, Emoji, boards, delete_Board } = useContext(GlobalContext);
+    const filtered_Board = boards.filter(boardRef => boardRef.id === board.id);
     return (
         <>
-        <div className="bg-white p-2 relative shadow-lg rounded-2xl flex flex-col items-center">
+        <div className="bg-white p-2 relative shadow-lg rounded-2xl flex flex-col items-center" onDoubleClick={() => {get_Modal(<BoardForm 
+                create={false} filtered_Board={filtered_Board} delete_Board={delete_Board} hide_Modal={hide_Modal} loadBgColor={loadBgColor} onEdit={async (values) => {
+                    edit_Board(values);
+                }}
+                />)}}>
             <div className="w-100 py-3 px-12 border-4 border-green-400 rounded-full shadow-lg" style={{borderColor:`${loadBgColor.colors[0]}`}}>
                 <span className="text-2xl">{board.emoji}</span>
             </div>

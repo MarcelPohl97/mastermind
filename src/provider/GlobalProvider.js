@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { firestore } from '../firebase/firebase';
 
 const GlobalContext = React.createContext();
 
@@ -21,6 +22,10 @@ const GlobalProvider = (props) => {
 
     const hide_Modal = () => {
         setshowModal(false);
+    }
+
+    const delete_Board = (board_id) => {
+        firestore.collection("boards").doc(board_id.toString()).delete()
     }
 
     const [priorities, setPriorities] = useState([
@@ -235,6 +240,7 @@ const GlobalProvider = (props) => {
         Emoji,
         setEmoji,
         getEmoji,
+        delete_Board,
       }}
     >
       {props.children}
